@@ -9,7 +9,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    email: [jkoutalios@gmail.com](mailto:jkoutalios@gmail.com)
+    Email: <a href="mailto:jkoutalios@gmail.com">jkoutalios@gmail.com</a>
     Waldorpstraat 666, 2521 CK
     The Hague, The Netherlands
 
