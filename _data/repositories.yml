@@ -1,14 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - johnkou97
 
-repo_description_lines_max: 2
+repo_description_lines_max: 1
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - johnkou97/AdaptiveOptics
+  - johnkou97/postmerger_frequencies
+  - johnkou97/stellar_evolution
+  - johnkou97/pyTOVpp
