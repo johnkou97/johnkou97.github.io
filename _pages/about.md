@@ -2,24 +2,23 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: # add a subtitle if you want
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    Waldorpstraat 666, 2521 CK
+    The Hague, The Netherlands
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am a graduate student researcher in Astronomy and Data Science at Leiden University and a member of the [Leiden Observatory](https://local.strw.leidenuniv.nl/). I am currently working on my MSc thesis on the topic of "A cross-power model for power suppression in FLAMINGO". My previous research project in Leiden was on the topic of "Finding the best exoplanets to search for exomoons by radial velocity".
+  
+I obtained my BSc in Physics from the [Aristotle University of Thessaloniki](https://www.auth.gr/en) in 2020. I was a part of the [Gravitational Waves Group](https://niksterg.github.io/gw-group/) of the [Section of Astrophysics, Astronomy and Mechanics](https://www.astro.auth.gr/n/), where I worked on the topic of "Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission".
+  
+My other interests include Data Science, Machine Learning, Deep Learning, Reinforcement Learning, Statistics and much more. I am currently working on a project on the topic of "Reinforcement Learning for Adaptive Optics and Exoplanet Imaging". The public repository of the project can be found [here](https://github.com/johnkou97/AdaptiveOptics). I am also a big fan of Linux and open-source software. I have worked on many projects in the past, some as a part of my studies and some as a hobby.
