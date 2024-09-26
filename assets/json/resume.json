@@ -50,32 +50,6 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2024PhRvD.110f3008P"
     }
   ],
-  "research": [
-    {
-      "name": "M.Sc. Thesis Project: Applying a cross-power model for power suppression in FLAMINGO",
-      "supervisor": "Dr. Marcel van Daalen",
-      "startDate": "SEP 2023",
-      "endDate": "JUN 2024"
-    },
-    {
-      "name": "Reinforcement learning for adaptive optics and exoplanet imaging",
-      "supervisor": "Dr. Rico Landman, Dr. Thomas Moerland, Dr. Aske Plaat",
-      "startDate": "OCT 2023",
-      "endDate": "FEB 2024"
-    },
-    {
-      "name": "M.Sc. Thesis Project: Finding the best exoplanets to search for exomoons by radial velocity",
-      "supervisor": "Dr. Matthew Kenworthy",
-      "startDate": "FEB 2022",
-      "endDate": "DEC 2022"
-    },
-    {
-      "name": "B.Sc. Thesis Project: Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission",
-      "supervisor": "Dr. Nikolaos Stergioulas",
-      "startDate": "SEP 2019",
-      "endDate": "SEP 2020"
-    }
-  ],
   "work": [
     {
       "name": "Institute for Advanced Study, Princeton University",
@@ -235,12 +209,28 @@
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "M.Sc. Thesis Project: Applying a cross-power model for power suppression in FLAMINGO",
+      "supervisor": "Dr. Marcel van Daalen",
+      "startDate": "SEP 2023",
+      "endDate": "JUN 2024"
+    },
+    {
+      "name": "Reinforcement learning for adaptive optics and exoplanet imaging",
+      "supervisor": "Dr. Rico Landman, Dr. Thomas Moerland, Dr. Aske Plaat",
+      "startDate": "OCT 2023",
+      "endDate": "FEB 2024"
+    },
+    {
+      "name": "M.Sc. Thesis Project: Finding the best exoplanets to search for exomoons by radial velocity",
+      "supervisor": "Dr. Matthew Kenworthy",
+      "startDate": "FEB 2022",
+      "endDate": "DEC 2022"
+    },
+    {
+      "name": "B.Sc. Thesis Project: Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission",
+      "supervisor": "Dr. Nikolaos Stergioulas",
+      "startDate": "SEP 2019",
+      "endDate": "SEP 2020"
     }
   ]
 }
