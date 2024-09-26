@@ -88,6 +88,74 @@
       "url": ""
     }
   ],
+  "work": [
+    {
+      "name": "Leiden University",
+      "position": "Teaching Assistant for the course 'Reinforcement Learning' (M.Sc.)",
+      "url": "",
+      "startDate": "FEB 2024",
+      "endDate": "JUN 2024",
+      "summary": "Teaching Assistant for the Master level course 'Reinforcement Learning' at the Computer Science department of Leiden University.",
+      "highlights": [""]
+    },
+    {
+      "name": "Leiden University",
+      "position": "Teaching Assistant for the course 'Science and the Public' (M.Sc.)",
+      "url": "",
+      "startDate": "FEB 2023",
+      "endDate": "JUN 2024",
+      "summary": "Teaching Assistant for the Master level course 'Science and the Public' at the Astronomy department of Leiden University. for two academic years (spring semester 2023 and 2024).",
+      "highlights": [""]
+    },
+    {
+      "name": "Leiden University",
+      "position": "Teaching Assistant for the course 'Astronomy Lab and Observing Project' (B.Sc.)",
+      "url": "",
+      "startDate": "FEB 2024",
+      "endDate": "JUN 2024",
+      "summary": "Teaching Assistant for the Bachelor level course 'Astronomy Lab and Observing Project' at the Astronomy department of Leiden University. As a TA, I was responsible for the supervision of the students during the observations at the Isaac Newton Telescope in La Palma, Spain.",
+      "highlights": [""]
+    },
+    {
+      "name": "Self-employed",
+      "position": "Private Tutor in Physics, Mathematics and Chemistry",
+      "url": "",
+      "startDate": "SEP 2018",
+      "endDate": "JUN 2024",
+      "summary": "Private tutor in Physics, Mathematics and Chemistry for high school and undergraduate students. I have been teaching students for the high school exams in Greece and university students from many different departments for their exams.",
+      "highlights": [""]
+    },
+    {
+      "name": "Greek Team for the International Olympiad on Astronomy and Astrophysics",
+      "position": "Instructor for the preparation of the Greek Team for the International Olympiad on Astronomy and Astrophysics",
+      "url": "",
+      "startDate": "JUN 2015",
+      "endDate": "AUG 2023",
+      "summary": "I have been teaching the students the theoretical and practical aspects of Astronomy and Astrophysics, as well as the necessary skills for the competition. The preparation includes lectures, exercises, and exams and takes place during the summer months.",
+      "highlights": [""]
+    },
+    {
+      "name": "Aristotle University of Thessaloniki",
+      "position": "Grading Assistant for the course 'Astronomy and Astrophysics' (B.Sc.)",
+      "url": "",
+      "startDate": "FEB 2018",
+      "endDate": "JUN 2020",
+      "summary": "Grading Assistant for the Bachelor level course 'Astronomy and Astrophysics' at the Physics department of Aristotle University of Thessaloniki. I was responsible for the grading of the students' homework and exercises.",
+      "highlights": [""]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Aristotle University of Thessaloniki",
+      "location": "Thessaloniki, Greece",
+      "position": "Public Outreach Guide at the Astronomical Observatory of the University",
+      "url": "",
+      "startDate": "FEB 2018",
+      "endDate": "JUN 2021",
+      "summary": "As a public outreach guide, I was responsible for the organization and execution of the public events at the Astronomical Observatory of the University. The events include public observations, lectures, workshops and school visits.",
+      "highlights": [""]
+    }
+  ],
   "awards": [
     {
       "title": "Scholarship from Cosmote for undergraduate studies",
@@ -130,8 +198,8 @@
       "level": "Intermediate",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "C++",
         "SQL",
+        "C/C++",
         "Mathematica",
         "Matlab"
       ]
@@ -239,29 +307,6 @@
       "phone": "+31 715274799"
     }
   ]
-  // "work": [
-  //   {
-  //     "name": "Institute for Advanced Study, Princeton University",
-  //     "position": "Professor of Theoretical Physics",
-  //     "url": "https://example.com",
-  //     "startDate": "1933-01-01",
-  //     "endDate": "1955-01-01",
-  //     "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-  //     "highlights": ["Relativity"]
-  //   }
-  // ],
-  // "volunteer": [
-  //   {
-  //     "organization": "People's Climate March",
-  //     "location": "Zurich, Switzerland",
-  //     "position": "Lead Organizer",
-  //     "url": "https://example.com",
-  //     "startDate": "2014-04-01",
-  //     "endDate": "2015-07-01",
-  //     "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-  //     "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-  //   }
-  // ],
   // "certificates": [
   //   {
   //     "name": "Machine Learning",
