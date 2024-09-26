@@ -111,6 +111,82 @@
       "summary": "Participated in the 8th International Olympiad on Astronomy and Astrophysics."
     }
   ],
+  "skills": [
+    {
+      "name": "Languages, Frameworks and Tools",
+      "level": "Expert",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Python",
+        "Jupyter",
+        "Git",
+        "Linux OS",
+        "LaTeX",
+        "VS Code"
+      ]
+    },
+    {
+      "name": "Languages and Frameworks and Tools",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "C++",
+        "SQL",
+        "Mathematica",
+        "Matlab"
+      ]
+    },
+    {
+      "name": "Machine and Deep Learning",
+      "level": "Expert",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "PyTorch",
+        "TensorFlow",
+        "Keras",
+        "Scikit-learn",
+        "JAX"
+      ]
+    },
+    {
+      "name": "Data Science",
+      "level": "Expert",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Pandas",
+        "Numpy",
+        "Matplotlib",
+        "Scipy",
+        "Seaborn",
+        "Nbodykit"
+      ]
+    },
+    {
+      "name": "I.T. and Networking",
+      "level": "",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Bash",
+        "SSH",
+        "Anaconda",
+        "Docker",
+        "JupyterHub"
+      ]
+    },
+    {
+      "name": "Soft Skills",
+      "level": "",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Problem Solving",
+        "Critical Thinking",
+        "Teamwork",
+        "Communication",
+        "Time Management",
+        "Adaptability"
+      ]
+    }
+  ],
   "languages": [
     {
       "language": "Greek",
@@ -193,21 +269,6 @@
   //     "issuer": "Stanford University",
   //     "url": "https://example.com",
   //     "icon": "fa-solid fa-location-dot"
-  //   }
-  // ],
-  // "skills": [
-  //   {
-  //     "name": "Physics",
-  //     "level": "Master",
-  //     "icon": "fa-solid fa-hashtag",
-  //     "keywords": [
-  //       "Quantum Mechanics",
-  //       "Quantum Computing",
-  //       "Quantum Information",
-  //       "Quantum Cryptography",
-  //       "Quantum Communication",
-  //       "Quantum Teleportation"
-  //     ]
   //   }
   // ],
   // "interests": [
