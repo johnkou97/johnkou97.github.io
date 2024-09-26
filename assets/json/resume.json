@@ -277,6 +277,81 @@
       "icon": ""
     }
   ],
+  "interests": [
+    {
+      "name": "Artificial Intelligence",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Machine Learning",
+        "Deep Learning",
+        "Reinforcement Learning",
+        "Neural Networks",
+        "Natural Language Processing",
+        "Generative Models",
+        "Optimization",
+        "Probabilistic Graphical Models",
+        "AI Ethics",
+        "AI in Healthcare",
+        "AI in Finance",
+        "AI in Energy",
+        "AI in Astronomy/Astrophysics",
+        "AI for Social Good"
+      ]
+    },
+    {
+      "name": "Data Science",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Data Analysis",
+        "Data Visualization",
+        "Statistical Inference",
+        "Data Mining",
+        "Data Cleaning",
+        "Data Driven Decision Making",
+        "Predictive Modeling",
+        "Big Data",
+        "Time Series Analysis",
+        "Bayesian Statistics",
+        "Hypothesis Testing",
+        "Data Science in Astronomy/Astrophysics",
+        "Data Science for Business",
+        "Data Science for Social Good"
+      ]
+    },
+    {
+      "name": "Astrophysics/Astronomy",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Gravitational Waves",
+        "Neutron Stars",
+        "Black Holes",
+        "Compact Objects",
+        "High Energy Astrophysics",
+        "Cosmology",
+        "Large Scale Structure",
+        "Exoplanets",
+        "Exomoons",
+        "Data Science in Astronomy",
+        "Machine Learning and A.I. in Astronomy"
+      ]
+    },
+    {
+      "name": "Hobbies",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Chess",
+        "Science Communication",
+        "Reading",
+        "Hiking",
+        "Cycling",
+        "Cooking",
+        "Traveling",
+        "Movies/TV Series",
+        "Board/Video Games"
+      ]
+    }
+
+  ],
   "references": [
     {
       "name": "Professor Nikolaos Stergioulas",
@@ -316,18 +391,4 @@
   //     "icon": "fa-solid fa-location-dot"
   //   }
   // ],
-  // "interests": [
-  //   {
-  //     "name": "Physics",
-  //     "icon": "fa-solid fa-tag",
-  //     "keywords": [
-  //       "Quantum Mechanics",
-  //       "Quantum Computing",
-  //       "Quantum Information",
-  //       "Quantum Cryptography",
-  //       "Quantum Communication",
-  //       "Quantum Teleportation"
-  //     ]
-  //   }
-  // ]
 }
