@@ -96,7 +96,7 @@
       "startDate": "FEB 2024",
       "endDate": "JUN 2024",
       "summary": "Teaching Assistant for the Master level course 'Reinforcement Learning' at the Computer Science department of Leiden University.",
-      "highlights": [""]
+      "highlights": "" //[""]
     },
     {
       "name": "Leiden University",
@@ -105,7 +105,7 @@
       "startDate": "FEB 2023",
       "endDate": "JUN 2024",
       "summary": "Teaching Assistant for the Master level course 'Science and the Public' at the Astronomy department of Leiden University. for two academic years (spring semester 2023 and 2024).",
-      "highlights": [""]
+      "highlights": "" //[""]
     },
     {
       "name": "Leiden University",
@@ -114,7 +114,7 @@
       "startDate": "FEB 2024",
       "endDate": "JUN 2024",
       "summary": "Teaching Assistant for the Bachelor level course 'Astronomy Lab and Observing Project' at the Astronomy department of Leiden University. As a TA, I was responsible for the supervision of the students during the observations at the Isaac Newton Telescope in La Palma, Spain.",
-      "highlights": [""]
+      "highlights": "" //[""]
     },
     {
       "name": "Self-employed",
@@ -123,7 +123,7 @@
       "startDate": "SEP 2018",
       "endDate": "JUN 2024",
       "summary": "Private tutor in Physics, Mathematics and Chemistry for high school and undergraduate students. I have been teaching students for the high school exams in Greece and university students from many different departments for their exams.",
-      "highlights": [""]
+      "highlights": "" //[""]
     },
     {
       "name": "Greek Team for the International Olympiad on Astronomy and Astrophysics",
@@ -132,7 +132,7 @@
       "startDate": "JUN 2015",
       "endDate": "AUG 2023",
       "summary": "I have been teaching the students the theoretical and practical aspects of Astronomy and Astrophysics, as well as the necessary skills for the competition. The preparation includes lectures, exercises, and exams and takes place during the summer months.",
-      "highlights": [""]
+      "highlights": "" //[""]
     },
     {
       "name": "Aristotle University of Thessaloniki",
@@ -141,7 +141,7 @@
       "startDate": "FEB 2018",
       "endDate": "JUN 2020",
       "summary": "Grading Assistant for the Bachelor level course 'Astronomy and Astrophysics' at the Physics department of Aristotle University of Thessaloniki. I was responsible for the grading of the students' homework and exercises.",
-      "highlights": [""]
+      "highlights": "" //[""]
     }
   ],
   "volunteer": [
@@ -153,7 +153,7 @@
       "startDate": "FEB 2018",
       "endDate": "JUN 2021",
       "summary": "As a public outreach guide, I was responsible for the organization and execution of the public events at the Astronomical Observatory of the University. The events include public observations, lectures, workshops and school visits.",
-      "highlights": [""]
+      "highlights": "" //[""]
     }
   ],
   "awards": [
