@@ -126,7 +126,7 @@
       ]
     },
     {
-      "name": "Languages and Frameworks and Tools",
+      "name": "Languages, Frameworks and Tools",
       "level": "Intermediate",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
@@ -138,7 +138,7 @@
     },
     {
       "name": "Machine and Deep Learning",
-      "level": "Expert",
+      "level": "",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
         "PyTorch",
@@ -150,7 +150,7 @@
     },
     {
       "name": "Data Science",
-      "level": "Expert",
+      "level": "",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
         "Pandas",
