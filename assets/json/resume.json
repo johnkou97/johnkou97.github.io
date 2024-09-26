@@ -50,6 +50,44 @@
       "url": "https://ui.adsabs.harvard.edu/abs/2024PhRvD.110f3008P"
     }
   ],
+  "projects": [
+    {
+      "name": "M.Sc. Thesis Project: Applying a cross-power model for power suppression in FLAMINGO",
+      "summary": "",
+      "highlights": "",
+      "supervisor": "Dr. Marcel van Daalen",
+      "startDate": "SEP 2023",
+      "endDate": "JUN 2024",
+      "url": ""
+    },
+    {
+      "name": "Reinforcement learning for adaptive optics and exoplanet imaging",
+      "summary": "",
+      "highlights": "",
+      "supervisor": "Dr. Rico Landman, Dr. Thomas Moerland, Dr. Aske Plaat",
+      "startDate": "OCT 2023",
+      "endDate": "FEB 2024",
+      "url": ""
+    },
+    {
+      "name": "M.Sc. Thesis Project: Finding the best exoplanets to search for exomoons by radial velocity",
+      "summary": "",
+      "highlights": "",
+      "supervisor": "Dr. Matthew Kenworthy",
+      "startDate": "FEB 2022",
+      "endDate": "DEC 2022",
+      "url": ""
+    },
+    {
+      "name": "B.Sc. Thesis Project: Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission",
+      "summary": "",
+      "highlights": "",
+      "supervisor": "Dr. Nikolaos Stergioulas",
+      "startDate": "SEP 2019",
+      "endDate": "SEP 2020",
+      "url": ""
+    }
+  ],
   "work": [
     {
       "name": "Institute for Advanced Study, Princeton University",
@@ -75,11 +113,25 @@
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Scholarship from Cosmote for undergraduate studies",
+      "date": "2015 - 2019",
+      "awarder": "Cosmote",
+      "url": "",
+      "summary": "Awarded a scholarship for my undergraduate studies in Physics at Aristotle University of Thessaloniki."
+    },
+    {
+      "title": "Honorable Mention in the 9th International Olympiad on Astronomy and Astrophysics",
+      "date": "2015",
+      "awarder": "IOAA",
+      "url": "",
+      "summary": "Awarded an Honorable Mention in the 9th International Olympiad on Astronomy and Astrophysics."
+    },
+    {
+      "title": "Participation in the 8th International Olympiad on Astronomy and Astrophysics",
+      "date": "2014",
+      "awarder": "IOAA",
+      "url": "",
+      "summary": "Participated in the 8th International Olympiad on Astronomy and Astrophysics."
     }
   ],
   "certificates": [
@@ -89,41 +141,6 @@
       "issuer": "Stanford University",
       "url": "https://example.com",
       "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
     }
   ],
   "skills": [
@@ -205,53 +222,6 @@
       "url": "https://www.universiteitleiden.nl/en/staffmembers/thomas-moerland#tab-1",
       "email": "t.m.moerland@liacs.leidenuniv.nl",
       "phone": "+31 715274799"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
-    },
-
-    {
-      "name": "M.Sc. Thesis Project: Applying a cross-power model for power suppression in FLAMINGO",
-      "summary": "",
-      "highlights": "",
-      "supervisor": "Dr. Marcel van Daalen",
-      "startDate": "SEP 2023",
-      "endDate": "JUN 2024",
-      "url": ""
-    },
-    {
-      "name": "Reinforcement learning for adaptive optics and exoplanet imaging",
-      "summary": "",
-      "highlights": "",
-      "supervisor": "Dr. Rico Landman, Dr. Thomas Moerland, Dr. Aske Plaat",
-      "startDate": "OCT 2023",
-      "endDate": "FEB 2024",
-      "url": ""
-    },
-    {
-      "name": "M.Sc. Thesis Project: Finding the best exoplanets to search for exomoons by radial velocity",
-      "summary": "",
-      "highlights": "",
-      "supervisor": "Dr. Matthew Kenworthy",
-      "startDate": "FEB 2022",
-      "endDate": "DEC 2022",
-      "url": ""
-    },
-    {
-      "name": "B.Sc. Thesis Project: Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission",
-      "summary": "",
-      "highlights": "",
-      "supervisor": "Dr. Nikolaos Stergioulas",
-      "startDate": "SEP 2019",
-      "endDate": "SEP 2020",
-      "url": ""
     }
   ]
 }
