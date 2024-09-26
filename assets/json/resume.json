@@ -24,15 +24,6 @@
   },
   "education": [
     {
-      "institution": "Leiden University",
-      "location": "Leiden, The Netherlands",
-      "url": "https://www.universiteitleiden.nl/en",
-      "area": "Astronomy and Data Science",
-      "studyType": "Master",
-      "startDate": "FEB 2022",
-      "endDate": "SEP 2024"
-    },
-    {
       "institution": "Aristotle University of Thessaloniki",
       "location": "Thessaloniki, Greece",
       "url": "https://www.auth.gr/en",
@@ -40,6 +31,15 @@
       "studyType": "Bachelor",
       "startDate": "SEP 2015",
       "endDate": "NOV 2020"
+    },
+    {
+      "institution": "Leiden University",
+      "location": "Leiden, The Netherlands",
+      "url": "https://www.universiteitleiden.nl/en",
+      "area": "Astronomy and Data Science",
+      "studyType": "Master",
+      "startDate": "FEB 2022",
+      "endDate": "SEP 2024"
     }
   ],
   "publications": [
@@ -48,6 +48,32 @@
       "publisher": "Physical Review D",
       "releaseDate": "2024-09-05",
       "url": "https://ui.adsabs.harvard.edu/abs/2024PhRvD.110f3008P"
+    }
+  ],
+  "research": [
+    {
+      "name": "M.Sc. Thesis Project: Applying a cross-power model for power suppression in FLAMINGO",
+      "supervisor": "Dr. Marcel van Daalen",
+      "startDate": "SEP 2023",
+      "endDate": "JUN 2024"
+    },
+    {
+      "name": "Reinforcement learning for adaptive optics and exoplanet imaging",
+      "supervisor": "Dr. Rico Landman, Dr. Thomas Moerland, Dr. Aske Plaat",
+      "startDate": "OCT 2023",
+      "endDate": "FEB 2024"
+    },
+    {
+      "name": "M.Sc. Thesis Project: Finding the best exoplanets to search for exomoons by radial velocity",
+      "supervisor": "Dr. Matthew Kenworthy",
+      "startDate": "FEB 2022",
+      "endDate": "DEC 2022"
+    },
+    {
+      "name": "B.Sc. Thesis Project: Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission",
+      "supervisor": "Dr. Nikolaos Stergioulas",
+      "startDate": "SEP 2019",
+      "endDate": "SEP 2020"
     }
   ],
   "work": [
