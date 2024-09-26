@@ -205,14 +205,32 @@
   ],
   "references": [
     {
-      "name": "Professor John Doe",
+      "name": "Professor Nikolaos Stergioulas",
       "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "url": "https://www.astro.auth.gr/n/?p=members&u=4",
+      "email": "niksterg@auth.gr",
+      "phone": "+30 2310998233"
     },
     {
-      "name": "Professor John Doe",
+      "name": "Professor Marcel van Daalen",
       "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "url": "https://www.universiteitleiden.nl/en/staffmembers/marcel-van-daalen#tab-1",
+      "email": "daalen@strw.leidenuniv.nl",
+      "phone": "+31 715275812"
+    },
+    {
+      "name": "Professor Matthew Kenworthy",
+      "icon": "fa-solid fa-graduation-cap",
+      "url": "https://www.universiteitleiden.nl/en/staffmembers/matthew-kenworthy#tab-1",
+      "email": "kenworthy@strw.leidenuniv.nl",
+      "phone": "+31 715278455"
+    },
+    {
+      "name": "Professor Thomas Moerland",
+      "icon": "fa-solid fa-envelope",
+      "url": "https://www.universiteitleiden.nl/en/staffmembers/thomas-moerland#tab-1",
+      "email": "t.m.moerland@liacs.leidenuniv.nl",
+      "phone": "+31 715274799"
     }
   ],
   "projects": [
