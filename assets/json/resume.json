@@ -57,8 +57,8 @@
       "highlights": "",
       "supervisor": "Dr. Marcel van Daalen",
       "startDate": "SEP 2023",
-      "endDate": "JUN 2024",
-      "url": ""
+      "endDate": "JUN 2024"
+      // "url": ""
     },
     {
       "name": "Reinforcement learning for adaptive optics and exoplanet imaging",
@@ -66,8 +66,8 @@
       "highlights": "",
       "supervisor": "Dr. Rico Landman, Dr. Thomas Moerland, Dr. Aske Plaat",
       "startDate": "OCT 2023",
-      "endDate": "FEB 2024",
-      "url": ""
+      "endDate": "FEB 2024"
+      // "url": ""
     },
     {
       "name": "M.Sc. Thesis Project: Finding the best exoplanets to search for exomoons by radial velocity",
@@ -75,8 +75,8 @@
       "highlights": "",
       "supervisor": "Dr. Matthew Kenworthy",
       "startDate": "FEB 2022",
-      "endDate": "DEC 2022",
-      "url": ""
+      "endDate": "DEC 2022"
+      // "url": ""
     },
     {
       "name": "B.Sc. Thesis Project: Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission",
@@ -84,15 +84,15 @@
       "highlights": "",
       "supervisor": "Dr. Nikolaos Stergioulas",
       "startDate": "SEP 2019",
-      "endDate": "SEP 2020",
-      "url": ""
+      "endDate": "SEP 2020"
+      // "url": ""
     }
   ],
   "work": [
     {
       "name": "Leiden University",
       "position": "Teaching Assistant for the course 'Reinforcement Learning' (M.Sc.)",
-      "url": "",
+      // "url": "",
       "startDate": "FEB 2024",
       "endDate": "JUN 2024",
       "summary": "Teaching Assistant for the Master level course 'Reinforcement Learning' at the Computer Science department of Leiden University.",
@@ -101,7 +101,7 @@
     {
       "name": "Leiden University",
       "position": "Teaching Assistant for the course 'Science and the Public' (M.Sc.)",
-      "url": "",
+      // "url": "",
       "startDate": "FEB 2023",
       "endDate": "JUN 2024",
       "summary": "Teaching Assistant for the Master level course 'Science and the Public' at the Astronomy department of Leiden University. for two academic years (spring semester 2023 and 2024).",
@@ -110,7 +110,7 @@
     {
       "name": "Leiden University",
       "position": "Teaching Assistant for the course 'Astronomy Lab and Observing Project' (B.Sc.)",
-      "url": "",
+      // "url": "",
       "startDate": "FEB 2024",
       "endDate": "JUN 2024",
       "summary": "Teaching Assistant for the Bachelor level course 'Astronomy Lab and Observing Project' at the Astronomy department of Leiden University. As a TA, I was responsible for the supervision of the students during the observations at the Isaac Newton Telescope in La Palma, Spain.",
@@ -119,7 +119,7 @@
     {
       "name": "Self-employed",
       "position": "Private Tutor in Physics, Mathematics and Chemistry",
-      "url": "",
+      // "url": "",
       "startDate": "SEP 2018",
       "endDate": "JUN 2024",
       "summary": "Private tutor in Physics, Mathematics and Chemistry for high school and undergraduate students. I have been teaching students for the high school exams in Greece and university students from many different departments for their exams.",
@@ -128,7 +128,7 @@
     {
       "name": "Greek Team for the International Olympiad on Astronomy and Astrophysics",
       "position": "Instructor for the preparation of the Greek Team for the International Olympiad on Astronomy and Astrophysics",
-      "url": "",
+      // "url": "",
       "startDate": "JUN 2015",
       "endDate": "AUG 2023",
       "summary": "I have been teaching the students the theoretical and practical aspects of Astronomy and Astrophysics, as well as the necessary skills for the competition. The preparation includes lectures, exercises, and exams and takes place during the summer months.",
@@ -137,7 +137,7 @@
     {
       "name": "Aristotle University of Thessaloniki",
       "position": "Grading Assistant for the course 'Astronomy and Astrophysics' (B.Sc.)",
-      "url": "",
+      // "url": "",
       "startDate": "FEB 2018",
       "endDate": "JUN 2020",
       "summary": "Grading Assistant for the Bachelor level course 'Astronomy and Astrophysics' at the Physics department of Aristotle University of Thessaloniki. I was responsible for the grading of the students' homework and exercises.",
@@ -149,7 +149,7 @@
       "organization": "Aristotle University of Thessaloniki",
       "location": "Thessaloniki, Greece",
       "position": "Public Outreach Guide at the Astronomical Observatory of the University",
-      "url": "",
+      // "url": "",
       "startDate": "FEB 2018",
       "endDate": "JUN 2021",
       "summary": "As a public outreach guide, I was responsible for the organization and execution of the public events at the Astronomical Observatory of the University. The events include public observations, lectures, workshops and school visits.",
@@ -161,21 +161,21 @@
       "title": "Scholarship from Cosmote for undergraduate studies",
       "date": "2015 to 2019",
       "awarder": "Cosmote",
-      "url": "",
+      // "url": "",
       "summary": "Awarded a scholarship for my undergraduate studies in Physics at Aristotle University of Thessaloniki."
     },
     {
       "title": "Honorable Mention in the 9th International Olympiad on Astronomy and Astrophysics",
       "date": "2015",
       "awarder": "IOAA",
-      "url": "",
+      // "url": "",
       "summary": "Awarded an Honorable Mention in the 9th International Olympiad on Astronomy and Astrophysics."
     },
     {
       "title": "Participation in the 8th International Olympiad on Astronomy and Astrophysics",
       "date": "2014",
       "awarder": "IOAA",
-      "url": "",
+      // "url": "",
       "summary": "Participated in the 8th International Olympiad on Astronomy and Astrophysics."
     }
   ],
