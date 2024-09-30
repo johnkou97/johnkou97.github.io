@@ -388,7 +388,7 @@
         "date": "15-17 MAY 2023",
         "location": "Leeuwarden, The Netherlands",
         "url": "https://indico.astron.nl/event/309/",
-        "summary": "",
+        "institution": "ASTRON",
         "highlights": "" // []
       },
       {
@@ -396,7 +396,7 @@
         "date": "26-28 MAY 2020, 10-14 MAY 2021, 23-25 MAY 2022, 15-17 MAY 2023, 18-20 APR 2024",
         "location": "Virtual",
         "url": "https://gwosc.org/workshops/",
-        "summary": "",
+        "institution": "LIGO Scientific Collaboration",
         "highlights": "" // []
       },
       {
@@ -404,7 +404,7 @@
         "date": "9-13 MAR 2020",
         "location": "Valetta, Malta",
         "url": "https://indico.ego-gw.it/event/46/",
-        "summary": "",
+        "institution": "University of Malta",
         "highlights": "" // []
       },
       {
@@ -412,7 +412,7 @@
         "date": "13-15 NOV 2019",
         "location": "Tuebingen, Germany",
         "url": "https://www.tat.physik.uni-tuebingen.de/~kokkotas/WORKSHOP_2019/Main.html",
-        "summary": "",
+        "institution": "Eberhard Karls University of Tuebingen",
         "highlights": "" // []
       },
       {
@@ -420,7 +420,7 @@
         "date": "8-11 JUL 2019",
         "location": "Volos, Greece",
         "url": "",
-        "summary": "",
+        "institution": "Hellenic Astronomical Society",
         "highlights": "" // []
       },
       {
@@ -428,7 +428,7 @@
         "date": "8-12 OCT 2018",
         "location": "Thessaloniki, Greece",
         "url": "https://www.astro.auth.gr/summer2018/",
-        "summary": "",
+        "institution": "Aristotle University of Thessaloniki",
         "highlights": "" // []
       },
       {
@@ -436,7 +436,7 @@
         "date": "15-18 SEP 2018",
         "location": "Thessaloniki, Greece",
         "url": "",
-        "summary": "",
+        "institution": "Hellenic Physical Society",
         "highlights": "" // []
       }
     ]
