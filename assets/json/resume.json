@@ -66,8 +66,8 @@
       "highlights": "",
       "supervisor": "Dr. Rico Landman, Dr. Thomas Moerland, Dr. Aske Plaat",
       "startDate": "OCT 2023",
-      "endDate": "FEB 2024"
-      // "url": ""
+      "endDate": "FEB 2024",
+      "url": "https://github.com/johnkou97/AdaptiveOptics"
     },
     {
       "name": "M.Sc. Thesis Project: Finding the best exoplanets to search for exomoons by radial velocity",
@@ -181,8 +181,8 @@
   ],
   "skills": [
     {
-      "name": "Languages, Frameworks and Tools",
-      "level": "Expert",
+      "name": "Languages, Frameworks and Tools (Expert)",
+      "level": "",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
         "Python",
@@ -194,8 +194,8 @@
       ]
     },
     {
-      "name": "Languages, Frameworks and Tools",
-      "level": "Intermediate",
+      "name": "Languages, Frameworks and Tools (Intermediate)",
+      "level": "",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
         "SQL",
