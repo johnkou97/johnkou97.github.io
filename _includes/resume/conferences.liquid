@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
           {% if content.date %}
-            {% assign date = content.date | split: '-' | join: '.' %}
+            {% assign date = content.date %}
             {% assign date_parts = date | split: ',' %}
           {% else %}
             {% assign date = '' %}

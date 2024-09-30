@@ -385,7 +385,7 @@
   "conferences": [
       {
         "name": "78th Dutch Astronomers' Conference",
-        "date": "15-17 May 2023",
+        "date": "15-17 MAY 2023",
         "location": "Leeuwarden, The Netherlands",
         "url": "https://indico.astron.nl/event/309/",
         "summary": "",
@@ -393,7 +393,7 @@
       },
       {
         "name": "Gravitational-Wave Open Data Workshop",
-        "date": "May 2020, 2021, 2022, 2023, April 2024",
+        "date": "26-28 MAY 2020, 10-14 MAY 2021, 23-25 MAY 2022, 15-17 MAY 2023, 18-20 APR 2024",
         "location": "Virtual",
         "url": "https://gwosc.org/workshops/",
         "summary": "",
@@ -401,7 +401,7 @@
       },
       {
         "name": "2nd g2net Training School",
-        "date": "9-13 March 2020",
+        "date": "9-13 MAR 2020",
         "location": "Valetta, Malta",
         "url": "https://indico.ego-gw.it/event/46/",
         "summary": "",
@@ -409,7 +409,7 @@
       },
       {
         "name": "School on Neutron Star Physics in the Era of Gravitational Waves Astronomy",
-        "date": "13-15 November 2019",
+        "date": "13-15 NOV 2019",
         "location": "Tuebingen, Germany",
         "url": "https://www.tat.physik.uni-tuebingen.de/~kokkotas/WORKSHOP_2019/Main.html",
         "summary": "",
@@ -417,7 +417,7 @@
       },
       {
         "name": "14th Hellenic Astronomical Conference",
-        "date": "8-11 July 2019",
+        "date": "8-11 JUL 2019",
         "location": "Volos, Greece",
         "url": "",
         "summary": "",
@@ -425,7 +425,7 @@
       },
       {
         "name": "3rd HEL.A.S. Summer School and DAAD School on Neutron Stars and Gravitational Waves",
-        "date": "8-12 October 2018",
+        "date": "8-12 OCT 2018",
         "location": "Thessaloniki, Greece",
         "url": "https://www.astro.auth.gr/summer2018/",
         "summary": "",
@@ -433,7 +433,7 @@
       },
       {
         "name": "17th Conference of the Hellenic Physical Society",
-        "date": "15-18 September 2018",
+        "date": "15-18 SEP 2018",
         "location": "Thessaloniki, Greece",
         "url": "",
         "summary": "",
