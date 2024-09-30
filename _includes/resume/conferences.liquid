@@ -10,6 +10,11 @@
             {% assign date = '' %}
             {% assign date_parts = '' %}
           {% endif %}
+          <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
+            {% for part in date_parts %}
+              {{ part }}<br/>
+            {% endfor %}
+          </span>
           <table class="table-cv">
             <tbody>
               <tr>
