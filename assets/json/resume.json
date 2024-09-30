@@ -381,7 +381,21 @@
       "email": "t.m.moerland@liacs.leidenuniv.nl",
       "phone": "+31 715274799"
     }
-  ]
+  ],
+  "conferences": [
+      {
+        "name": "International Conference on AI",
+        "date": "2022-05",
+        "location": "New York, USA",
+        "url": "https://example.com/conference",
+        "summary": "Presented a paper on AI ethics and regulations.",
+        "highlights": [
+          "Keynote speech by Dr. John Doe",
+          "Panel discussion on AI and society"
+        ]
+      }
+    ]
+  
   // "certificates": [
   //   {
   //     "name": "Machine Learning",
