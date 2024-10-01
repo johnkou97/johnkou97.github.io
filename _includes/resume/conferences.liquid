@@ -42,6 +42,9 @@
             {% endif %}
           </h6>
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem;">{{ content.institution }}</h6>
+          {% if content.summary %}
+            <p class="ml-1 ml-md-4" style="font-size: 0.85rem;">{{ content.summary }}</p>
+          {% endif %}
           <ul class="items">
             {% for item in content.highlights %}
               <li>

@@ -88,6 +88,79 @@
       // "url": ""
     }
   ],
+  "conferences": [
+      {
+        "name": "79th Dutch Astronomers' Conference",
+        "date": "13-15 MAY 2024",
+        "location": "Egmond aan Zee -- The Netherlands",
+        "url": "https://www.knvws.nl/actueel/nederlandse-astronomenconferentie-2024-13-15-mei/",
+        "institution": "Anton Pannekoek Institute for Astronomy",
+        "summary": "Poster presentation of the M.Sc. Thesis Project: Applying a cross-power model for power suppression in FLAMINGO.",
+        "highlights": "" // []
+      },
+      {
+        "name": "78th Dutch Astronomers' Conference",
+        "date": "15-17 MAY 2023",
+        "location": "Leeuwarden -- The Netherlands",
+        "url": "https://indico.astron.nl/event/309/",
+        "institution": "ASTRON",
+        "summary": "",
+        "highlights": "" // []
+      },
+      {
+        "name": "Gravitational-Wave Open Data Workshop",
+        "date": "26-28 MAY 2020, 10-14 MAY 2021, 23-25 MAY 2022, 15-17 MAY 2023, 18-20 APR 2024",
+        "location": "Virtual",
+        "url": "https://gwosc.org/workshops/",
+        "institution": "LIGO Scientific Collaboration",
+        "summary": "",
+        "highlights": "" // []
+      },
+      {
+        "name": "2nd g2net Training School",
+        "date": "9-13 MAR 2020",
+        "location": "Valetta, Malta",
+        "url": "https://indico.ego-gw.it/event/46/",
+        "institution": "University of Malta",
+        "summary": "",
+        "highlights": "" // []
+      },
+      {
+        "name": "School on Neutron Star Physics in the Era of Gravitational Waves Astronomy",
+        "date": "13-15 NOV 2019",
+        "location": "Tuebingen -- Germany",
+        "url": "https://www.tat.physik.uni-tuebingen.de/~kokkotas/WORKSHOP_2019/Main.html",
+        "institution": "Eberhard Karls University of Tuebingen",
+        "summary": "",
+        "highlights": "" // []
+      },
+      {
+        "name": "14th Hellenic Astronomical Conference",
+        "date": "8-11 JUL 2019",
+        "location": "Volos, Greece",
+        "url": "",
+        "institution": "Hellenic Astronomical Society",
+        "highlights": "" // []
+      },
+      {
+        "name": "3rd HEL.A.S. Summer School and DAAD School on Neutron Stars and Gravitational Waves",
+        "date": "8-12 OCT 2018",
+        "location": "Thessaloniki -- Greece",
+        "url": "https://www.astro.auth.gr/summer2018/",
+        "institution": "Aristotle University of Thessaloniki",
+        "summary": "",
+        "highlights": "" // []
+      },
+      {
+        "name": "17th Conference of the Hellenic Physical Society",
+        "date": "15-18 SEP 2018",
+        "location": "Thessaloniki -- Greece",
+        "url": "",
+        "institution": "Hellenic Physical Society",
+        "summary": "",
+        "highlights": "" // []
+      }
+    ],
   "work": [
     {
       "name": "Leiden University",
@@ -381,73 +454,7 @@
       "email": "t.m.moerland@liacs.leidenuniv.nl",
       "phone": "+31 715274799"
     }
-  ],
-  "conferences": [
-      {
-        "name": "79th Dutch Astronomers' Conference",
-        "date": "13-15 MAY 2024",
-        "location": "Egmond aan Zee -- The Netherlands",
-        "url": "https://www.knvws.nl/actueel/nederlandse-astronomenconferentie-2024-13-15-mei/",
-        "institution": "Anton Pannekoek Institute for Astronomy",
-        "highlights": "" // []
-      },
-      {
-        "name": "78th Dutch Astronomers' Conference",
-        "date": "15-17 MAY 2023",
-        "location": "Leeuwarden -- The Netherlands",
-        "url": "https://indico.astron.nl/event/309/",
-        "institution": "ASTRON",
-        "highlights": "" // []
-      },
-      {
-        "name": "Gravitational-Wave Open Data Workshop",
-        "date": "26-28 MAY 2020, 10-14 MAY 2021, 23-25 MAY 2022, 15-17 MAY 2023, 18-20 APR 2024",
-        "location": "Virtual",
-        "url": "https://gwosc.org/workshops/",
-        "institution": "LIGO Scientific Collaboration",
-        "highlights": "" // []
-      },
-      {
-        "name": "2nd g2net Training School",
-        "date": "9-13 MAR 2020",
-        "location": "Valetta, Malta",
-        "url": "https://indico.ego-gw.it/event/46/",
-        "institution": "University of Malta",
-        "highlights": "" // []
-      },
-      {
-        "name": "School on Neutron Star Physics in the Era of Gravitational Waves Astronomy",
-        "date": "13-15 NOV 2019",
-        "location": "Tuebingen -- Germany",
-        "url": "https://www.tat.physik.uni-tuebingen.de/~kokkotas/WORKSHOP_2019/Main.html",
-        "institution": "Eberhard Karls University of Tuebingen",
-        "highlights": "" // []
-      },
-      {
-        "name": "14th Hellenic Astronomical Conference",
-        "date": "8-11 JUL 2019",
-        "location": "Volos, Greece",
-        "url": "",
-        "institution": "Hellenic Astronomical Society",
-        "highlights": "" // []
-      },
-      {
-        "name": "3rd HEL.A.S. Summer School and DAAD School on Neutron Stars and Gravitational Waves",
-        "date": "8-12 OCT 2018",
-        "location": "Thessaloniki -- Greece",
-        "url": "https://www.astro.auth.gr/summer2018/",
-        "institution": "Aristotle University of Thessaloniki",
-        "highlights": "" // []
-      },
-      {
-        "name": "17th Conference of the Hellenic Physical Society",
-        "date": "15-18 SEP 2018",
-        "location": "Thessaloniki -- Greece",
-        "url": "",
-        "institution": "Hellenic Physical Society",
-        "highlights": "" // []
-      }
-    ]
+  ]
   
   // "certificates": [
   //   {
