@@ -1,11 +1,13 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
+title: Reinforcement Learning for adaptive optics and exoplanet imaging
+description: # add a description of your project
 img: assets/img/7.jpg
-redirect: https://unsplash.com
 importance: 3
-category: work
+category: research
+related_publications: false
+giscus_comments: false
+redirect: https://unsplash.com
 ---
 
 Every project has a beautiful feature showcase page.

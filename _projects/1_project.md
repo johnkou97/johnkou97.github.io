@@ -1,11 +1,13 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: Applying a cross-power model for power suppression in FLAMINGO
+description: # add a description of your project
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: research
 related_publications: true
+giscus_comments: false
+redirect:
 ---
 
 Every project has a beautiful feature showcase page.

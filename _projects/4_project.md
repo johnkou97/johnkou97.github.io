@@ -1,10 +1,13 @@
 ---
 layout: page
-title: project 4
-description: another without an image
+title: Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission
+description: # add a description of your project
 img:
-importance: 3
-category: fun
+importance: 4
+category: research
+related_publications: false
+giscus_comments: false
+redirect:
 ---
 
 Every project has a beautiful feature showcase page.

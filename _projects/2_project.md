@@ -1,11 +1,13 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
+title: Finding the best exoplanets to search for exomoons by radial velocity
+description: # add a description of your project
 img: assets/img/3.jpg
 importance: 2
-category: work
+category: research
+related_publications: false
 giscus_comments: true
+redirect:
 ---
 
 Every project has a beautiful feature showcase page.
