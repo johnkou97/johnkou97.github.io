@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Some of the projects I have worked on. The projects are categorized into research, course and personal projects. You can find more information about each project by clicking on the cards below.
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [research, course, personal]
 horizontal: false
 ---
 
