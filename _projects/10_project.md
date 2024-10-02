@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Kaggle Challenges
-description: collection of Kaggle challenges I have participated in.
-img: assets/img/6.jpg
-importance: 1
+title: Gravitational Wave Hackathon
+description: g2net hackathon in Malta (2020) and Thessaloniki (2023)
+img: 
+importance: 2
 category: personal
 related_publications: false
 giscus_comments: false
