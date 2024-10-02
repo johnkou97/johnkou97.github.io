@@ -1,11 +1,13 @@
 ---
 layout: page
-title: project 8
-description: an other project with a background image and giscus comments
+title: Other Astronomical Projects
+description: projects from various astronomical, astrophysical, and mathematical courses
 img: assets/img/9.jpg
-importance: 2
-category: work
-giscus_comments: true
+importance: 4
+category: course
+related_publications: false
+giscus_comments: false
+redirect:
 ---
 
 Every project has a beautiful feature showcase page.

@@ -1,10 +1,13 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
+title: Deep Learning
+description: projects from the course 'Deep Learning' at Leiden University
 img:
-importance: 4
-category: fun
+importance: 2
+category: course
+related_publications: false
+giscus_comments: false
+redirect:
 ---
 
 Every project has a beautiful feature showcase page.

@@ -1,10 +1,13 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
+title: Reinforcement Learning
+description: projects from the course 'Reinforcement Learning' at Leiden University
 img: assets/img/1.jpg
-importance: 3
-category: fun
+importance: 1
+category: course
+related_publications: false
+giscus_comments: false
+redirect:
 ---
 
 Every project has a beautiful feature showcase page.
