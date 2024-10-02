@@ -2,7 +2,7 @@
 layout: page
 title: Kaggle Challenges
 description: collection of Kaggle challenges I have participated in.
-img: assets/img/6.jpg
+img: assets/img/tree.jpg  # Photo by <a href="https://unsplash.com/@sallybrad2016?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Preethi Viswanathan</a> on <a href="https://unsplash.com/photos/brown-tree-branch-covered-with-white-snow-h5fsy4E4FMY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 importance: 1
 category: personal
 related_publications: false

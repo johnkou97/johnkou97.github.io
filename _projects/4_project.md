@@ -2,7 +2,7 @@
 layout: page
 title: Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission
 description: # add a description of your project
-img:
+img: /assets/img/spectral.png 
 importance: 4
 category: research
 related_publications: false

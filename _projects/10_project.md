@@ -2,7 +2,7 @@
 layout: page
 title: Gravitational Wave Hackathon
 description: g2net hackathon in Malta (2020) and Thessaloniki (2023)
-img: 
+img: assets/img/gravitational.jpg # image taken from www.ligo.caltech.edu/video/gravitational-waves
 importance: 2
 category: personal
 related_publications: false
