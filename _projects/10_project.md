@@ -47,6 +47,7 @@ The results of the challenge were evaluated based on the accuracy of the predict
 | F1-score         | 79.5% |
 | Balanced accuracy| 79.6% |
 
+
 For better understanding of the results, the confusion matrix is shown below:
 
 <div class="row">
@@ -61,13 +62,6 @@ For better understanding of the results, the confusion matrix is shown below:
 Overall, the hackathon in Malta was a great experience and I learned a lot about the field of gravitational waves and machine learning. It was one of my first experiences with deep learning and looking back (especially on the code), I see how much I have learned since then. For the full code of the project and instructions on how to run it, please visit the [GitHub repository](https://github.com/johnkou97/g2net_malta_hackaton/) of the project.
 
 ## Thessaloniki 2023
-
-<!-- In this competition, you will be given a training set of real noise segments of the Hanford detector during the O3 run, in which gravitational wave models were injected at different signal-to-noise ratios (SNR). Your task is to classify each segment into one of three categories: 1) 0<=SNR<6 2) 6 <=SNR <10 and 3) SNR >= 10.
-
-The injections correspond to binary black hole mergers with non-aligned spins, having masses between 7 and 50 times the solar mass, randomly distributed at different sky localizations and inclinations and in a distance ranges that results in signal to noise ratios up to about 50.
-
-Evaluation
-The description of the evaluation is as follows (TBD). ## Submission Format The submission file should in csv format and contain a three columns, one for each class, in which the probability that an injection belongs to each class is recorder (from 0 to 1). -->
 
 The hackathon in Thessaloniki was a great opportunity to participate in a similar challenge and learn more about the field of gravitational waves and machine learning. The challenge was to classify noise segments of the Hanford detector during the O3 run into one of three categories based on the signal-to-noise ratio (SNR). The full dataset is available on [Kaggle](https://www.kaggle.com/competitions/g2net-hackathon)
 
@@ -86,7 +80,7 @@ For the model, I used a convolutional neural network (CNN) with `Optuna` for hyp
         {% include figure.liquid loading="eager" path="assets/img/personal/parallel_coordinate_plot.png" title="parallel coordinate plot" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/personal/parameter_importance.png" title="parameter importance" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/personal/parameter_importances.png" title="parameter importance" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -100,6 +94,7 @@ The results of the challenge were evaluated based on the accuracy of the predict
 | Training   | 87.53%   |
 | Validation | 82.35%   |
 | Test       | 83.91%   |
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
