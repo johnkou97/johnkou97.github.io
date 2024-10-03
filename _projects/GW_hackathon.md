@@ -109,4 +109,4 @@ I believe that the hackathon in Thessaloniki has shown to me how much I have lea
 
 <!-- put note for the header image -->
 
-Header image taken from [LIGO Caltech](https://www.ligo.caltech.edu/video/gravitational-waves) website.
+[Header image taken from [LIGO Caltech](https://www.ligo.caltech.edu/video/gravitational-waves) website.]
