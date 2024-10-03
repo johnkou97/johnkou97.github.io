@@ -10,11 +10,62 @@ giscus_comments: false
 redirect:
 ---
 
-# Gravitational Wave Hackathon
-
 I have had the pleasure to participate in two hackathons related to gravitational waves as part of the workshops organized by the [network for Gravitational Waves, Geophysics and Machine Learning (G2Net)](https://www.g2net.eu/). The first one was in Malta in 2020 where I participated in person and the second one was in Thessaloniki in 2023 where I participated remotely. The hackathons were a great opportunity to learn more about the field of gravitational waves and machine learning, and to meet other researchers in the field.
 
 ## Malta 2020
 
-The data used for the challenge contains earthquake from all over the world, together with noise (non-earthquake ambient noise). Earthquakes are very similar to gravitational waves, and in this context, have no meaningful difference. The goal of this challenge is to correctly classify an unknown set of data using any model that was trained on a provided dataset where the correct labels are provided.
+### Data
+
+The data used for the challenge contains earthquake from all over the world, together with noise (non-earthquake ambient noise). Earthquakes are very similar to gravitational waves, and in this context, have no meaningful difference. The goal of this challenge is to correctly classify an unknown set of data using any model that was trained on a provided dataset where the correct labels are provided. The full dataset is available on [Kaggle](https://www.kaggle.com/datasets/zerafachris/g2net-training-school-hackaton)
+
+For each element in the dataset, the following information is provided:
+- `trace_id`: the unique identifier of the trace
+- `receiver_latitude`: the latitude of the receiver
+- `receiver_longitude`: the longitude of the receiver
+- `receiver_elevation_m`: the elevation of the receiver
+- `p_arrival_sample`: the sample of the P arrival
+- `p_travel_sec`: the travel time of the P arrival
+- `s_arrival_sample`: the sample of the S arrival
+- `source_origin_time`: the origin time of the source
+- `source_latitude`: the latitude of the source
+- `source_longitude`: the longitude of the source
+- `source_depth_km`: the depth of the source
+- `snr_db_E`: the signal-to-noise ratio of the E component
+- `snr_db_N`: the signal-to-noise ratio of the N component
+- `snr_db_Z`: the signal-to-noise ratio of the Z component
+- `E`: the E component (6000 samples)
+- `N`: the N component (6000 samples)
+- `Z`: the Z component (6000 samples)
+
+Each element is labeled as one of the following classes:
+- `0`: Noise
+- `1`: Near_Small
+- `2`: Near_Medium
+- `3`: Near_Large
+- `4`: Far_Small
+- `5`: Far_Medium
+- `6`: Far_Large
+
+### Models
+
+I used two different approaches to classify the data: an ensemble method and a convolutional neural network (CNN). The ensemble method is based on the AdaBoost algorithm, which combines multiple weak classifiers to create a strong classifier. The CNN is a deep learning model that is able to learn features from the data and classify it accordingly.
+
+For the optimization of the CNN model, I used the `Optuna` library to search for the best hyperparameters. The hyperparameters that were optimized include the learning rate, dropout rate, regularization rate, and the batch size.
+
+### Training
+
+For the CNN model, I used 50 epochs with early stopping based on the validation loss. The model was trained on the training data and validated on the validation data. 
+
+### Results
+
+The results of the challenge were evaluated based on the accuracy of the predictions. The CNN model greatly outperformed the AdaBoost model, which was not able to achieve a high accuracy. The results of the CNN model are shown in the table below:
+
+| Metric           | Score |
+|------------------|-------|
+| Precision        | 79.5% |
+| Recall           | 79.6% |
+| F1-score         | 79.5% |
+| Balanced accuracy| 79.6% |
+
+## Thessaloniki 2023
 
