@@ -80,13 +80,13 @@ For the model, I used a convolutional neural network (CNN) with `Optuna` for hyp
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/optimization_history.png" title="optimization history" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/personal/optimization_history.png" title="optimization history" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/parallel_coordinate_plot.png" title="parallel coordinate plot" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/personal/parallel_coordinate_plot.png" title="parallel coordinate plot" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/parameter_importance.png" title="parameter importance" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/personal/parameter_importance.png" title="parameter importance" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
