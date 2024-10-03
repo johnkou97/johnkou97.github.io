@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Finding the best exoplanets to search for exomoons by radial velocity
-description: # add a description of your project
+description: Master's thesis research project (1st year)
 img: assets/img/saturn.jpg # image taken from https://images.nasa.gov/details/PIA14922
 importance: 2
 category: research

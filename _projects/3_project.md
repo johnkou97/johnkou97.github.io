@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Reinforcement Learning for adaptive optics and exoplanet imaging
-description: # add a description of your project
+description: research project on Advanced Reinforcement Learning
 img: assets/img/optics.gif
 importance: 3
 category: research

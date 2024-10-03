@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission
-description: # add a description of your project
+description: Bachelor's thesis research project
 img: /assets/img/spectral.png 
 importance: 4
 category: research
