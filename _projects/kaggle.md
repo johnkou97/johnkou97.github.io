@@ -69,12 +69,15 @@ The training dataset contains the information for 8693 passengers, and the test 
 For this challenge, I wanted to test many different models from the `scikit-learn` library and compare their performance. I also created a visualization notebook to get some useful insights from the data. 
 
 <div class="row">
-  <div class="column">
+  <div class="col-sm mt-3 mt-md-0">
     <img src="/assets/img/personal/age_distribution.png" alt="Age distribution" style="width:100%">
   </div>
-  <div class="column">
+  <div class="col-sm mt-3 mt-md-0">
     <img src="/assets/img/personal/age_by_transported.png" alt="Age by transported" style="width:100%">
     </div>
+</div>
+<div class="caption">
+  Two plots showing useful insights from the data for the Spaceship Titanic challenge. Left: Age distribution of the passengers. Right: Age distribution of the passengers by transported status (True or False).
 </div>
 
 The full list of models I tested is as follows:
@@ -96,17 +99,6 @@ For some of the models, I also played with the hyperparameters to see if I could
 
 
 In order to compare the performance of the models, I used the same preprocessing steps for all of them. I filled the missing values in the `Age` column with the median age, dropped the missing values, encoded the categorical variables, and scaled the numerical features. I also split the data into a training and a validation set (75% training, 25% validation). 
-
-<!-- The best result was achieved by the AdaBoost followed by the Gradient Boosting classifier.
-
-The top 5 models are as follows:
-
-Model	Accuracy
-AdaBoost	0.79541
-Gradient Boosting	0.79237
-Bagging	0.79191
-SVM	0.79074
-Voting	0.79074 -->
 
 The performance of the models was evaluated based on the accuracy of the predictions, as given by the Kaggle platform. The 5 models with the best performance are shown in the table below:
 
