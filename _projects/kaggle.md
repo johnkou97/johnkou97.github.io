@@ -70,10 +70,10 @@ For this challenge, I wanted to test many different models from the `scikit-lear
 
 <div class="row">
   <div class="column">
-    <img src="/assets/img/spaceship_titanic/age_distribution.png" alt="Age distribution" style="width:100%">
+    <img src="/assets/img/personal/age_distribution.png" alt="Age distribution" style="width:100%">
   </div>
   <div class="column">
-    <img src="/assets/img/spaceship_titanic/age_by_transported.png" alt="Age by transported" style="width:100%">
+    <img src="/assets/img/personal/age_by_transported.png" alt="Age by transported" style="width:100%">
     </div>
 </div>
 
