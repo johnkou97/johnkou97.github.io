@@ -49,3 +49,73 @@ The scores are based on the accuracy of the predictions. The best score I achiev
 
 ## [Spaceship Titanic](https://www.kaggle.com/competitions/spaceship-titanic)
 
+The Spaceship Titanic challenge is a fictional challenge that takes place in the year 2912. The challenge is to predict which passengers were transported by a spacetime anomaly using records recovered from the spaceship's damaged computer system. The dataset contains the following information for each passenger:
+- PassengerId: a unique identifier for each passenger
+- HomePlanet: the home planet of the passenger
+- CryoSleep: the passenger was in cryosleep (yes or no)
+- Cabin: the cabin number
+- Destination: the destination of the passenger
+- Age: the age of the passenger
+- VIP: the passenger was a VIP (yes or no)
+- RoomService: the passenger used the room service
+- FoodCourt: the passenger used the food court
+- ShoppingMall: the passenger used the shopping mall
+- Spa: the passenger used the spa
+- VRDeck: the passenger used the VR deck
+- Name: the name of the passenger
+
+The training dataset contains the information for 8693 passengers, and the test dataset contains the information for 4277 passengers. The target variable is the `Transported` column, which indicates whether the passenger was transported by the spacetime anomaly (True or False).
+
+For this challenge, I wanted to test many different models from the `scikit-learn` library and compare their performance. I also created a visualization notebook to get some useful insights from the data. 
+
+<div class="row">
+  <div class="column">
+    <img src="/assets/img/spaceship_titanic/age_distribution.png" alt="Age distribution" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/assets/img/spaceship_titanic/age_by_transported.png" alt="Age by transported" style="width:100%">
+    </div>
+</div>
+
+The full list of models I tested is as follows:
+- AdaBoost 
+- Bagging
+- ExtraTrees
+- Gradient Boosting Machine (GBM)
+- K-Nearest Neighbors (KNN)
+- Logistic Regression
+- Naive Bayes
+- Neural Network
+- Random Forest
+- Support Vector Machine (SVM)
+- Stacking (GBM and Random Forest)
+- Decision Tree
+- Voting (Majority Voting)
+
+For some of the models, I also played with the hyperparameters to see if I could improve the performance. The voting model was created by combining the predictions of the Random Forest, GBM, AdaBoost, Bagging, Stacking, Neural Network, and SVM models. The majority voting was used to predict the final outcome.
+
+
+In order to compare the performance of the models, I used the same preprocessing steps for all of them. I filled the missing values in the `Age` column with the median age, dropped the missing values, encoded the categorical variables, and scaled the numerical features. I also split the data into a training and a validation set (75% training, 25% validation). 
+
+<!-- The best result was achieved by the AdaBoost followed by the Gradient Boosting classifier.
+
+The top 5 models are as follows:
+
+Model	Accuracy
+AdaBoost	0.79541
+Gradient Boosting	0.79237
+Bagging	0.79191
+SVM	0.79074
+Voting	0.79074 -->
+
+The performance of the models was evaluated based on the accuracy of the predictions, as given by the Kaggle platform. The 5 models with the best performance are shown in the table below:
+
+| Model | Accuracy |
+|-------|----------|
+| AdaBoost | 0.79541 |
+| Gradient Boosting | 0.79237 |
+| Bagging | 0.79191 |
+| SVM | 0.79074 |
+| Voting | 0.79074 |
+
+The best score I achieved was 0.79541 with the AdaBoost model. This score is on the top 40% of the leaderboard, which is not a great result, but it was a good exercise to test many different models from a single library and compare their performance. Also the data preprocessing was not very complex, so I could focus more on the models themselves. The code for this challenge, with instructions on how to run it, can be found in the [Spaceship Titanic](https://github.com/johnkou97/Spaceship-Titanic) repository.
