@@ -140,17 +140,13 @@ For the course "Stellar Structure and Evolution" at the Leiden Observatory, I co
 
 For the star evolution simulation, we used the MESA code {% cite 2011ApJS..192....3P 2013ApJS..208....4P 2015ApJS..220...15P 2018ApJS..234...34P 2019ApJS..243...10P 2023ApJS..265...15J --file external %}. For more information on the MESA code, please visit the documentation on the [MESA website](https://docs.mesastar.org/en/23.05.1/).
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/HR_1.0.png" title="Hertzsprung-Russell diagram for the 1 solar mass star" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/HR_2.0.png" title="Hertzsprung-Russell diagram for the 2 solar mass star" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Hertzsprung-Russell diagrams for the 1 solar mass star (left) and the 2 solar mass star (right) showing the evolution of the stars from the protostar phase to the white dwarf phase.
-</div>
+The evolution of the stars was studied by plotting the density as a function of the central temperature in a log-log plot. The different regions where each equation of state dominates were identified. We have four different equations of state: 
+\begin{equation}
+    P = \frac{\rho k T}{\mu m_H}, \mathrm{ideal \, gas}, \\
+    P = \frac{\rho k T}{\mu m_H} + aT^4, \mathrm{radiation}, \\
+    P = \frac{\rho k T}{\mu m_H} + \frac{aT^4}{3}, \mathrm{degenerate \, electron}, \\
+    P = \frac{\rho k T}{\mu m_H} + \frac{aT^4}{3} + \frac{B}{\rho}, \mathrm{degenerate \, electron \, and \, radiation},
+\end{equation}
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -161,7 +157,19 @@ For the star evolution simulation, we used the MESA code {% cite 2011ApJS..192..
     </div>
 </div>
 <div class="caption">
-    The evolution of the 1 solar mass star (left) and the 2 solar mass star (right) in a log-log plot of the luminosity and the effective temperature.
+    The evolution of the 1 solar mass star (left) and the 2 solar mass star (right) in a log-log plot of the density as a function of the central temperature. In the plot, we can see the different regions where each equation of state dominates. The different evolutionary stages of the star are plotted with different colors. The color of the points shows their age. The relative position of the Sun is also depicted.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/HR_1.0.png" title="Hertzsprung-Russell diagram for the 1 solar mass star" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/HR_2.0.png" title="Hertzsprung-Russell diagram for the 2 solar mass star" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Hertzsprung-Russell diagrams (log-log plots of the luminosity as a function of the effective temperature) for the 1 solar mass star (left) and the 2 solar mass star (right) showing the evolution of the stars from the protostar phase to the white dwarf phase. As above, the different evolutionary stages of the star are plotted with different colors. The color of the points shows their age. 
 </div>
 
 <div class="row">
@@ -173,8 +181,9 @@ For the star evolution simulation, we used the MESA code {% cite 2011ApJS..192..
     </div>
 </div>
 <div class="caption">
-    The gradients of the 1 solar mass star (left) and the 2 solar mass star (right) as a function of the radius of the star.
+    The gradients of the 1 solar mass star (left) and the 2 solar mass star (right) as a function of the radius of the star. Each plot contains two panels, one for the pre-main sequence phase and one for the main sequence phase. Each time we plot the adiabatic and the radiative gradients. When the adiabatic gradient is larger than the radiative gradient, the star is convective, which is shown by the grey area in the plot.
 </div>
+
 
 ## Exoplanets
 
