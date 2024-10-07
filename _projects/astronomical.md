@@ -304,7 +304,28 @@ The project started by creating a single planet with a mass of 30 Earth masses. 
 
 The next step was to add an artificial luminosity that would deposit some energy inside the planets. The result of this process was the inflation of the planets, which affected the initial entropy at the base of the gaseous envelope of each planet. The artificial luminosity that was implemented was $$L_{\text{center}} = 2 \times 10^{27} \, \text{erg/sec}$$. The final step was to see how the planets evolved. During the evolution, a new more realistic luminosity was set, $$L_{\text{center}} = 5M_{\text{core}} \times 10^{-8} \, \text{erg/sec}$$, where $$M_{\text{core}}$$ is in units of grams. The planets were allowed to evolve for a timescale of $$5 \times 10^9$$ years. 
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/M-t.png" title="Mass as a function of time" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/M-R.png" title="Mass as a function of radius" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: The radius of the planets as a function of time (right panel focuses more on the smaller radii). Right: The evolved exoplanets plotted in a mass-radius diagram with real exoplanets for comparison (on the left we have noted the real exoplanets that most closely resemble our models).
+</div>
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/gradients.png" title="Gradients as a function of radius" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/T-P.png" title="Temperature as a function of pressure" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: The gradients of the planets as a function of the radius of the planet. Right: The temperature as a function of the pressure in the planets. Each panel is for a different planet.
 
 ## Interstellar Medium
 
