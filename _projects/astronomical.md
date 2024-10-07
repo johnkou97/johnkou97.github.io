@@ -51,11 +51,11 @@ First we test the matched filtering algorithm on our own synthetic data. We crea
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/synthetic_data.png" title="Synthetic data" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div>
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/detection_synthetic_data.png" title="Detection of synthetic data" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div>
-        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/contour_synthetic_data.png" title="Contour plot of synthetic data" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/contour_plot_synthetic_data.png" title="Contour plot of synthetic data" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
