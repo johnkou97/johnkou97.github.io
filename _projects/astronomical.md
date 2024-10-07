@@ -195,6 +195,117 @@ This project was a great opportunity to learn about the physical processes that 
 
 As part of the course "Exo-planets" at the Leiden University, I completed a project on the evolution of low-mass planets with an envelope made mostly of hydrogen and helium. The project aimed to simulate the interiors and evolution of these planets and to study how irradiation from a central star affects their structure and evolution. The project followed previous work {% cite 2016ApJ...831..180C --file external %} and used the Modules for Experiments in Stellar Astrophysics (MESA) {% cite 2011ApJS..192....3P 2013ApJS..208....4P 2015ApJS..220...15P 2018ApJS..234...34P 2019ApJS..243...10P 2023ApJS..265...15J --file external %} code to simulate the evolution of the planets.
 
+<!-- Methods
+The way we work with the code starts by creating a single planet, which we then
+modify in order to give it the parameters we desire. In the first step we create a
+single planet with M = 30Mearth. This is our initial planet and it is coreless and
+also has no heavy elements, which means it only consists of a mix of H and He gas.
+In the next step we create a core for the planet. The core will have the same
+composition as that of the Earth which means that we can use the equation from
+[2]:
+R
+R⊕
+=
+
+M
+M⊕
+!0.27
+⇒ ρ = ρ⊕
+
+M
+M⊕
+!0.19
+(1)
+We want to create 5 different planets with different mass cores. We can see all
+the different values with the calculated density in the Table 1.
+Core Mass density (gr/cm3
+)
+3M⊕ 6.801
+5M⊕ 7.494
+7M⊕ 7.989
+10M⊕ 8.549
+12M⊕ 8.851
+Table 1: The core mass of the different planets and the mean density of the core.
+The next step is to reduce the mass of our planets from the 30M⊕ that they are
+now. In order to do that we reduce the mass of the gaseous envelope, that surrounds
+the core. For each planet we will create 2 different planets for different values of the
+ratio between the mass of the envelope and the total mass of the planet.
+fenv =
+Menv
+Mp
+where Mp = Menv + Mcore (2)
+which leads to:
+Mp =
+Mcore
+1 − fenv
+(3)
+After that we can create 2 planets for each core mass, by using 2 different values
+for the fenv. The final masses are shown in the Table 2:
+After that we want to add an artificial luminosity that will deposit some energy
+inside the planets. The result of this process is the inflation of the planets which
+will affect the initial entropy at the base of the gaseous envelope of each planet. The
+artificial luminosity that we implement is Lcenter = 2 · 1027erg/sec .
+1
+Core Mass fenv Total Mass
+3M⊕
+0.1 1.001 · 10−5M⊙
+0.01 9.104 · 10−6M⊙
+5M⊕
+0.1 1.669 · 10−5M⊙
+0.01 1.517 · 10−5M⊙
+7M⊕
+0.1 2.337 · 10−5M⊙
+0.01 2.124 · 10−5M⊙
+10M⊕
+0.1 3.338 · 10−5M⊙
+0.01 3.035 · 10−5M⊙
+12M⊕
+0.1 4.006 · 10−5M⊙
+0.01 3.642 · 10−5M⊙
+Table 2: The total mass of the planet for the different values of the core mass and
+fenv. Note that the final mass is in solar masses while the core mass is in units of
+earth masses.
+The final step is to see how the planets evolve. During the evolution we set a
+new more realistic luminosity:
+Lcenter = 5Mcore · 10−8
+erg/sec (4)
+where Mcore is in units of gr
+We can see the results in Table 3
+Core Mass Luminosity (erg/sec)
+3M⊕ 8.965 · 1020
+5M⊕ 1.494 · 1021
+7M⊕ 2.092 · 1021
+10M⊕ 2.988 · 1021
+12M⊕ 3.586 · 1021
+Table 3: The core mass of the different planets and the artificial core luminosity.
+Note that we only have 5 cases for the different core masses because the pairs of
+the planets that share the same core mass will have the same artificial luminosity
+added.
+We then let the system evolve for a timescale of 5 · 109
+yr and we get our final
+results. -->
+
+The project started by creating a single planet with a mass of 30 Earth masses. The planet was coreless and consisted only of a mix of hydrogen and helium gas. The next step was to create a core for the planet. The core had the same composition as the Earth, which allowed us to calculate the density of the core. We created five different planets with different core masses and densities, 3, 5, 7, 10, and 12 Earth masses. After creating the core, we reduced the mass of the planets by reducing the mass of the gaseous envelope that surrounded the core. For each core mass, we created two different planets with different values for the ratio between the mass of the envelope and the total mass of the planet. The final masses of the planets are shown in the table below.
+
+| Core Mass | fenv | Total Mass |
+|-----------|------|------------|
+| 3M⊕      | 0.1  | 1.001 · 10⁻⁵M⊙ |
+|           | 0.01 | 9.104 · 10⁻⁶M⊙ |
+| 5M⊕      | 0.1  | 1.669 · 10⁻⁵M⊙ |
+|           | 0.01 | 1.517 · 10⁻⁵M⊙ |
+| 7M⊕      | 0.1  | 2.337 · 10⁻⁵M⊙ |
+|           | 0.01 | 2.124 · 10⁻⁵M⊙ |
+| 10M⊕     | 0.1  | 3.338 · 10⁻⁵M⊙ |
+|           | 0.01 | 3.035 · 10⁻⁵M⊙ |
+| 12M⊕     | 0.1  | 4.006 · 10⁻⁵M⊙ |
+|           | 0.01 | 3.642 · 10⁻⁵M⊙ |
+
+<p></p>
+
+The next step was to add an artificial luminosity that would deposit some energy inside the planets. The result of this process was the inflation of the planets, which affected the initial entropy at the base of the gaseous envelope of each planet. The artificial luminosity that was implemented was $$L_{\text{center}} = 2 \times 10^{27} \, \text{erg/sec}$$. The final step was to see how the planets evolved. During the evolution, a new more realistic luminosity was set, $$L_{\text{center}} = 5M_{\text{core}} \times 10^{-8} \, \text{erg/sec}$$, where $$M_{\text{core}}$$ is in units of grams. The planets were allowed to evolve for a timescale of $$5 \times 10^9$$ years. 
+
+
+
 ## Interstellar Medium
 
 
