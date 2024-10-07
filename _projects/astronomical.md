@@ -326,6 +326,41 @@ The next step was to add an artificial luminosity that would deposit some energy
 </div>
 <div class="caption">
     Left: The gradients of the planets as a function of the radius of the planet. Right: The temperature as a function of the pressure in the planets. Each panel is for a different planet.
+</div>
+
+The results of the project showed that the planets evolved differently depending on their core mass and the ratio between the mass of the envelope and the total mass of the planet. For a full explanation of the results, please refer to the final report [here](/assets/pdf/exoplanets_1.pdf). 
+
+The second part of the project focused on the evolution of one of the planets previously made, this time with irradiation from a central star. We started with the heaviest of the planets created in the previous work, a planet with a core mass of 12 Earth masses and an envelope mass of 0.1. We create two different scenarios with different levels of irradiation. The first scenario had an outside flux of $$10F_{\oplus}$$, and the second scenario had an outside flux of $$100F_{\oplus}$$. These scenarios will be compared to the original evolution of the planet with no external heating. The planets were allowed to evolve for a timescale of $$5 \times 10^9$$ years (same as the previous work).
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/lab2_R-t.png" title="Radius as a function of time" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/lab2_L-t.png" title="Luminosity as a function of time" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div>
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/lab2_M-R.png" title="Mass as a function of radius" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: The radius of the planet as a function of time for the different scenarios. Middle: The luminosity of the planet as a function of time for the different scenarios. Right: The mass of the planet as a function of the radius for the different scenarios plotted over the mass-radius diagram of real exoplanets.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/lab2_gradients.png" title="Gradients as a function of radius" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/lab2_T-R.png" title="Temperature as a function of radius" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div>
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/lab2_P-R.png" title="Pressure as a function of radius" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: The gradients of the planet as a function of the radius for the different scenarios. Middle: The temperature as a function of the radius for the different scenarios. Right: The pressure as a function of the radius for the different scenarios.
+</div>
 
 ## Interstellar Medium
 
