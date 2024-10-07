@@ -136,6 +136,11 @@ The matched filtering algorithm was able to detect the gravitational wave signal
 ## Stellar Evolution
 
 
+For the course "Stellar Structure and Evolution" at the Leiden Observatory, I completed a project on the evolution of a star from the protostar phase to the white dwarf phase. The project used the Modules for Experiments in Stellar Astrophysics (MESA) code to simulate the evolution of a 1 solar mass star and a 2 solar mass star of solar composition. The project aimed to study the differences in the evolution of the two stars and to understand the physical processes that drive the evolution of stars.
+
+For the star evolution simulation, we used the MESA code {% cite 2011ApJS..192....3P 2013ApJS..208....4P 2015ApJS..220...15P 2018ApJS..234...34P 2019ApJS..243...10P 2023ApJS..265...15J --file external %}. For more information on the MESA code, please visit the documentation on the [MESA website](https://docs.mesastar.org/en/23.05.1/).
+
+
 
 ## Exoplanets
 
