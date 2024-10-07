@@ -141,22 +141,9 @@ For the course "Stellar Structure and Evolution" at the Leiden Observatory, I co
 For the star evolution simulation, we used the MESA code {% cite 2011ApJS..192....3P 2013ApJS..208....4P 2015ApJS..220...15P 2018ApJS..234...34P 2019ApJS..243...10P 2023ApJS..265...15J --file external %}. For more information on the MESA code, please visit the documentation on the [MESA website](https://docs.mesastar.org/en/23.05.1/).
 
 The evolution of the stars was studied by plotting the density as a function of the central temperature in a log-log plot. The different regions where each equation of state dominates were identified. We have four different equations of state: 
-\begin{equation}
-    P = \frac{\rho k T}{\mu m_H}, \mathrm{ideal \, gas}, 
-    \label{eq:ideal_gas}
-\end{equation}
-\begin{equation}
-    P = \frac{\rho k T}{\mu m_H} + \frac{a T^4}{3}, \mathrm{ideal \, gas \, + \, radiation}, 
-    \label{eq:ideal_gas_radiation}
-\end{equation}
-\begin{equation}
-    P = \frac{\rho k T}{\mu m_H} + \frac{a T^4}{3} + \frac{1}{3} a T^4, \mathrm{ideal \, gas \, + \, radiation \, + \, degeneracy}, 
-    \label{eq:ideal_gas_radiation_degeneracy}
-\end{equation}
-\begin{equation}
-    P = \frac{\rho k T}{\mu m_H} + \frac{a T^4}{3} + \frac{1}{3} a T^4 + \frac{1}{3} a T^4, \mathrm{ideal \, gas \, + \, radiation \, + \, degeneracy \, + \, electron \, degeneracy}. 
-    \label{eq:ideal_gas_radiation_degeneracy_electron}
-\end{equation}
+
+$$P_{\text{gas}} = \frac{R}{\mu} T \rho \quad \text{(ideal gas)}, \quad P_{\text{e}} = K_{\text{NR}} \left( \frac{\rho}{\mu_e} \right)^{5/3} \quad \text{(non-relativistic degenerate electron gas)},$$
+$$ P_{\text{e}} = K_{\text{ER}} \left( \frac{\rho}{\mu_e} \right)^{4/3} \quad \text{(extreme relativistic degenerate electron gas)}, \quad P_{\text{rad}} = \frac{a T^4}{3} \quad \text{(radiation pressure)}.$$
 for the different phases that a gas can have. While stars evolve, they can go through different phases where different equations of state dominate. In the plots below, we can see the evolution of the 1 solar mass star and the 2 solar mass star and the different regions that they go through.
 
 <div class="row">
@@ -204,7 +191,7 @@ This project was a great opportunity to learn about the physical processes that 
 
 ## Exoplanets
 
-
+As part of the course "Exo-planets" at the Leiden University, I completed a project on the detection of exoplanets using the transit method. The project consisted of analyzing the light curve of a star to detect the presence of an exoplanet. The light curve is the brightness of the star as a function of time. When an exoplanet transits in front of its host star, it blocks a fraction of the star's light, causing a dip in the light curve. By analyzing the shape of the dip and the time it takes to occur, we can determine the properties of the exoplanet, such as its radius, orbital period, and distance from the star.
 
 ## Interstellar Medium
 
