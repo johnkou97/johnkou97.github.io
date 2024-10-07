@@ -142,11 +142,22 @@ For the star evolution simulation, we used the MESA code {% cite 2011ApJS..192..
 
 The evolution of the stars was studied by plotting the density as a function of the central temperature in a log-log plot. The different regions where each equation of state dominates were identified. We have four different equations of state: 
 \begin{equation}
-    P = \frac{\rho k T}{\mu m_H}, \mathrm{ideal \, gas}, \\
-    P = \frac{\rho k T}{\mu m_H} + aT^4, \mathrm{radiation}, \\
-    P = \frac{\rho k T}{\mu m_H} + \frac{aT^4}{3}, \mathrm{degenerate \, electron}, \\
-    P = \frac{\rho k T}{\mu m_H} + \frac{aT^4}{3} + \frac{B}{\rho}, \mathrm{degenerate \, electron \, and \, radiation},
+    P = \frac{\rho k T}{\mu m_H}, \mathrm{ideal \, gas}, 
+    \label{eq:ideal_gas}
 \end{equation}
+\begin{equation}
+    P = \frac{\rho k T}{\mu m_H} + \frac{a T^4}{3}, \mathrm{ideal \, gas \, + \, radiation}, 
+    \label{eq:ideal_gas_radiation}
+\end{equation}
+\begin{equation}
+    P = \frac{\rho k T}{\mu m_H} + \frac{a T^4}{3} + \frac{1}{3} a T^4, \mathrm{ideal \, gas \, + \, radiation \, + \, degeneracy}, 
+    \label{eq:ideal_gas_radiation_degeneracy}
+\end{equation}
+\begin{equation}
+    P = \frac{\rho k T}{\mu m_H} + \frac{a T^4}{3} + \frac{1}{3} a T^4 + \frac{1}{3} a T^4, \mathrm{ideal \, gas \, + \, radiation \, + \, degeneracy \, + \, electron \, degeneracy}. 
+    \label{eq:ideal_gas_radiation_degeneracy_electron}
+\end{equation}
+for the different phases that a gas can have. While stars evolve, they can go through different phases where different equations of state dominate. In the plots below, we can see the evolution of the 1 solar mass star and the 2 solar mass star and the different regions that they go through.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -160,6 +171,8 @@ The evolution of the stars was studied by plotting the density as a function of 
     The evolution of the 1 solar mass star (left) and the 2 solar mass star (right) in a log-log plot of the density as a function of the central temperature. In the plot, we can see the different regions where each equation of state dominates. The different evolutionary stages of the star are plotted with different colors. The color of the points shows their age. The relative position of the Sun is also depicted.
 </div>
 
+We can also see the evolution of the stars in a Hertzsprung-Russell diagram, which is a log-log plot of the luminosity as a function of the effective temperature. In a typical Hertzsprung-Russell diagram there are different regions where stars are located depending on their evolutionary stage. As stars evolve, they move through these regions, starting from the protostar phase, then the main sequence, where they spend most of their lives, and finally they go through the red giant phase, the horizontal branch and the asymptotic giant branch, to end up as white dwarfs. The Hertzsprung-Russell diagrams for the 1 solar mass star and the 2 solar mass star are shown below.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/HR_1.0.png" title="Hertzsprung-Russell diagram for the 1 solar mass star" class="img-fluid rounded z-depth-1" %}
@@ -172,6 +185,8 @@ The evolution of the stars was studied by plotting the density as a function of 
     Hertzsprung-Russell diagrams (log-log plots of the luminosity as a function of the effective temperature) for the 1 solar mass star (left) and the 2 solar mass star (right) showing the evolution of the stars from the protostar phase to the white dwarf phase. As above, the different evolutionary stages of the star are plotted with different colors. The color of the points shows their age. 
 </div>
 
+Finally, we can study the gradients of the stars as a function of the radius of the star. The gradients are important because they determine the energy transport mechanism in the star. When the adiabatic gradient is larger than the radiative gradient, the star is convective. The gradients of the 1 solar mass star and the 2 solar mass star for the pre-main sequence phase and the main sequence phase are shown below.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/gradients_1.0.png" title="Gradients for the 1 solar mass star" class="img-fluid rounded z-depth-1" %}
@@ -183,6 +198,8 @@ The evolution of the stars was studied by plotting the density as a function of 
 <div class="caption">
     The gradients of the 1 solar mass star (left) and the 2 solar mass star (right) as a function of the radius of the star. Each plot contains two panels, one for the pre-main sequence phase and one for the main sequence phase. Each time we plot the adiabatic and the radiative gradients. When the adiabatic gradient is larger than the radiative gradient, the star is convective, which is shown by the grey area in the plot.
 </div>
+
+This project was a great opportunity to learn about the physical processes that drive the evolution of stars and to understand the different regions that stars go through as they evolve. The MESA code is a powerful tool that allows us to simulate the evolution of stars and to study the physical processes that drive their evolution. For the code as well as instructions on how to run it, please visit the [GitHub repository](https://github.com/johnkou97/stellar_evolution) or you can check the final report [here](assets/pdf/stellar_evolution.pdf).
 
 
 ## Exoplanets
