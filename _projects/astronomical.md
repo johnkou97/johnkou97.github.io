@@ -74,12 +74,9 @@ As we can see from the figures, the matched filtering algorithm is able to detec
     <div>
         {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/contourf_1.png" title="Contour plot of data stream 1" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div>
-        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/wave_1.png" title="Detected wave in data stream 1" class="img-fluid rounded z-depth-1" %}
-    </div>
 </div>
 <div class="caption">
-    Results of the matched filtering algorithm on data stream 1. From left to right: raw data stream, detection of the time of merger, contour plot of the filter output as a function of the chirp mass and the phase, and the detected wave in the data stream.
+    Results of the matched filtering algorithm on data stream 1. From left to right: raw data stream, detection of the time of merger, and the contour plot of the filter output as a function of the chirp mass and the phase.
 </div>
 
 <div class="row">
@@ -91,9 +88,6 @@ As we can see from the figures, the matched filtering algorithm is able to detec
     </div>
     <div>
         {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/contourf_2.png" title="Contour plot of data stream 2" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div>
-        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/wave_2.png" title="Detected wave in data stream 2" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -112,16 +106,29 @@ As we can see from the figures, the matched filtering algorithm is able to detec
     </div>
 </div>
 <div class="caption">
-    As above, but for data stream 3. This time, the detected wave is not shown, as no gravitational wave signal was detected in this data stream.
+    As above, but for data stream 3.
 </div>
 
-The matched filtering algorithm was able to detect the gravitational wave signals in two of the three data streams. The detected waves are shown in the figures above. The algorithm was able to recover the parameters of the signals, such as the chirp mass and the phase. The results of the detection are consistent with the parameters used to create the signals. The algorithm was not able to detect a gravitational wave signal in the third data stream, which did not contain a signal. The final results are summarized in the table below:
+
+The matched filtering algorithm was able to detect the gravitational wave signals in two of the three data streams. For the third data stream, the algorithm detected a very weak signal, which was not significant enough to be considered a detection.The detected waves are shown in the figures below. The algorithm was able to recover the parameters of the signals, such as the chirp mass and the phase. The results of the detection are consistent with the parameters used to create the signals. The algorithm was not able to detect a gravitational wave signal in the third data stream, which did not contain a signal. The final results are summarized in the table below:
 
 | Data Stream | Time of Merger | Chirp Mass | Phase | Detected |
 |-------------|----------------|------------|-------|----------|
 | 1           | 299.0          | 90.0       | 6.2   | Yes      |
 | 2           | 1000.0         | 31.0       | 3.2   | Yes      |
 | 3           | -              | -          | -     | No       |
+
+<div class="row">
+    <div>
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/wave_1.png" title="Detected wave in data stream 1" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div>
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/wave_2.png" title="Detected wave in data stream 2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Detected gravitational wave signals in data streams 1 and 2 plotted against the raw data.
+</div>
 
 
 ## Stellar Evolution
