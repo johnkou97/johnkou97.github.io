@@ -133,7 +133,7 @@ The matched filtering algorithm was able to detect the gravitational wave signal
 </div>
 
 
-## Stellar Evolution
+## Stellar Structure and Evolution Lab Assignment
 
 
 For the course "Stellar Structure and Evolution" at the Leiden Observatory, I completed a project on the evolution of a star from the protostar phase to the white dwarf phase. The project used the Modules for Experiments in Stellar Astrophysics (MESA) code to simulate the evolution of a 1 solar mass star and a 2 solar mass star of solar composition. The project aimed to study the differences in the evolution of the two stars and to understand the physical processes that drive the evolution of stars.
@@ -143,8 +143,9 @@ For the star evolution simulation, we used the MESA code {% cite 2011ApJS..192..
 The evolution of the stars was studied by plotting the density as a function of the central temperature in a log-log plot. The different regions where each equation of state dominates were identified. We have four different equations of state: 
 
 $$P_{\text{gas}} = \frac{R}{\mu} T \rho \quad \text{(ideal gas)}, \quad P_{\text{e}} = K_{\text{NR}} \left( \frac{\rho}{\mu_e} \right)^{5/3} \quad \text{(non-relativistic degenerate electron gas)},$$
-$$ P_{\text{e}} = K_{\text{ER}} \left( \frac{\rho}{\mu_e} \right)^{4/3} \quad \text{(extreme relativistic degenerate electron gas)}, \quad P_{\text{rad}} = \frac{a T^4}{3} \quad \text{(radiation pressure)}.$$
-for the different phases that a gas can have. While stars evolve, they can go through different phases where different equations of state dominate. In the plots below, we can see the evolution of the 1 solar mass star and the 2 solar mass star and the different regions that they go through.
+$$ P_{\text{e}} = K_{\text{ER}} \left( \frac{\rho}{\mu_e} \right)^{4/3} \quad \text{(extreme relativistic degenerate electron gas)}, \quad P_{\text{rad}} = \frac{a T^4}{3} \quad \text{(radiation pressure)},$$
+
+for the different phases that a gas can have. We denote with $$P_{\text{gas}}$$ the gas pressure, $$P_{\text{e}}$$ the electron pressure, $$P_{\text{rad}}$$ the radiation pressure, $$R$$ the gas constant, $$\mu$$ the mean molecular weight, $$\mu_e$$ the mean molecular weight per electron, $$K_{\text{NR}}$$ the non-relativistic degeneracy constant, $$K_{\text{ER}}$$ the extreme relativistic degeneracy constant, $$a$$ the radiation constant, and $$T$$ the temperature. While stars evolve, they can go through different phases where different equations of state dominate. In the plots below, we can see the evolution of the 1 solar mass star and the 2 solar mass star and the different regions that they go through.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -186,12 +187,13 @@ Finally, we can study the gradients of the stars as a function of the radius of 
     The gradients of the 1 solar mass star (left) and the 2 solar mass star (right) as a function of the radius of the star. Each plot contains two panels, one for the pre-main sequence phase and one for the main sequence phase. Each time we plot the adiabatic and the radiative gradients. When the adiabatic gradient is larger than the radiative gradient, the star is convective, which is shown by the grey area in the plot.
 </div>
 
-This project was a great opportunity to learn about the physical processes that drive the evolution of stars and to understand the different regions that stars go through as they evolve. The MESA code is a powerful tool that allows us to simulate the evolution of stars and to study the physical processes that drive their evolution. For the code as well as instructions on how to run it, please visit the [GitHub repository](https://github.com/johnkou97/stellar_evolution) or you can check the final report [here](assets/pdf/stellar_evolution.pdf).
+This project was a great opportunity to learn about the physical processes that drive the evolution of stars and to understand the different regions that stars go through as they evolve. The MESA code is a powerful tool that allows us to simulate the evolution of stars and to study the physical processes that drive their evolution. For the code as well as instructions on how to run it, please visit the [GitHub repository](https://github.com/johnkou97/stellar_evolution) or you can check the final report [here](/assets/pdf/stellar_evolution.pdf).
 
 
-## Exoplanets
+## MODELLING SUB-NEPTUNE MASS PLANETS INTERIOR
 
-As part of the course "Exo-planets" at the Leiden University, I completed a project on the detection of exoplanets using the transit method. The project consisted of analyzing the light curve of a star to detect the presence of an exoplanet. The light curve is the brightness of the star as a function of time. When an exoplanet transits in front of its host star, it blocks a fraction of the star's light, causing a dip in the light curve. By analyzing the shape of the dip and the time it takes to occur, we can determine the properties of the exoplanet, such as its radius, orbital period, and distance from the star.
+
+As part of the course "Exo-planets" at the Leiden University, I completed a project on the evolution of low-mass planets with an envelope made mostly of hydrogen and helium. The project aimed to simulate the interiors and evolution of these planets and to study how irradiation from a central star affects their structure and evolution. The project followed previous work {% cite 2016ApJ...831..180C --file external %} and used the Modules for Experiments in Stellar Astrophysics (MESA) {% cite 2011ApJS..192....3P 2013ApJS..208....4P 2015ApJS..220...15P 2018ApJS..234...34P 2019ApJS..243...10P 2023ApJS..265...15J --file external %} code to simulate the evolution of the planets.
 
 ## Interstellar Medium
 
