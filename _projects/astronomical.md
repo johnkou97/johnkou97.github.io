@@ -140,7 +140,41 @@ For the course "Stellar Structure and Evolution" at the Leiden Observatory, I co
 
 For the star evolution simulation, we used the MESA code {% cite 2011ApJS..192....3P 2013ApJS..208....4P 2015ApJS..220...15P 2018ApJS..234...34P 2019ApJS..243...10P 2023ApJS..265...15J --file external %}. For more information on the MESA code, please visit the documentation on the [MESA website](https://docs.mesastar.org/en/23.05.1/).
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/HR_1.0.png" title="Hertzsprung-Russell diagram for the 1 solar mass star" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/HR_2.0.png" title="Hertzsprung-Russell diagram for the 2 solar mass star" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Hertzsprung-Russell diagrams for the 1 solar mass star (left) and the 2 solar mass star (right) showing the evolution of the stars from the protostar phase to the white dwarf phase.
+</div>
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/loglog_1.0.png" title="Log-log plot for the 1 solar mass star" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/loglog_2.0.png" title="Log-log plot for the 2 solar mass star" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The evolution of the 1 solar mass star (left) and the 2 solar mass star (right) in a log-log plot of the luminosity and the effective temperature.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/gradients_1.0.png" title="Gradients for the 1 solar mass star" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/gradients_2.0.png" title="Gradients for the 2 solar mass star" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The gradients of the 1 solar mass star (left) and the 2 solar mass star (right) as a function of the radius of the star.
+</div>
 
 ## Exoplanets
 
