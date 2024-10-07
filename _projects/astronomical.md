@@ -247,7 +247,7 @@ The second part of the project focused on the evolution of one of the planets pr
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/lab2_L-t.png" title="Luminosity as a function of time" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div>
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/lab2_M-R.png" title="Mass as a function of radius" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -262,7 +262,7 @@ The second part of the project focused on the evolution of one of the planets pr
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/lab2_T-R.png" title="Temperature as a function of radius" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div>
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/courses/astronomical/lab2_P-R.png" title="Pressure as a function of radius" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
@@ -284,4 +284,4 @@ This project was my first experience with `MESA` code and the simulation of exop
 
 ## References
 
-{% bibliography --cited --file external %}
+{% bibliography --cited_in_order --file external %}
