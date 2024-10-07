@@ -8,6 +8,7 @@ category: courses
 related_publications: false
 giscus_comments: false
 redirect:
+pretty_table: true
 ---
 
 As part of my graduate and undergraduate studies, I have completed various projects as part of my coursework. In this page, I present some of the projects that I have completed in the fields of astronomy, astrophysics, and mathematics. These projects include the analysis of astronomical data, the development of computational models, and the application of mathematical techniques to solve astrophysical problems.
