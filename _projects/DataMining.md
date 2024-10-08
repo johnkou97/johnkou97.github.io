@@ -162,5 +162,20 @@ We used the RMSE as the evaluation metric to compare the performance of the mode
 	Comparison of the models on the training, validation, and test sets. The RMSE is used as the evaluation metric. For the random forest model, a different metric was used for the training and validation sets (but not for the test set as it comes from the Kaggle competition), making the comparison not possible.
 </div>
 
+All the results can be summarized in the table below:
+
+| Model | RMSE Train | RMSE Validation | RMSE Test | Training Time (s) |
+| --- | --- | --- | --- | --- |
+| LGB | 1.39 | 1.24 | 1.19 | 20.56 |
+| LGB Extended | 1.13 | 1.02 | 1.098 | 24.39 |
+| XGB | 1.18 | 1.11 | 1.180 | 705.53 |
+| XGB Extended | 1.07 | 1.00 | 1.080 | 853.44 |
+| Random Forest | - | - | 1.119 | 678.73 |
+| Random Forest Extended | - | - | 1.099 | 945.32 |
+
+<p></p>
+
+The final predictions were submitted to the Kaggle competition (RMSE test column) and the best model was the XGB for the extended version. For all the models the extended version performed better than the main version, which shows that the additional features were useful for the predictions. The feature importance plots also showed that the additional features were important for the predictions. The LGB and the Random Forest models had very similar performance, with the LGB being much faster to train, making the Random Forest model less attractive. The XGB model was the best in terms of performance, but it was also slow to train (a bit faster than the Random Forest).
+
 In conclusion, this assignment was a great opportunity to learn about time series forecasting and implement several models to predict future sales. We were able to preprocess the data, train the models, and evaluate their performance. The results were very informative and helped us understand the strengths and weaknesses of each model. For more details, you can check the full report [here](/assets/pdf/future_sales.pdf). The full code can be found on 
 
