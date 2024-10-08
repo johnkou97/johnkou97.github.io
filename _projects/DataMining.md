@@ -121,4 +121,46 @@ The aim of the assignment was to perform exploratory data analysis (EDA) on the 
 - XGB (Extreme Gradient Boosting)
 - Random Forest
 
+Before generating the predictions, we performed EDA on the dataset to understand the distribution of the data and identify any outliers. We also created several plots to visualize the data. The plots below show the total sales per month and the number of items per category.
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/item_sales_vs_years.png" alt="Total Sales per Month" caption="Total Sales per Month" %}
+	</div>
+	<div class="col-sm mt-3 mt-md-0">
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/items_per_category.png" alt="Items per Category" caption="Items per Category" %}
+	</div>
+</div>
+<div class="caption">
+	Left: Total sales per month from January 2013 to October 2015. Each line represents a different year. Right: Number of items per category.
+</div>
+
+For the preprocessing of the data, we decided to use the last available month (October 2015) as our validation set, to make sure that our model generalizes well to unseen data. We created two different training sets, one with the date_block_num, shop_id, and item_id, and another one that also included the item_category_id, item_maincategory_id, and item_subcategory_id (extended version). For the main and subcategories, we used the LabelEncoder to generate integers that will act as a unique identifier of each of the two names of the item’s category. The Y train includes the values of item_cnt_month, which is the goal of the prediction. These values are clipped between 0 and 20 to remove the outliers and give us better results in our predictions. 
+
+The models were trained using the training set and validated using the validation set. For the XGB we could also plot the feature importance, which is shown in the figure below.
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/feature_importance.png" alt="Feature Importance" caption="Feature Importance" %}
+	</div>
+	<div class="col-sm mt-3 mt-md-0">
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/fearure_importance_extended.png" alt="Feature Importance Extended" caption="Feature Importance Extended" %}
+	</div>
+</div>
+<div class="caption">
+	Feature importance of the XGB model using the training set (left) and the extended version (right).
+</div> 
+
+We used the RMSE as the evaluation metric to compare the performance of the models. The results of the models, for the extended version, on the training, validation, and test sets, as well as the training time, are shown in the figure below.
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/model_comparison.png" alt="Model Comparison" caption="Model Comparison" %}
+	</div>
+</div>
+<div class="caption">
+	Comparison of the models on the training, validation, and test sets. The RMSE is used as the evaluation metric. For the random forest model, a different metric was used for the training and validation sets (but not for the test set as it comes from the Kaggle competition), making the comparison not possible.
+</div>
+
+In conclusion, this assignment was a great opportunity to learn about time series forecasting and implement several models to predict future sales. We were able to preprocess the data, train the models, and evaluate their performance. The results were very informative and helped us understand the strengths and weaknesses of each model. For more details, you can check the full report [here](/assets/pdf/future_sales.pdf). The full code can be found on 
 
