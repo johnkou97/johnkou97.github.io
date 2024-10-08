@@ -49,7 +49,7 @@ The final comparison of the models shows that the Matrix Factorization model per
 	The RMSE (solid line) and MAE (dashed line) of the final model on the training (blue) and validation (purple) sets. With the red line indicating the execution time (left) and memory usage (right) of each model.
 </div>
 
-The result can, also, be summarized in a table:
+The results can, also, be summarized in a table:
 
 | Model | RMSE Test | MAE Test | Execution Time (s) | Memory (MB) |
 | --- | --- | --- | --- | --- |
@@ -103,5 +103,22 @@ In conclusion, this assignment was a great opportunity to learn about recommenda
 
 
 ## Predict Future Sales - Kaggle Competition
+
+In this assignment, we participated in the Kaggle competition "Predict Future Sales", where we had to predict total sales for every product and store in the next month. The dataset consists of daily sales data, provided by one of the largest Russian software firms - 1C Company. The task was to predict the total sales for every product and store in the next month. The dataset can be downloaded from [here](https://www.kaggle.com/competitions/competitive-data-science-predict-future-sales).
+
+ Each item in the dataset has a unique identifier, which is a tuple of the shop_id and item_id. The dataset also includes:
+- item_category_id: unique identifier of item category
+- item_cnt_day: number of products sold. 
+- item_price: current price of an item
+- date: date in format dd/mm/yyyy
+- date_block_num: a consecutive month number starting from January 2013 (0) to October 2015 (33)
+- item_name: name of item
+- shop_name: name of shop
+- item_category_name: name of item category
+
+The aim of the assignment was to perform exploratory data analysis (EDA) on the dataset, preprocess the data, and implement several existing forecasting models. We used the following models:
+- LGB (Light Gradient Boosting)
+- XGB (Extreme Gradient Boosting)
+- Random Forest
 
 
