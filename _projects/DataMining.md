@@ -26,10 +26,10 @@ During training, we kept track of the execution time and memory usage of each mo
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/mining/uv.png" alt="UV Decomposition" caption="UV Decomposition" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/uv.png" title="UV Decomposition" class="img-fluid rounded z-depth-1" %}
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/matrixfactorization_errors.png" alt="Matrix Factorization" caption="Matrix Factorization" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/matrixfactorization_errors.png" title="Matrix Factorization Zoom" class="img-fluid rounded z-depth-1" %}
 	</div>
 </div>
 <div class="caption">
@@ -40,10 +40,10 @@ The final comparison of the models shows that the Matrix Factorization model per
 
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/comparison_time.png" alt="Execution Time" caption="Execution Time" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/comparison_time.png" title="Execution Time" class="img-fluid rounded z-depth-1" %}
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/comparison_memory.png" alt="Memory Usage" caption="Memory Usage" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/comparison_memory.png" title="Memory Usage" class="img-fluid rounded z-depth-1" %}
 	</div>
 </div>
 <div class="caption">
@@ -73,13 +73,13 @@ We first used the dimensionality reduction techniques to cluster the users based
 
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/gender_pca.png" alt="PCA" caption="PCA" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/gender_pca.png" title="PCA" class="img-fluid rounded z-depth-1" %}
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/gender_tsne.png" alt="tSNE" caption="tSNE" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/gender_tsne.png" title="tSNE" class="img-fluid rounded z-depth-1" %}
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/gender_umap.png" alt="UMAP" caption="UMAP" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/gender_umap.png" title="UMAP" class="img-fluid rounded z-depth-1" %}
 	</div>
 </div>
 <div class="caption">
@@ -90,10 +90,10 @@ As it is clear, the different genders are not separable using these techniques. 
 
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/genre_tsne.png" alt="tSNE" caption="tSNE" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/genre_tsne.png" title="tSNE" class="img-fluid rounded z-depth-1" %}
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/genre_umap.png" alt="UMAP" caption="UMAP" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/genre_umap.png" title="UMAP" class="img-fluid rounded z-depth-1" %}
 	</div>
 </div>
 <div class="caption">
@@ -126,10 +126,10 @@ Before generating the predictions, we performed EDA on the dataset to understand
 
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/item_sales_vs_years.png" alt="Total Sales per Month" caption="Total Sales per Month" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/item_sales_vs_years.png" title="Total Sales per Month" class="img-fluid rounded z-depth-1" %}
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/items_per_category.png" alt="Items per Category" caption="Items per Category" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/items_per_category.png" title="Items per Category" class="img-fluid rounded z-depth-1" %}
 	</div>
 </div>
 <div class="caption">
@@ -142,10 +142,10 @@ The models were trained using the training set and validated using the validatio
 
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/feature_importance.png" alt="Feature Importance" caption="Feature Importance" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/XGB_feature_importance.png" title="Feature Importance" class="img-fluid rounded z-depth-1" %}
 	</div>
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/fearure_importance_extended.png" alt="Feature Importance Extended" caption="Feature Importance Extended" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/XGB_feature_importance_extended.png" title="Feature Importance Extended" class="img-fluid rounded z-depth-1" %}
 	</div>
 </div>
 <div class="caption">
@@ -156,7 +156,7 @@ We used the RMSE as the evaluation metric to compare the performance of the mode
 
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
-		{% include figure.liquid loading="eager" path="assets/img/courses/mining/model_comparison.png" alt="Model Comparison" caption="Model Comparison" %}
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/model_comparison.png" title="Model Comparison" class="img-fluid rounded z-depth-1" %}
 	</div>
 </div>
 <div class="caption">
