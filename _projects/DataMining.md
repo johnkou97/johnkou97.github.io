@@ -8,6 +8,7 @@ category: courses
 related_publications: false
 giscus_comments: false
 redirect:
+pretty_table: true
 ---
 
 ## Recommender Systems - MovieLens 1M Dataset
