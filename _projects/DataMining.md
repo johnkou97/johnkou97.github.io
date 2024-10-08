@@ -19,6 +19,29 @@ For this assignment, we used the following algorithms:
 - UV matrix decomposition algorithm
 - Matrix Factorization with Gradient Descent and Regularization
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/uv.png" alt="UV Decomposition" caption="UV Decomposition" %}
+	</div>
+	<div class="col-sm mt-3 mt-md-0">
+		{% include figure.liquid loading="eager" path="assets/img/courses/matrixfactorization_errors.png" alt="Matrix Factorization" caption="Matrix Factorization" %}
+	</div>
+</div>
+<div class="caption">
+	Left: UV Decomposition. Right: Matrix Factorization.
+</div>
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+		{% include figure.liquid loading="eager" path="assets/img/courses/comparison_time.png" alt="Execution Time" caption="Execution Time" %}
+	</div>
+	<div class="col-sm mt-3 mt-md-0">
+		{% include figure.liquid loading="eager" path="assets/img/courses/comparison_memory.png" alt="Memory Usage" caption="Memory Usage" %}
+	</div>
+</div>
+<div class="caption">
+	Left: Execution Time. Right: Memory Usage.
+</div>
 
 
 The table below shows the RMSE, MAE, execution time, and memory usage of each model.
