@@ -8,6 +8,7 @@ category: personal
 related_publications: false
 giscus_comments: false
 redirect:
+pretty_table: true
 ---
 
 I have participated in four Kaggle challenges so far. My participation in the challenge [Predict Future Sales](https://www.kaggle.com/competitions/competitive-data-science-predict-future-sales) was part of the Data Mining course and is described in the [Data Mining](/projects/DataMining) project. The challenge [G2Net-Hackathon](https://www.kaggle.com/competitions/g2net-hackathon) is described in the [Gravitational Wave Hackathon](/projects/GW_hackathon) project. The other two challenges are described below.
@@ -44,6 +45,8 @@ I trained the algorithms on the training dataset and created a submission file f
 | LogReg    | 0.76794 |
 | LightGBM  | 0.77511 |
 | XGBoost   | 0.77751 |
+
+<p></p>
 
 The scores are based on the accuracy of the predictions. The best score I achieved was 0.77751 with the XGBoost algorithm. This score is on the top 30% of the leaderboard, which is not bad for the simple approach I used. The code for this challenge, with instructions on how to run it,can be found in the [Titanic](https://github.com/johnkou97/Titanic) repository.
 
@@ -109,5 +112,7 @@ The performance of the models was evaluated based on the accuracy of the predict
 | Bagging | 0.79191 |
 | SVM | 0.79074 |
 | Voting | 0.79074 |
+
+<p></p>
 
 The best score I achieved was 0.79541 with the AdaBoost model. This score is on the top 40% of the leaderboard, which is not a great result, but it was a good exercise to test many different models from a single library and compare their performance. Also the data preprocessing was not very complex, so I could focus more on the models themselves. The code for this challenge, with instructions on how to run it, can be found in the [Spaceship Titanic](https://github.com/johnkou97/Spaceship-Titanic) repository.

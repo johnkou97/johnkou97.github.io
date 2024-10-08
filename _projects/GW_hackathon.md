@@ -8,6 +8,7 @@ category: personal
 related_publications: false
 giscus_comments: false
 redirect:
+pretty_table: true
 ---
 
 I have had the pleasure to participate in two hackathons related to gravitational waves as part of the workshops organized by the [network for Gravitational Waves, Geophysics and Machine Learning (G2Net)](https://www.g2net.eu/). The first one was in Malta in 2020 where I participated in person and the second one was in Thessaloniki in 2023 where I participated remotely. The hackathons were a great opportunity to learn more about the field of gravitational waves and machine learning, and to meet other researchers in the field.
@@ -47,6 +48,7 @@ The results of the challenge were evaluated based on the accuracy of the predict
 | F1-score         | 79.5% |
 | Balanced accuracy| 79.6% |
 
+<p></p>
 
 For better understanding of the results, the confusion matrix is shown below:
 
@@ -95,6 +97,7 @@ The results of the challenge were evaluated based on the accuracy of the predict
 | Validation | 82.35%   |
 | Test       | 83.91%   |
 
+<p></p>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
