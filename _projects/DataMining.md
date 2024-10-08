@@ -68,6 +68,8 @@ The next part of the assignment was to use dimensionality reduction techniques t
 - t-SNE (t-Distributed Stochastic Neighbor Embedding)
 - UMAP (Uniform Manifold Approximation and Projection)
 
+We first used the dimensionality reduction techniques to cluster the users based on their gender and see if the clusters were separable. The plots below show the results of the three techniques, where the colors represent the gender of the users.
+
 <div class="row">
 	<div class="col-sm mt-3 mt-md-0">
 		{% include figure.liquid loading="eager" path="assets/img/courses/mining/gender_pca.png" alt="PCA" caption="PCA" %}
@@ -80,9 +82,24 @@ The next part of the assignment was to use dimensionality reduction techniques t
 	</div>
 </div>
 <div class="caption">
-	Visualization
+	Clustering of the data using PCA (left), tSNE (middle), and UMAP (right). The colors represent the different genders of the users.
 </div>
 
+As it is clear, the different genders are not separable using these techniques. We can also see that the PCA plots are not very informative, as all the points are clustered together. We created many more plots using the same techniques and different features. On the plots below, we clustered the movies based on 2 genres (horror and romantic) using t-SNE and UMAP. In this case we can see that the clusters are more separable, especially using UMAP.
+
+<div class="row">
+	<div class="col-sm mt-3 mt-md-0">
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/genre_tsne.png" alt="tSNE" caption="tSNE" %}
+	</div>
+	<div class="col-sm mt-3 mt-md-0">
+		{% include figure.liquid loading="eager" path="assets/img/courses/mining/genre_umap.png" alt="UMAP" caption="UMAP" %}
+	</div>
+</div>
+<div class="caption">
+	Clustering of the data using tSNE (left) and UMAP (right). The colors represent two different genres of the movies, horror (blue) and romantic (orange).
+</div>
+
+In conclusion, this assignment was a great opportunity to learn about recommendation algorithms and dimensionality reduction techniques. We were able to implement several models and compare their performance on the MovieLens 1M dataset. We also learned how to use PCA, t-SNE, and UMAP to visualize the data and see if clusters can emerge from different features of the dataset. The results were very informative and helped us understand the strengths and weaknesses of each model and technique. For more details, you can check the full report [here](/assets/pdf/recommender.pdf). The full code can be found on my [GitHub](https://github.com/johnkou97/RecommenderSystem) repository.
 
 
 ## Predict Future Sales - Kaggle Competition
