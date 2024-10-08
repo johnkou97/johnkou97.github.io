@@ -274,12 +274,14 @@ As we can see from the results, the irradiation from a central star affects the 
 
 This project was my first experience with `MESA` code and the simulation of exoplanets. It was a great opportunity to learn about the physical processes that drive the evolution of low-mass planets and to understand how irradiation from a central star affects their structure and evolution. For the code as well as instructions on how to run it, please visit the [GitHub repository](https://github.com/johnkou97/Exoplanet_project) of the project.
 
+
+<!-- 
 ## Interstellar Medium
 
 
 
 ## Numerical Analysis
-
+ -->
 
 
 ## References
