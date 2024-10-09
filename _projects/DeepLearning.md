@@ -11,7 +11,7 @@ redirect:
 pretty_table: true
 ---
 
-The code for all the projects can be found in my [GitHub repository](
+The code for all the projects can be found in my [GitHub repository](https://github.com/johnkou97/DeepLearning)
 
 ## Data Dimensionality - Distance Based Classification
 
