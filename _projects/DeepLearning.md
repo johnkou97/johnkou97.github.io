@@ -96,7 +96,7 @@ We used two different techniques to train the model: giving the model all the tr
         
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/deep/accuracy.png" title="accuracy" class="img-fluid rounded z-depth-1", style="max-width: 100px; height: auto;" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/accuracy.png" title="accuracy" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -119,11 +119,6 @@ We can see that the online training method achieved a higher accuracy on the tra
 ## XOR Network - Gradient Descent
 
 We implemented a simple neural network to solve the XOR problem using gradient descent. The XOR problem is a classic example of a non-linearly separable problem that cannot be solved by a single perceptron. The XOR takes as input two binary values (0 or 1) and outputs 1 if the inputs are different and 0 if the inputs are the same. 
-
-<!-- The xor_net function defines a neural network with two layers:
-
-Hidden Layer: This layer is represented by layer_1, which is a 3x2 matrix of weights connecting the input layer to the hidden layer.
-Output Layer: This layer is represented by layer_2, which is a vector of three weights connecting the hidden layer to the output layer. -->
 
 In our implementation, we used a neural network with one hidden layer and one output layer. The hidden layer has three neurons, and the output layer has one neuron. We trained the network using gradient descent and the backpropagation algorithm. We tested three different learning rates: 0.3, 0.6, and 0.8. The results are shown in the figure below. We also tested the network with two different initializations: uniform and normal. The mean squared error (MSE) was used as the loss function. We can see the training process for the different learning rates and initializations in the figures below.
 
@@ -162,6 +157,13 @@ For the Fashion MNIST dataset, the MLP model achieved a test accuracy of 85%, wh
 
 ## "Tell the Time" Network
 
-
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/classification.png" title="classification" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Classification of the "Tell the Time" dataset using a neural network.
+</div>
 
 ## Generative Models - Autoencoders (VAEs) & Generative Adversarial Networks (GANs)
