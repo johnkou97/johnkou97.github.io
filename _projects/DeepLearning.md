@@ -11,6 +11,8 @@ redirect:
 pretty_table: true
 ---
 
+The code for all the projects can be found in my [GitHub repository](
+
 ## Data Dimensionality - Distance Based Classification
 
 In this assignment, we explored the MNIST dataset and applied dimensionality reduction techniques to visualize the data. The dataset consists of 2707 images (1707 for training and 1000 for testing) of handwritten digits from 0 to 9. The images are 16x16 pixels in size and are represented as a vector of 256 features. Each sample is labeled with the corresponding digit.
@@ -199,7 +201,7 @@ Overall, the assignment was a success, and we were able to develop a model that 
 
 ## Generative Models - Autoencoders (VAEs) & Generative Adversarial Networks (GANs)
 
-In this assignment, we explored generative models, specifically autoencoders (Variational Autoencoders - VAEs) and Generative Adversarial Networks (GANs). We started with a [jupyter notebook](https://colab.research.google.com/drive/17Rk3MLC6XAxaTQ--M9L_LwM_K1OId-hj?usp=sharing) that introduced the concepts of autoencoders and GANs and provided a step-by-step guide on how to implement them using TensorFlow and Keras. The notebook used a [dataset of faces](https://surfdrive.surf.nl/files/index.php/s/6TTwiWuIRr6wppl) to train the models and generate new faces. In our approach, we used the [Simpsons Faces dataset](https://www.kaggle.com/datasets/kostastokis/simpsons-faces) to train the models and generate new faces.
+In this assignment, we explored generative models, specifically autoencoders (Variational Autoencoders - VAEs) and Generative Adversarial Networks (GANs). We started with a [jupyter notebook](https://colab.research.google.com/drive/17Rk3MLC6XAxaTQ--M9L_LwM_K1OId-hj?usp=sharing) that introduced the concepts of autoencoders and GANs and provided a step-by-step guide on how to implement them using TensorFlow and Keras. The notebook used a [dataset of faces](https://surfdrive.surf.nl/files/index.php/s/6TTwiWuIRr6wppl) to train the models and generate new faces. In our approach, we used the [Simpsons Faces dataset](https://www.kaggle.com/datasets/kostastokis/simpsons-faces) to train the models and generate new faces. The original images from the faces dataset and the Simpsons faces dataset are shown in the figure below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -212,6 +214,8 @@ In this assignment, we explored generative models, specifically autoencoders (Va
 <div class="caption">
     Original images from the faces dataset (left) and the Simpsons faces dataset (right).
 </div>
+
+The VAE and GAN models were trained on the faces dataset and the Simpsons faces dataset. The results of the training process are shown in the figures below. We can see that the VAE model was able to generate new faces that resemble the original faces from the first epoch to the last epoch. The GAN model was also able to generate new faces, but only after a few epochs. Although the results are not perfect, we can see that the models were able to capture the underlying structure of the data and generate new faces that resemble the original faces for both datasets.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -261,6 +265,15 @@ In this assignment, we explored generative models, specifically autoencoders (Va
     GAN generated images from the Simpsons faces dataset at the beginning of the training process (left) and at the end of the training process (right).
 </div>
 
+<!-- Once your models are trained, their latent spaces capture the distribution of the data that they
+were trained on. You can use randomly generated vectors as input to the decoder components
+of these models to generate novel images (the decoder in case of VAE, generator in case of
+GAN). Each vector represents a point in this latent space and since it is continuous, you can
+generate various interesting visualizations. Your task is to create one of these visualizations
+by linearly interpolating between t -->
+
+As a last step, we generated new images by interpolating between two random latent vectors in the latent space of the VAE and GAN models. The results are shown in the figures below. The results for the GAN model were not great, but we can see that the VAE model was somewhat able to generate new faces by interpolating between two random latent vectors.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/courses/deep/simps_vae_inter.png" title="simps_vae_inter" class="img-fluid rounded z-depth-1" %}
@@ -272,3 +285,5 @@ In this assignment, we explored generative models, specifically autoencoders (Va
 <div class="caption">
     VAE (left) and GAN (right) generated images from the Simpsons faces dataset at the end of the training process with interpolation between two random latent vectors.
 </div>
+
+Overall, the assignment was a great introduction to generative models. Although the results were not perfect, the approach that was used was very simple and only scratched the surface of what is possible with generative models.
