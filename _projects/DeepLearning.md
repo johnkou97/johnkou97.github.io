@@ -96,7 +96,7 @@ We used two different techniques to train the model: giving the model all the tr
         
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/deep/accuracy.png" title="accuracy" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/accuracy.png" title="accuracy" class="img-fluid rounded z-depth-1", style="max-width: 400px; height: auto;" %}
     </div>
 </div>
 <div class="caption">
@@ -118,7 +118,30 @@ We can see that the online training method achieved a higher accuracy on the tra
 
 ## XOR Network - Gradient Descent
 
+We implemented a simple neural network to solve the XOR problem using gradient descent. The XOR problem is a classic example of a non-linearly separable problem that cannot be solved by a single perceptron. The XOR takes as input two binary values (0 or 1) and outputs 1 if the inputs are different and 0 if the inputs are the same. 
 
+<!-- The xor_net function defines a neural network with two layers:
+
+Hidden Layer: This layer is represented by layer_1, which is a 3x2 matrix of weights connecting the input layer to the hidden layer.
+Output Layer: This layer is represented by layer_2, which is a vector of three weights connecting the hidden layer to the output layer. -->
+
+In our implementation, we used a neural network with one hidden layer and one output layer. The hidden layer has three neurons, and the output layer has one neuron. We trained the network using gradient descent and the backpropagation algorithm. We tested three different learning rates: 0.3, 0.6, and 0.8. The results are shown in the figure below. We also tested the network with two different initializations: uniform and normal. The mean squared error (MSE) was used as the loss function. We can see the training process for the different learning rates and initializations in the figures below.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/mse_1.png" title="mse_1" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/mse_2.png" title="mse_2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Mean squared error (MSE) during training for different learning rates and initializations. Left: varying learning rates with uniform initialization. Right: varying initializations with learning rate 0.3.
+</div>
+
+We can see that all the different strategies converged to a solution, reaching an MSE of 0, which means that the network was able to solve the XOR problem. From the diffefrent learning rates, we can see that the highest learning rate (0.8) converged faster than the other two. The uniform initialization also converged faster than the normal initialization.
+
+We also implemented a lazy approach to the XOR problem, where we used the same network architecture but in each epoch, we randomized the weights of the network, until the network was able to solve the XOR problem. The test was to see how many epochs, on average, it took for the network to solve the XOR problem. We did four attempts with an average of 118570.75 epochs and a standard deviation of 118409.22 epochs. The results show that the network was able to solve the XOR problem, but it took a large number of epochs to do so, making it an inefficient approach.
 
 ## MNIST & CIFAR-10 - TensorFlow
 
