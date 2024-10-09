@@ -157,7 +157,7 @@ For the Fashion MNIST dataset, the MLP model achieved a test accuracy of 85%, wh
 
 ## "Tell the Time" Network
 
-The goal of this assignment is to develop a model that can tell the time from an image of an analog clock. The dataset consists of 18,000 images of analog clocks, each labeled with two values: the hour and the minute. The images are grayscale and have a resolution of 150x150 pixels. Each image is taken from a different angle and rotation, making the task far more challenging.
+The goal of this assignment is to develop a model that can tell the time from an image of an analog clock. The dataset consists of 18,000 images of analog clocks, each labeled with two values: the hour and the minute. The images are grayscale and have a resolution of 150x150 pixels. Each image is taken from a different angle and rotation, making the task far more challenging. The full dataset can be found [here](https://surfdrive.surf.nl/files/index.php/s/B8emtQRGUeAaqmz).
 
 We used three different approaches to solve the problem: 
 - Regression: where we trained a neural network to predict a single output value for the hour and minute (e.g., 12:30 -> 12.5).
@@ -198,3 +198,77 @@ The "common sense" accuracy improved the test accuracy of the regression approac
 Overall, the assignment was a success, and we were able to develop a model that can tell the time from an image of an analog clock (with many different angles and rotations), with a "common sense" accuracy of 11.71 minutes on unseen data.
 
 ## Generative Models - Autoencoders (VAEs) & Generative Adversarial Networks (GANs)
+
+In this assignment, we explored generative models, specifically autoencoders (Variational Autoencoders - VAEs) and Generative Adversarial Networks (GANs). We started with a [jupyter notebook](https://colab.research.google.com/drive/17Rk3MLC6XAxaTQ--M9L_LwM_K1OId-hj?usp=sharing) that introduced the concepts of autoencoders and GANs and provided a step-by-step guide on how to implement them using TensorFlow and Keras. The notebook used a [dataset of faces](https://surfdrive.surf.nl/files/index.php/s/6TTwiWuIRr6wppl) to train the models and generate new faces. In our approach, we used the [Simpsons Faces dataset](https://www.kaggle.com/datasets/kostastokis/simpsons-faces) to train the models and generate new faces.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/original.png" title="original" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/simps.png" title="simps" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Original images from the faces dataset (left) and the Simpsons faces dataset (right).
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/original_vae_0.png" title="original_vae_0" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/original_vae_1.png" title="original_vae_1" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    VAE generated images from the faces dataset at the beginning of the training process (left) and at the end of the training process (right).
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/original_gan_0.png" title="original_gan_0" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/original_gan_1.png" title="original_gan_1" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    GAN generated images from the faces dataset at the beginning of the training process (left) and at the end of the training process (right).
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/simps_vae_0.png" title="simps_vae_0" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/simps_vae_1.png" title="simps_vae_1" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    VAE generated images from the Simpsons faces dataset at the beginning of the training process (left) and at the end of the training process (right).
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/simps_gan_0.png" title="simps_gan_0" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/simps_gan_1.png" title="simps_gan_1" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    GAN generated images from the Simpsons faces dataset at the beginning of the training process (left) and at the end of the training process (right).
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/simps_vae_inter.png" title="simps_vae_inter" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/simps_gan_inter.png" title="simps_gan_inter" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    VAE (left) and GAN (right) generated images from the Simpsons faces dataset at the end of the training process with interpolation between two random latent vectors.
+</div>
