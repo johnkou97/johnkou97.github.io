@@ -90,14 +90,31 @@ We can see that the k-NN classifier outperformed the distance-based classifier o
 
 ## Multi-Class Perceptron
 
+For this assignment, we implemented a multi-class perceptron model to classify the MNIST dataset. The implementation was done from scratch in Python using only the `numpy` library (no deep learning frameworks were used). 
+
+We used two different techniques to train the model: giving the model all the training data at once (batch training) and giving the model one sample at a time (online training). The results are shown in the figure below.
+        
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/deep/accuracy.png" title="accuracy" class="img-fluid rounded z-depth-1" %}
+    <div class="center">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/perceptron.png" title="perceptron" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Accuracy of the multi-class perceptron model on the MNIST dataset.
+    Accuracy of the multi-class perceptron model on the MNIST dataset for batch (Whole Dataset Method) and online (Input one by one Method) training.
 </div>
+
+Training the model with the whole dataset at once required more epochs to converge compared to training the model one sample at a time. However, the training time was significantly shorter for the batch training method. The accuracies of the two methods can be seen in the table below.
+
+| Method | Dataset | Correct | Incorrect | Accuracy |
+|--------|---------|---------|-----------|----------|
+| Batch  | Train   | 1683    | 24        | 98.59%   |
+|        | Test    | 881     | 119       | 88.10%   |
+| Online | Train   | 1707    | 0         | 100.00%  |
+|        | Test    | 872     | 128       | 87.20%   |
+
+<p></p>
+
+We can see that the online training method achieved a higher accuracy on the training dataset compared to the batch training method. However, the test accuracy was slightly lower for the online training method. This can be caused by overfitting to the training data when training the model one sample at a time. On the test dataset, both methods achieved similar accuracies, with the batch training method slightly outperforming the online training method.
 
 ## XOR Network - Gradient Descent
 
