@@ -88,7 +88,7 @@ We applied two classification algorithms to the reduced data: a simple distance-
 
 We can see that the k-NN classifier outperformed the distance-based classifier on both the training and test datasets. 
 
-## Multi-Class Perceptron
+## MultiClass Perceptron
 
 For this assignment, we implemented a multi-class perceptron model to classify the MNIST dataset. The implementation was done from scratch in Python using only the `numpy` library (no deep learning frameworks were used). 
 
@@ -96,7 +96,7 @@ We used two different techniques to train the model: giving the model all the tr
         
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/deep/accuracy.png" title="accuracy" class="img-fluid rounded z-depth-1", style="max-width: 400px; height: auto;" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/accuracy.png" title="accuracy" class="img-fluid rounded z-depth-1", style="max-width: 100px; height: auto;" %}
     </div>
 </div>
 <div class="caption">
@@ -143,11 +143,24 @@ We can see that all the different strategies converged to a solution, reaching a
 
 We also implemented a lazy approach to the XOR problem, where we used the same network architecture but in each epoch, we randomized the weights of the network, until the network was able to solve the XOR problem. The test was to see how many epochs, on average, it took for the network to solve the XOR problem. We did four attempts with an average of 118570.75 epochs and a standard deviation of 118409.22 epochs. The results show that the network was able to solve the XOR problem, but it took a large number of epochs to do so, making it an inefficient approach.
 
-## MNIST & CIFAR-10 - TensorFlow
+## Fashion MNIST & CIFAR 10 - TensorFlow
 
+In this assignment, we used TensorFlow to build and train neural networks on the Fashion MNIST and CIFAR-10 datasets. The Fashion MNIST dataset consists of 70,000 grayscale images (60,000 for training and 10,000 for testing) of 28x28 pixels each, representing 10 different classes of clothing items. The CIFAR-10 dataset consists of 60,000 color images (50,000 for training and 10,000 for testing) of 32x32x3 pixels each, representing 10 different classes of objects.
 
+We built two different neural network architectures. The first architecture is a multi-layer perceptron (MLP) with three hidden layers, each with 300, 100, and 10 neurons, respectively. The total number of parameters in the model is 266,610. The second architecture is a convolutional neural network (CNN) with three convolutional layers, each followed by a max-pooling layer, and two fully connected layers. The total number of parameters in the model is 1,413,834. We trained both models on the Fashion MNIST and CIFAR-10 datasets each time only changing the input layer to match the dataset. For each dataset we selected 5,000 samples from the training set to use as the validation set. The results are shown in the table below.
 
-## Tell-the-Time Network
+| Dataset | Model | Train Accuracy | Validation Accuracy | Test Accuracy |
+|---------|-------|----------------|---------------------|---------------|
+| Fashion MNIST | MLP | 0.92 | 0.88 | 0.85 |
+|               | CNN | 0.92 | 0.89 | 0.22 |
+| CIFAR-10 | MLP | 0.63 | 0.48 | 0.38 |
+|          | CNN | 0.75 | 0.71 | 0.54 |
+
+<p></p>
+
+For the Fashion MNIST dataset, the MLP model achieved a test accuracy of 85%, while the CNN model had a very low test accuracy of 22%, while for the training and validation accuracy both models performed similarly. This indicates that the CNN model was overfitting the data. For the CIFAR-10 dataset, the MLP model achieved a test accuracy of 38%, while the CNN model had a test accuracy of 54%. The CNN model outperformed the MLP model on the CIFAR-10 dataset, indicating that the CNN model was able to capture the spatial features of the images better than the MLP model, which is something that was expected, since CNNs are more suitable for image classification tasks.
+
+## "Tell the Time" Network
 
 
 
