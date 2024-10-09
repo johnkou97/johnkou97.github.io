@@ -95,8 +95,8 @@ For this assignment, we implemented a multi-class perceptron model to classify t
 We used two different techniques to train the model: giving the model all the training data at once (batch training) and giving the model one sample at a time (online training). The results are shown in the figure below.
         
 <div class="row">
-    <div class="center">
-        {% include figure.liquid loading="eager" path="assets/img/courses/deep/perceptron.png" title="perceptron" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/deep/accuracy.png" title="accuracy" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
