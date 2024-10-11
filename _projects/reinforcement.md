@@ -30,10 +30,24 @@ pretty_table: true
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/exploration.png" title="av_digits" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/iteration_1.png" title="iteration_1" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/exploitation_2.png" title="av_digits" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/iteration_10.png" title="iteration_10" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/iteration_18.png" title="iteration_18" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Different iterations of the Dynamic Programming algorithm applied to the Stochastic Windy Gridworld environment.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/exploration.png" title="exploration" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/exploration_2.png" title="exploration 2" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -42,10 +56,10 @@ pretty_table: true
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/depth.png" title="av_digits" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/depth.png" title="depth" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/depth_2.png" title="av_digits" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/depth_2.png" title="depth 2" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -54,10 +68,10 @@ pretty_table: true
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/on_off_policy.png" title="av_digits" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/on_off_policy.png" title="on_off_policy" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/on_off_policy_2.png" title="av_digits" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/on_off_policy_2.png" title="on_off_policy 2" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
