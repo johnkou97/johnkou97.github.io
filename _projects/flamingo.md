@@ -5,7 +5,7 @@ description: Master's thesis research project (2nd year)
 img: assets/img/flamingo.png # image taken from https://flamingo.strw.leidenuniv.nl/index.html
 importance: 1
 category: research
-related_publications: true
+related_publications: false
 giscus_comments: false
 redirect:
 pretty_table: true

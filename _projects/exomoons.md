@@ -6,7 +6,7 @@ img: assets/img/saturn.jpg # image taken from https://images.nasa.gov/details/PI
 importance: 2
 category: research
 related_publications: false
-giscus_comments: true
+giscus_comments: false
 redirect:
 pretty_table: true
 ---
