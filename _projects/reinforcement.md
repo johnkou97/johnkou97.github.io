@@ -145,11 +145,36 @@ Finally, we created some cool animations of the agent's behavior in the Stochast
 
 The assignment was a great introduction to reinforcement learning and the different algorithms used in the field. We solved the Stochastic Windy Gridworld environment using Dynamic Programming, Q-learning, and SARSA. We also explored various hyperparameters and strategies for exploration, on-policy vs. off-policy algorithms, and different back-ups. The animations of the agent's behavior in the environment were a great way to visualize the agent's learning process and how it improved over time. The full report can be found [here](/assets/pdf/tabular.pdf). The code for the project is not publicly available, as it is part of the course material. If requested, I can provide parts of the code privately.
 
-<!-- ## Cartpole -- Deep Q-Learning
+## Cartpole -- Deep Q-Learning
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/video/cart_20.mp4" title="cart_20" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/video/cart_200.mp4" title="cart_200" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: 20 episodes of training. Right: 200 episodes of training.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/cart_400.mp4" title="cart_400" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/cart_800.mp4" title="cart_800" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: 400 episodes of training. Right: 800 episodes of training.
+</div>
 
 
 
-## Catch -- Actor-Critic -->
+
+<!-- ## Catch -- Actor-Critic -->
 
 ## References
 
