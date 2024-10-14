@@ -149,10 +149,10 @@ The assignment was a great introduction to reinforcement learning and the differ
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/video/cart_20.mp4" title="cart_20" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="assets/video/cart_20.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/video/cart_200.mp4" title="cart_200" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="assets/video/cart_200.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
     </div>
 </div>
 <div class="caption">
@@ -161,10 +161,10 @@ The assignment was a great introduction to reinforcement learning and the differ
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/cart_400.mp4" title="cart_400" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="assets/video/cart_400.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/cart_800.mp4" title="cart_800" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="assets/video/cart_800.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
     </div>
 </div>
 <div class="caption">
