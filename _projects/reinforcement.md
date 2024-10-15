@@ -10,6 +10,8 @@ giscus_comments: false
 redirect:
 pretty_table: true
 ---
+toc:
+  beginning: true
 
 ## Stochastic Windy Gridworld -- Tabular Reinforcement Learning
 
@@ -147,6 +149,53 @@ The assignment was a great introduction to reinforcement learning and the differ
 
 ## Cartpole -- Deep Q-Learning
 
+For the second project, we implemented a Deep Q-Learning agent to solve the Cartpole environment from [OpenAI Gym](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) using PyTorch. The Cartpole environment is a classic control problem from the reinforcement learning literature {% cite control_problems --file external %}. The environment consists of a cart that can move left or right, and a pole that is attached to the cart. The goal is to balance the pole by applying forces to the cart. The agent receives a reward of +1 for every step taken, including the termination step. The episode ends if the pole angle is greater than ±12°, the cart position is greater than ±2.4 (agent reaches the edge of the display), or the episode length is greater than 500 (maximum number of steps). The action space is discrete with two actions: push the cart to the left or push the cart to the right. The observation space consists of four values: cart position, cart velocity, pole angle, and pole angular velocity.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/ablation_study.png" title="ablation_study" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Ablation study of the Deep Q-Learning agent in the Cartpole environment. 
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/egreedy_experiment.png" title="egreedy_experiment" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/egreedy_anneal_experiment.png" title="egreedy_anneal_experiment" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Exploration strategies experiment. Left: comparison of classic ε-greedy. Right: comparison of ε-greedy with annealing.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/boltzmann_experiment.png" title="boltzmann_experiment" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/boltzmann_linear_anneal_experiment.png" title="boltzmann_linear_anneal_experiment" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Exploration strategies experiment. Left: comparison of Boltzmann. Right: comparison of Boltzmann with linear annealing.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/exploration_methods.png" title="exploration_methods" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/comparison_dqn_ddqn.png" title="comparison_dqn_ddqn" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: comparison of exploration methods. Right: comparison of DQN and DDQN.
+</div>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="assets/video/cart_20.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
@@ -171,8 +220,20 @@ The assignment was a great introduction to reinforcement learning and the differ
     Left: 400 episodes of training. Right: 800 episodes of training.
 </div>
 
-
-
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/hist_200.png" title="hist_200" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/hist_400.png" title="hist_400" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/hist_800.png" title="hist_800" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Histograms of the rewards obtained by the agent during evaluation after 200, 400, and 800 episodes of training.
+</div>
 
 <!-- ## Catch -- Actor-Critic -->
 
