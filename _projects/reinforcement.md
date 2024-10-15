@@ -9,9 +9,9 @@ related_publications: false
 giscus_comments: false
 redirect:
 pretty_table: true
----
 toc:
   beginning: true
+---
 
 ## Stochastic Windy Gridworld -- Tabular Reinforcement Learning
 
@@ -135,7 +135,7 @@ We first use the DQN with both the TN and ER turned on to experiment with differ
     </div>
 </div>
 <div class="caption">
-    Exploration strategies experiment. Left: comparison of classic ε-greedy with different values of ε. Right: comparison of ε-greedy with linear annealing, with $$\epsilon_{\text{start}}=0.99$$ and $$\epsilon_{\text{end}}=0.01$$. Different lines represent different values of the percentage of the total number of episodes at which the annealing ends.
+    Exploration strategies experiment. Left: comparison of classic ε-greedy with different values of ε. Right: comparison of ε-greedy with linear annealing, with $\epsilon_{\text{start}}=0.99$ and $$\epsilon_{\text{end}}=0.01$$. Different lines represent different values of the percentage of the total number of episodes at which the annealing ends.
 </div>
 
 <div class="row">
