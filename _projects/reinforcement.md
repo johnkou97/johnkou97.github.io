@@ -26,35 +26,6 @@ The Stochastic Windy Gridworld environment is an adaptation of one of the exampl
     The Stochastic Windy Gridworld environment. The start point is denoted with "S" and the goal state with "G". The arrows indicate the direction of the wind, thicker arrows indicate stronger wind. The agent can move in four directions: up, down, left, and right.
 </div>
 
-<!-- Research Question
-In this assignment, you will study a range of basic principles in tabular, value-based reinforcement
-learning. They serve as a primer for the rest of the course. In particular, we will study the
-following topics:
- Dynamic Programming (DP) (Part 1):
-We first focus on dynamic programming, which is a bridging method between planning
-and reinforcement learning. DP assumes full access to a model of the environment, i.e., we
-can get p(s0 |s, a) and r(s, a, s0 ) for any state s and action a. DP is guaranteed to find the
-optimal solution, but it 1) requires a model (which is not always available) and 2) suffers
-from the curse of dimensionality (which all tabular methods actually do, and to which we
-get back later in the course).
- Model-free RL: We next switch to the reinforcement learning setting, where we do not
-have access to a model, but can only permanently execute actions from a state, and have
-to continue from the resulting next state.
-– Exploration (Part 2) The first issue this brings up is exploration versus exploitation:
-we need to sometimes try novel things, but at some point also exploit what we know
-works well. We will compare two simple ways to ensure exploration: -greedy and a
-softmax/Boltzmann policy.
-– Back-up: The second main aspect of any RL algorithm is the back-up. We acquired
-new information, and want to construct a new estimate of the value of a certain
-state-action pair s, a. There are two important considerations when constructing this
-back-up:
-* Off-policy versus on-policy (Part 3): This difference is best illustrated for
-one-step back-ups, for which we will compare Q-learning (off-policy) to SARSA
-(on-policy).
-* Depth (Part 4): We can also compute deeper back-ups, where we sum more
-rewards in a trace. We will compare 1-step back-ups, n-step back-ups, and Monte
-Carlo back-ups. -->
-
 The goal of this project was to study a range of basic principles in tabular, value-based reinforcement learning. The first part focused on Dynamic Programming, which is a bridging method between planning and reinforcement learning. In Dynamic Programming, we have full access to a model of the environment, and we can get the transition probabilities and rewards for any state and action. This guarantees that we will find the optimal solution, given enough iterations. 
 
 We implemented the Dynamic Programming algorithm and applied it to the Stochastic Windy Gridworld environment. The figure below shows different iterations of the algorithm. The Q-values converge to the optimal policy, after 18 iterations. In the beginning, we see that the values are low in all states, as the agent has not yet learned the optimal policy. After 10 iterations, the agent has learned to navigate the environment and the Q-values are higher and more stable. After 18 iterations, the agent has learned the optimal policy and the Q-values guide the agent to the goal state, in the fewest number of steps, which is 23.3 steps on average. The fact that this number is not an integer is due to the stochastic nature of the environment.
@@ -151,14 +122,9 @@ The assignment was a great introduction to reinforcement learning and the differ
 
 For the second project, we implemented a Deep Q-Learning agent to solve the Cartpole environment from [OpenAI Gym](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) using PyTorch. The Cartpole environment is a classic control problem from the reinforcement learning literature {% cite control_problems --file external %}. The environment consists of a cart that can move left or right, and a pole that is attached to the cart. The goal is to balance the pole by applying forces to the cart. The agent receives a reward of +1 for every step taken, including the termination step. The episode ends if the pole angle is greater than ±12°, the cart position is greater than ±2.4 (agent reaches the edge of the display), or the episode length is greater than 500 (maximum number of steps). The action space is discrete with two actions: push the cart to the left or push the cart to the right. The observation space consists of four values: cart position, cart velocity, pole angle, and pole angular velocity.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/ablation_study.png" title="ablation_study" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Ablation study of the Deep Q-Learning agent in the Cartpole environment. 
-</div>
+We implemented the Deep Q-Learning (DQN) algorithm with experience replay and target networks. The DQN agent uses a neural network to approximate the Q-values for each state-action pair. The pseudo-code for the DQN algorithm we implemented is from the book {% cite 2022arXiv220102135P --file external %}. We implemented DQN using PyTorch. We also implemented a Target Network (TN) to stabilize the learning process and an Experience Replay (ER) buffer to store and sample experiences for training. These features can be turned on or off by the user. We also implemented Double DQN (DDQN) to see if it improves the performance of the agent.
+
+We first use the DQN with both the TN and ER turned on to experiment with different exploration strategies. We compare the ε-greedy and Boltzmann exploration strategies, with different values of ε and temperature. We also experiment with linear annealing of ε and temperature. The results of the experiments are shown in the figures below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -169,7 +135,7 @@ For the second project, we implemented a Deep Q-Learning agent to solve the Cart
     </div>
 </div>
 <div class="caption">
-    Exploration strategies experiment. Left: comparison of classic ε-greedy. Right: comparison of ε-greedy with annealing.
+    Exploration strategies experiment. Left: comparison of classic ε-greedy with different values of ε. Right: comparison of ε-greedy with linear annealing, with $$\epsilon_{\text{start}}=0.99$$ and $$\epsilon_{\text{end}}=0.01$$. Different lines represent different values of the percentage of the total number of episodes at which the annealing ends.
 </div>
 
 <div class="row">
@@ -181,8 +147,10 @@ For the second project, we implemented a Deep Q-Learning agent to solve the Cart
     </div>
 </div>
 <div class="caption">
-    Exploration strategies experiment. Left: comparison of Boltzmann. Right: comparison of Boltzmann with linear annealing.
+    Exploration strategies experiment. Left: comparison of Boltzmann with different values of the temperature. Right: comparison of Boltzmann with linear annealing, with $$\text{tau}_{\text{start}}=2.00$$ and $$\text{tau}_{\text{end}}=0.01$$. Different lines represent different values of the percentage of the total number of episodes at which the annealing ends.
 </div>
+
+We also implemented a novelty-based exploration strategy, where the agent explores the environment based on the novelty of the state-action pairs. The original code for the novelty-based exploration strategy comes from {% cite 2016arXiv161104717T --file external %}, and uses a hash function to calculate the novelty of the state-action pairs. We compare the best performing ε-greedy and Boltzmann strategies with and without linear annealing and the novelty-based exploration strategy. We also compare the performance of the DQN agent with the performance of the DDQN agent. The results of the experiments are shown in the figures below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -193,8 +161,10 @@ For the second project, we implemented a Deep Q-Learning agent to solve the Cart
     </div>
 </div>
 <div class="caption">
-    Left: comparison of exploration methods. Right: comparison of DQN and DDQN.
+    Left: comparison of all exploration strategies withe the best exploration hyperparameter. Right: comparison of DQN and DDQN agents.
 </div>
+
+After that we tune the hyperparameters of the DQN agent to find the best performing agent. For the optimazation we use the `Optuna` library. We can see some figures for the tuning of the most important hyperparameters below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -205,8 +175,23 @@ For the second project, we implemented a Deep Q-Learning agent to solve the Cart
     </div>
 </div>
 <div class="caption">
-    Left: parallel coordinates plot. Right: slice plot.
+    Left: parallel coordinates plot showing the values of the four most important hyperparameters for the DQN agent. Right: slice plot showing the values of the four most important hyperparameters for the DQN agent.
 </div>
+
+The best exploration method was the Boltzmann exploration strategy without linear annealing for a temperature of 0.1. We used this value to perform the ablation study where we turned off either or both the TN and ER. The results of the ablation study are shown in the figure below. Note that in the legendd we denote the absence of the TN with "DQN-TN" and the absence of the ER with "DQN-ER".
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/ablation_study.png" title="ablation_study" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Ablation study of the Deep Q-Learning agent in the Cartpole environment. Left: comparison of DQN with both TN and ER (DQN), and DQN without both (DQN-ER-TN). Middle: comparison of DQN with both TN and ER (DQN), and DQN without TN (DQN-ER). Right: comparison of DQN with both TN and ER (DQN), and DQN without ER (DQN-TN).
+</div>
+
+We see that although the TN might help with the stability of the learning process, the ER is crucial for the performance of the agent. The best performing agent was the DQN agent with both the TN and ER turned on. 
+
+Finally, we train the best performing agent and save the weights of the neural network at various stages of training. We then evaluate the agent using the saved weights and create some cool video animations of the agent's behavior in the Cartpole environment. The videos show the agent's behavior at the beginning of training (episodes 20), in the middle of training (episodes 200 and 400), and at the end of training (episodes 800). We see how the agent goes from completely poor performance at the beginning of training to a perfect performance at the end of training. At mid-training, the agent seems to struggle more staying within the limits of the environment, and seems to be doing better at balancing the pole. The videos are shown below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -217,7 +202,7 @@ For the second project, we implemented a Deep Q-Learning agent to solve the Cart
     </div>
 </div>
 <div class="caption">
-    Left: 20 episodes of training. Right: 200 episodes of training.
+    Video animations of the agent's behavior in the Cartpole environment, during different stages of the training process. Each video contains 10 evaluation episodes (no exploration or training). Left: beginning of training (after 20 episodes of training). Right: middle of training (after 200 episodes of training).
 </div>
 
 <div class="row">
@@ -229,8 +214,10 @@ For the second project, we implemented a Deep Q-Learning agent to solve the Cart
     </div>
 </div>
 <div class="caption">
-    Left: 400 episodes of training. Right: 800 episodes of training.
+    Left: middle of training (after 400 episodes of training). Right: end of training (after 800 episodes of training). For this video we only included 5 evaluation episodes, as the agent was performing perfectly and we wanted to keep the video short.
 </div>
+
+We can also create histograms of the rewards obtained by the agent during evaluation after 200, 400, and 800 episodes of training. The histograms are shown below. We can see that at the end of training, the agent is consistently obtaining the maximum reward of 500, which means that the agent is balancing the pole for the maximum number of steps (500 steps).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -246,6 +233,8 @@ For the second project, we implemented a Deep Q-Learning agent to solve the Cart
 <div class="caption">
     Histograms of the rewards obtained by the agent during evaluation after 200, 400, and 800 episodes of training.
 </div>
+
+Overall, we were successful in training a Deep Q-Learning agent to solve the Cartpole environment. We experimented with different exploration strategies, hyperparameters, and ablated the TN and ER. We found that the best performing agent was the DQN agent with both the TN and ER turned on, using the Boltzmann exploration strategy with a temperature of 0.1. We also implemented the DDQN agent and compared its performance with the DQN agent. We found that the DDQN agent performed at the same level as the DQN agent. The full report can be found [here](/assets/pdf/cartpole.pdf). The code for the project is not publicly available, as it is part of the course material. If requested, I can provide parts of the code privately.
 
 <!-- ## Catch -- Actor-Critic -->
 
