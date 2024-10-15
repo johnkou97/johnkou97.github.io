@@ -198,6 +198,18 @@ For the second project, we implemented a Deep Q-Learning agent to solve the Cart
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/parallel_coordinates.png" title="parallel_coordinates" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/slice.png" title="slice" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: parallel coordinates plot. Right: slice plot.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="assets/video/cart_20.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
