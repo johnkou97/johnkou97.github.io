@@ -124,7 +124,7 @@ For the second project, we implemented a Deep Q-Learning agent to solve the Cart
 
 We implemented the Deep Q-Learning (DQN) algorithm with experience replay and target networks. The DQN agent uses a neural network to approximate the Q-values for each state-action pair. The pseudo-code for the DQN algorithm we implemented is from the book {% cite 2022arXiv220102135P --file external %}. We implemented DQN using PyTorch. We also implemented a Target Network (TN) to stabilize the learning process and an Experience Replay (ER) buffer to store and sample experiences for training. These features can be turned on or off by the user. We also implemented Double DQN (DDQN) to see if it improves the performance of the agent.
 
-We first use the DQN with both the TN and ER turned on to experiment with different exploration strategies. We compare the ε-greedy and Boltzmann exploration strategies, with different values of ε and temperature. We also experiment with linear annealing of ε and temperature. The results of the experiments are shown in the figures below. $$e$$, $$\epsilon$$, $$\epsilon_{\text{end}}$$
+We first use the DQN with both the TN and ER turned on to experiment with different exploration strategies. We compare the ε-greedy and Boltzmann exploration strategies, with different values of ε and temperature. We also experiment with linear annealing of ε and temperature. The results of the experiments are shown in the figures below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -135,7 +135,7 @@ We first use the DQN with both the TN and ER turned on to experiment with differ
     </div>
 </div>
 <div class="caption">
-    Exploration strategies experiment. Left: comparison of classic ε-greedy with different values of ε. Right: comparison of ε-greedy with linear annealing, with $$e=0.99$$ and $$\epsilon_{\text{end}}=0.01$$. Different lines represent different values of the percentage of the total number of episodes at which the annealing ends.
+    Exploration strategies experiment. Left: comparison of classic ε-greedy with different values of ε. Right: comparison of ε-greedy with linear annealing, with start value for ε of 0.99 and end value of 0.01. Different lines represent different values of the percentage of the total number of episodes at which the annealing ends.
 </div>
 
 <div class="row">
@@ -147,7 +147,7 @@ We first use the DQN with both the TN and ER turned on to experiment with differ
     </div>
 </div>
 <div class="caption">
-    Exploration strategies experiment. Left: comparison of Boltzmann with different values of the temperature. Right: comparison of Boltzmann with linear annealing, with $$\tau_{\text{start}}=2.00$$ and $$\tau_{\text{end}}=0.01$$. Different lines represent different values of the percentage of the total number of episodes at which the annealing ends.
+    Exploration strategies experiment. Left: comparison of Boltzmann with different values of the temperature. Right: comparison of Boltzmann with linear annealing, with start value for the temperature of 2.00 and end value of 0.01. Different lines represent different values of the percentage of the total number of episodes at which the annealing ends.
 </div>
 
 We also implemented a novelty-based exploration strategy, where the agent explores the environment based on the novelty of the state-action pairs. The original code for the novelty-based exploration strategy comes from {% cite 2016arXiv161104717T --file external %}, and uses a hash function to calculate the novelty of the state-action pairs. We compare the best performing ε-greedy and Boltzmann strategies with and without linear annealing and the novelty-based exploration strategy. We also compare the performance of the DQN agent with the performance of the DDQN agent. The results of the experiments are shown in the figures below.
