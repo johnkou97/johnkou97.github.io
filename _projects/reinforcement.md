@@ -165,7 +165,7 @@ For the second project, we implemented a Deep Q-Learning agent to solve the Cart
         {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/egreedy_experiment.png" title="egreedy_experiment" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/egreedy_anneal_experiment.png" title="egreedy_anneal_experiment" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/egreedy_linear_anneal_experiment.png" title="egreedy_anneal_experiment" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
