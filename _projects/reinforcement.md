@@ -11,11 +11,6 @@ redirect:
 pretty_table: true
 ---
 
-This page includes the following projects:
-- [Stochastic Windy Gridworld -- Tabular Reinforcement Learning](##stochastic-windy-gridworld----tabular-reinforcement-learning)
-- [Cartpole -- Deep Q-Learning](#cartpole----deep-q-learning)
-- [Catch -- Actor-Critic](##Catch -- Actor-Critic)
-
 ## Stochastic Windy Gridworld -- Tabular Reinforcement Learning
 
 The Stochastic Windy Gridworld environment is an adaptation of one of the examples in the book {% cite reinforce_book --file external %}. You can see the environment in the figure below. The environment has a 10x7 grid, with a start point denoted by "S" and a goal state denoted by "G". The agent can move in four directions: up, down, left, and right. The environment has a stochastic feature: the wind. The wind blows the agent up one or two additional steps (thin and thick arrows, respectively). The wind is present on 80% of the occasions, making the environment stochastic. The agent receives a reward of -1 at each step, a reward of +40 when reaching the goal state.
