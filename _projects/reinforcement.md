@@ -9,6 +9,7 @@ related_publications: false
 giscus_comments: false
 redirect:
 pretty_table: true
+toc: true
 ---
 
 toc:
