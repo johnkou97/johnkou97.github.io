@@ -168,7 +168,7 @@ After that we tune the hyperparameters of the DQN agent to find the best perform
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/parallel_coordinates.png" title="parallel_coordinates" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/parallel_coordinate.png" title="parallel_coordinate" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/slice.png" title="slice" class="img-fluid rounded z-depth-1" %}
@@ -236,7 +236,7 @@ We can also create histograms of the rewards obtained by the agent during evalua
 
 Overall, we were successful in training a Deep Q-Learning agent to solve the Cartpole environment. We experimented with different exploration strategies, hyperparameters, and ablated the TN and ER. We found that the best performing agent was the DQN agent with both the TN and ER turned on, using the Boltzmann exploration strategy with a temperature of 0.1. We also implemented the DDQN agent and compared its performance with the DQN agent. We found that the DDQN agent performed at the same level as the DQN agent. The full report can be found [here](/assets/pdf/cartpole.pdf). The code for the project is not publicly available, as it is part of the course material. If requested, I can provide parts of the code privately.
 
-<!-- ## Catch -- Actor-Critic -->
+## Catch -- Actor-Critic
 
 ## References
 
