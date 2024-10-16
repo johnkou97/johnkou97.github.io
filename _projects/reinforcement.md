@@ -9,8 +9,7 @@ related_publications: false
 giscus_comments: false
 redirect:
 pretty_table: true
-toc:
-  beginning: true
+toc: true
 ---
 
 This page includes: 
