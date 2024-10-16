@@ -147,7 +147,7 @@
         "name": "14th Hellenic Astronomical Conference",
         "date": "8-11 JUL 2019",
         "location": "Volos, Greece",
-        "url": "",
+        "url": "https://helas.gr/conf/2019/",
         "institution": "Hellenic Astronomical Society",
         "highlights": "" // []
       },
@@ -162,9 +162,9 @@
       },
       {
         "name": "17th Conference of the Hellenic Physical Society",
-        "date": "15-18 SEP 2018",
+        "date": "15-18 ΜΑΡ 2018",
         "location": "Thessaloniki -- Greece",
-        "url": "",
+        "url": "https://eef.gr/events/17o-sunedrio-tis-enwsis-ellinwn-fusikwn",
         "institution": "Hellenic Physical Society",
         "summary": "",
         "highlights": "" // []
@@ -201,7 +201,7 @@
     {
       "name": "Self-employed",
       "position": "Private Tutor in Physics, Mathematics and Chemistry",
-      // "url": "",
+      "url": "",
       "startDate": "SEP 2018",
       "endDate": "JUN 2024",
       "summary": "Private tutor in Physics, Mathematics and Chemistry for high school and undergraduate students. I have been teaching students for the high school exams in Greece and university students from many different departments for their exams.",
