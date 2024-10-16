@@ -9,13 +9,12 @@ related_publications: false
 giscus_comments: false
 redirect:
 pretty_table: true
-toc: true
 ---
 
-This page includes: 
-- [Stochastic Windy Gridworld -- Tabular Reinforcement Learning](#stochastic-windy-gridworld----tabular-reinforcement-learning)
-- [Cartpole -- Deep Q-Learning](#cartpole----deep-q-learning)
-- [Catch -- Actor-Critic](#catch----actor-critic)
+toc:
+    - name: Stochastic Windy Gridworld -- Tabular Reinforcement Learning
+    - name: Cartpole -- Deep Q-Learning
+    - name: Catch -- Actor-Critic
 
 ## Stochastic Windy Gridworld -- Tabular Reinforcement Learning
 
