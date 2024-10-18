@@ -13,7 +13,7 @@ pretty_table: true
 
 Please find the thesis [here](/assets/pdf/flamingo.pdf). The description of the project and the code are not available yet, but will be soon. Stay tuned!
 
-This project was presented at the [79th Dutch Astronomers' Conference](https://www.knvws.nl/actueel/nederlandse-astronomenconferentie-2024-13-15-mei/). See the pictures below!
+This project was presented at the [79th Dutch Astronomers' Conference](https://www.knvws.nl/actueel/nederlandse-astronomenconferentie-2024-13-15-mei/). See the pictures below! You can also find the poster in [pdf format](/assets/pdf/FLAMINGO_poster.pdf).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
