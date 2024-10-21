@@ -236,7 +236,44 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the Car
 
 ## Catch -- Actor-Critic
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/ablation_ac.png" title="ablation_ac" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Ablation study of the Actor-Critic agent in the Catch environment.
+</div>
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/experiment_vector.png" title="experiment_vector" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/epsilon_clip_ppo.png" title="epsilon_clip_ppo" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/cartpole_ac.png" title="cartpole_ac" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: experiment with vector vs pixel input for the Catch environment. Middle: experiment with ε-clip for the PPO agent in the Catch environment. Right: experiment with the Actor-Critic agent in the Cartpole environment.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/grid_size_ac.png" title="grid_size" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/speed_ac.png" title="speed" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/speed_size_ac.png" title="speed_size" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: experiment with different grid sizes for the Actor-Critic agent in the Catch environment. Middle: experiment with different speeds for the Actor-Critic agent in the Catch environment. Right: experiment with different grid sizes and speeds for the Actor-Critic agent in the Catch environment.
+</div>
 
 Cover Image by <a href="https://unsplash.com/@santesson89?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrea De Santis</a> on <a href="https://unsplash.com/photos/black-and-white-robot-toy-on-red-wooden-table-zwd435-ewb4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
