@@ -275,7 +275,53 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the Car
     Left: experiment with different grid sizes for the Actor-Critic agent in the Catch environment. Middle: experiment with different speeds for the Actor-Critic agent in the Catch environment. Right: experiment with different grid sizes and speeds for the Actor-Critic agent in the Catch environment.
 </div>
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/actor_0.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/actor_50.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+    </div>
+</div>
+<div class="caption">
+    Video animations of the agent's behavior in the Catch environment, during different stages of the training process. Each video contains 5 evaluation episodes (no exploration or training). Left: beginning of training (after 0 epochs of training). Right: middle of training (after 50 epochs of training).
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/actor_100.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/actor_150.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+    </div>
+</div>
+<div class="caption">
+    Video animations of the agent's behavior in the Catch environment, during different stages of the training process. Each video contains 3 evaluation episodes (no exploration or training). Left: middle of training (after 100 epochs of training). Right: end of training (after 150 epochs of training).
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/actor_0.png" title="actor_0" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/actor_50.png" title="actor_50" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/actor_100.png" title="actor_100" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/courses/reinforce/actor_150.png" title="actor_150" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Histograms of the rewards obtained by the agent during evaluation after 0, 50, 100, and 150 epochs of training (from left to right).
+</div>
+
+<br>
+<br>
 Cover Image by <a href="https://unsplash.com/@santesson89?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrea De Santis</a> on <a href="https://unsplash.com/photos/black-and-white-robot-toy-on-red-wooden-table-zwd435-ewb4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+<br>
+<br>
 
 ## References
 
