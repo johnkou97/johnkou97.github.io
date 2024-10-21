@@ -236,6 +236,10 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the Car
 
 ## Catch -- Actor-Critic
 
+
+
+Cover Image by <a href="https://unsplash.com/@santesson89?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrea De Santis</a> on <a href="https://unsplash.com/photos/black-and-white-robot-toy-on-red-wooden-table-zwd435-ewb4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
 ## References
 
 {% bibliography --cited_in_order --file external %}
