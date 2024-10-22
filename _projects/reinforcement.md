@@ -11,6 +11,28 @@ redirect:
 pretty_table: true
 ---
 
+<br>
+<br>
+Cover Image by <a href="https://unsplash.com/@santesson89?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrea De Santis</a> on <a href="https://unsplash.com/photos/black-and-white-robot-toy-on-red-wooden-table-zwd435-ewb4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+<br>
+<br>
+
+<!-- include the videos for the well trained agents of all the projects -->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/tab_178_179_180.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/cart_800.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/actor_150.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
+</div>
+<div class="caption">
+    Video animations of the agent's behavior in the Stochastic Windy Gridworld environment (left), the Cartpole environment (middle), and the Catch environment (right) at the end of training. Keep reading to learn more about the projects.
+</div>
+
 ## Stochastic Windy Gridworld -- Tabular Reinforcement Learning
 
 The Stochastic Windy Gridworld environment is an adaptation of one of the examples in the book {% cite reinforce_book --file external %}. You can see the environment in the figure below. The environment has a 10x7 grid, with a start point denoted by "S" and a goal state denoted by "G". The agent can move in four directions: up, down, left, and right. The environment has a stochastic feature: the wind. The wind blows the agent up one or two additional steps (thin and thick arrows, respectively). The wind is present on 80% of the occasions, making the environment stochastic. The agent receives a reward of -1 at each step, a reward of +40 when reaching the goal state.
@@ -317,11 +339,7 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the Car
     Histograms of the rewards obtained by the agent during evaluation after 0, 50, 100, and 150 epochs of training (from left to right).
 </div>
 
-<br>
-<br>
-Cover Image by <a href="https://unsplash.com/@santesson89?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrea De Santis</a> on <a href="https://unsplash.com/photos/black-and-white-robot-toy-on-red-wooden-table-zwd435-ewb4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-<br>
-<br>
+
 
 ## References
 
