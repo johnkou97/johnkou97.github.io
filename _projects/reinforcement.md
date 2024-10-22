@@ -15,7 +15,6 @@ Cover Image by <a href="https://unsplash.com/@santesson89?utm_content=creditCopy
 <br>
 <br>
 
-<!-- include the videos for the well trained agents of all the projects -->
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="assets/video/tab_178_179_180.mp4" class="img-fluid rounded z-depth-1" controls=true %}
@@ -24,7 +23,7 @@ Cover Image by <a href="https://unsplash.com/@santesson89?utm_content=creditCopy
         {% include video.liquid path="assets/video/cart_800.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/actor_150.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+        {% include video.liquid path="assets/video/actor_150_aspect.mp4" class="img-fluid rounded z-depth-1" controls=true %}
     </div>
 </div>
 <div class="caption">
@@ -256,68 +255,16 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the `Ca
 
 ## Catch -- Actor-Critic
 
-<!--  Reinforcement learning environment where we need to move a paddle to catch balls that drop from the top of the screen. 
-    
-    -----------
-    |     o   |
-    |         |
-    |         | 
-    |         |
-    |   _     |
-    -----------
-    
-    o = ball
-    _ = paddle
-    
-    
-    State space: 
-        - The width and height of the problem can be adjusted with the 'rows' and 'columns' argument upon initialization.
-        - The observation space can either be a vector with xy-locations of paddle and lowest ball, 
-        or a binary two-channel pixel array, with the paddle location in the first channel, and all balls in the second channel.
-        This can be determined with the 'observation_type' argument upon initialization. 
-        
-    Action space: 
-        - Each timestep the paddle can move left, right or stay idle.
-        
-    Reward function: 
-        - When we catch a ball when it reaches the bottom row, we get a reward of +1. 
-        - When we miss a ball that reaches the bottom row, we get a penalty of -1. 
-        - All other situaties have a reward of 0.  
-        
-    Dynamcics function: 
-        - Balls randomly drop from one of the possible positions on top of the screen.
-        - The speed of dropping can be adjusted with the 'speed' parameter. 
-        
-    Termination: 
-        - The task terminates when 1) we reach 'max_steps' total steps (to be set upon initialization), 
-        or 2) we miss 'max_misses' total balls (to be set upon initialization). 
-    
-    """
-
-    def __init__(self, rows: int = 7, columns: int = 7, speed: float = 1.0,
-                 max_steps: int = 250, max_misses: int = 10,
-                 observation_type: str = 'pixel', seed=None,
-                 ):
-        """ Arguments: 
-        rows: the number of rows in the environment grid.
-        columns: number of columns in the environment grid.
-        speed: speed of dropping new balls. At 1.0 (default), we drop a new ball whenever the last one drops from the bottom. 
-        max_steps: number of steps after which the environment terminates.
-        max_misses: number of missed balls after which the environment terminates (when this happens before 'max_steps' is reached).
-        observation_type: type of observation, either 'vector' or 'pixel'. 
-              - 'vector': observation is a vector of length 3:  [x_paddle,x_lowest_ball,y_lowest_ball]
-              - 'pixel': observation is an array of size [rows x columns x 2], with one hot indicator for the paddle location in the first channel,
-              and one-hot indicator for every present ball in the second channel. 
-        seed: environment seed.  -->
-
-In this assignment we worked with a new environment called `Catch`, which is an extension from the `Catch` environment in {% cite 2013arXiv1312.5602M --file external %}. The environment consists of a paddle that moves left or right to catch balls that drop from the top of the screen. It has a 7x7 grid, and the agent can move the paddle left, right, or stay idle. The agent receives a reward of +1 when catching a ball, a reward of -1 when missing a ball, and a reward of 0 otherwise. The episode ends when the agent reaches the maximum number of steps (default is 250 steps) or misses the maximum number of balls(default is 10 balls). The observation space can be either a vector with the xy-locations of the paddle and the lowest ball, or a binary two-channel pixel array with the paddle location in the first channel and all balls in the second channel. The speed of dropping new balls can be adjusted, as well as the size of the grid.
+In this assignment we worked with a new environment called `Catch`, which is an extension from the `Catch` environment in {% cite 2019arXiv190803568O --file external %}. The environment consists of a paddle that moves left or right to catch balls that drop from the top of the screen. It has a 7x7 grid, and the agent can move the paddle left, right, or stay idle. The agent receives a reward of +1 when catching a ball, a reward of -1 when missing a ball, and a reward of 0 otherwise. The episode ends when the agent reaches the maximum number of steps (default is 250 steps) or misses the maximum number of balls(default is 10 balls). The observation space can be either a vector with the xy-locations of the paddle and the lowest ball, or a binary two-channel pixel array with the paddle location in the first channel and all balls in the second channel. The speed of dropping new balls can be adjusted, as well as the size of the grid.
 
 We implemented three agents in this project:
 - REINFORCE
 - Actor-Critic
 - Proximal Policy Optimization (PPO)
 
+All these agents use a policy-based algorithm, which is a different approach from the value-based algorithms (DQN and DDQN) used in the previous projects. The policy-based algorithms directly learn the policy, which is a mapping from states to actions, without learning the value function. The REINFORCE agent uses the Monte Carlo policy gradient method to update the policy. The Actor-Critic agent uses an actor network to learn the policy and a critic network to learn the value function. The PPO agent uses the Proximal Policy Optimization algorithm to update the policy, which utilizes a clipped objective function to prevent large policy updates.
 
+For the Actor-Critic agent, we also implemented a Baseline and Bootstrapping. The hyperparameters, we experimented with many different values to find the best performing agent. We performed an ablation study to compare the performance of the Actor-Critic agent with and without the Baseline and Bootstrapping, as well as the REINFORCE agent. The results of the ablation study are shown in the figure below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -327,6 +274,10 @@ We implemented three agents in this project:
 <div class="caption">
     Ablation study of the Actor-Critic agent in the `Catch` environment.
 </div>
+
+As we can see from the results, the Actor-Critic agent greatly improves by using the Baseline and Bootstrapping. The vanilla Actor-Critic agent (no Baseline and Bootstrapping) is not able to learn at the environment. The REINFORCE agent performs better than the vanilla Actor-Critic agent, but not as good as the Actor-Critic agent with either the Baseline or Bootstrapping. The best performing agent is the Actor-Critic agent with both the Baseline and Bootstrapping turned on.
+
+Next we experiment with the vector and pixel (default) input for the `Catch` environment. We also compare the PPO agent for different values of the ε-clip parameter with the Actor-Critic agent. We experiment with different grid sizes and speeds for the Actor-Critic agent. We also use the Actor-Critic agent to solve the `Cartpole` environment (see the previous project). All these experiments are shown in the figures below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -340,8 +291,12 @@ We implemented three agents in this project:
     </div>
 </div>
 <div class="caption">
-    Left: experiment with vector vs pixel input for the `Catch` environment. Middle: experiment with ε-clip for the PPO agent in the `Catch` environment. Right: experiment with the Actor-Critic agent in the Cartpole environment.
+    Left: experiment with vector vs pixel input for the `Catch` environment. Middle: experiment with ε-clip for the PPO agent in the `Catch` environment. Right: experiment with the Actor-Critic agent in the `Cartpole` environment.
 </div>
+
+As we can see the vector input makes the learning process more unstable, and does not reach the performance of the default pixel input. The PPO agent performs better with a lower value of the ε-clip parameter, but is slower to learn than the Actor-Critic agent. For the `Cartpole` environment, the Actor-Critic agent shows some learning progress, but is not able to solve the environment. It should be noted that we did not spend much time tuning the hyperparameters for the `Cartpole` environment, as the focus was on the `Catch` environment, so the results are still promising.
+
+After that we experimented with some environment variations. We used the best performing Actor-Critic agent to solve the environment with different grid sizes, speeds, and combinations of grid sizes and speeds. When the ball speed is greater than 1.0 (default), the new ball drops before the previous ball reaches the bottom row. The opposite is true when the ball speed is less than 1.0. The results of the experiments are shown in the figures below. To compare the performance of the agent, we used the fraction of caught balls for each episode.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -355,8 +310,13 @@ We implemented three agents in this project:
     </div>
 </div>
 <div class="caption">
-    Left: experiment with different grid sizes for the Actor-Critic agent in the `Catch` environment. Middle: experiment with different speeds for the Actor-Critic agent in the `Catch` environment. Right: experiment with different grid sizes and speeds for the Actor-Critic agent in the `Catch` environment.
+    Left: experiment with different grid sizes for the Actor-Critic agent in the `Catch` environment. Middle: experiment with different speeds for the Actor-Critic agent in the `Catch` environment. Right: experiment with different grid sizes and speeds for the Actor-Critic agent in the `Catch` environment. For all the figures, the y-axis shows the fraction of caught balls for each episode (x-axis).
 </div>
+
+As we can see, making the grid smaller helped the agent to learn faster, but increasing it too much made the learning process unstable and suboptimal. Increasing the speed of the balls also lowered the performance of the agent, it was however expected, since it was no longer possible to catch all the balls, even when playing perfectly. What is surprising is that a slower speed for the balls made the learning process very unstable, with some runs reaching the optimal performance, and others being very far from it. 
+
+Finally, we created some nice video animations of the performance of our best agent (Actor-Critic with Baseline and Bootstrapping) at various stages of the learning process. The videos show the agent's behavior at the start of training (after 0 epochs), in the first stages of training (after 50 epochs), in the middle of training (after 100 epochs), and at the end of training (after 150 epochs). The agent kept learning after that, but the performance did not improve as it had already reached the optimal performance. For each evaluation we turned off the exploration and training, and the agent played 10 episodes. The videos only show 5 episodes for the first two stages and 3 episodes for the last two stages, to keep the videos short. The videos are shown below.
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -367,7 +327,7 @@ We implemented three agents in this project:
     </div>
 </div>
 <div class="caption">
-    Video animations of the agent's behavior in the `Catch` environment, during different stages of the training process. Each video contains 5 evaluation episodes (no exploration or training). Left: beginning of training (after 0 epochs of training). Right: middle of training (after 50 epochs of training).
+    Video animations of the agent's behavior in the `Catch` environment, during different stages of the training process. Each video contains 5 evaluation episodes (no exploration or training). Left: beginning of training (after 0 epochs of training). Right: first stages of training (after 50 epochs of training).
 </div>
 
 <div class="row">
@@ -381,6 +341,8 @@ We implemented three agents in this project:
 <div class="caption">
     Video animations of the agent's behavior in the `Catch` environment, during different stages of the training process. Each video contains 3 evaluation episodes (no exploration or training). Left: middle of training (after 100 epochs of training). Right: end of training (after 150 epochs of training).
 </div>
+
+We can see that at 0 epochs of training, the agent is moving randomly and is only able to catch a few balls, just by chance. After 50 epochs of training, the agent still moves more or less randomly, but is able to catch some more balls. After 100 epochs of training, the agent has learned to move more efficiently and is able to catch most of the balls. At 150 epochs of training, the agent has learned the optimal policy and is able to catch all the balls. We can also see that in the histograms of the rewards obtained by the agent during evaluation in all four stages of training for the 10 episodes. The histograms are shown below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -400,7 +362,7 @@ We implemented three agents in this project:
     Histograms of the rewards obtained by the agent during evaluation after 0, 50, 100, and 150 epochs of training (from left to right).
 </div>
 
-
+In conclusion, we were able to train an Actor-Critic agent to solve the `Catch` environment. We experimented with different hyperparameters, ablated the Baseline and Bootstrapping, and compared the performance of the Actor-Critic agent with the REINFORCE agent. We also experimented with the vector and pixel input for the `Catch` environment, and compared the PPO agent with the Actor-Critic agent. We experimented with different grid sizes and speeds for the `Catch` environment, and used the Actor-Critic agent to try to solve the `Cartpole` environment. The full report can be found [here](/assets/pdf/catch.pdf). The code for the project is not publicly available, as it is part of the course material. If requested, I can provide parts of the code privately.
 
 ## References
 
