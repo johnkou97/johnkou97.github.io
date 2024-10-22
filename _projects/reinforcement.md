@@ -11,8 +11,6 @@ redirect:
 pretty_table: true
 ---
 
-<br>
-<br>
 Cover Image by <a href="https://unsplash.com/@santesson89?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrea De Santis</a> on <a href="https://unsplash.com/photos/black-and-white-robot-toy-on-red-wooden-table-zwd435-ewb4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 <br>
 <br>
@@ -30,12 +28,12 @@ Cover Image by <a href="https://unsplash.com/@santesson89?utm_content=creditCopy
     </div>
 </div>
 <div class="caption">
-    Video animations of the agent's behavior in the Stochastic Windy Gridworld environment (left), the Cartpole environment (middle), and the Catch environment (right) at the end of training. Keep reading to learn more about the projects.
+    Video animations of the agent's behavior in the `Stochastic Windy Gridworld` environment (left), the `Cartpole` environment (middle), and the `Catch` environment (right) at the end of training. Keep reading to learn more about the projects.
 </div>
 
 ## Stochastic Windy Gridworld -- Tabular Reinforcement Learning
 
-The Stochastic Windy Gridworld environment is an adaptation of one of the examples in the book {% cite reinforce_book --file external %}. You can see the environment in the figure below. The environment has a 10x7 grid, with a start point denoted by "S" and a goal state denoted by "G". The agent can move in four directions: up, down, left, and right. The environment has a stochastic feature: the wind. The wind blows the agent up one or two additional steps (thin and thick arrows, respectively). The wind is present on 80% of the occasions, making the environment stochastic. The agent receives a reward of -1 at each step, a reward of +40 when reaching the goal state.
+The `Stochastic Windy Gridworld` environment is an adaptation of one of the examples in the book {% cite reinforce_book --file external %}. You can see the environment in the figure below. The environment has a 10x7 grid, with a start point denoted by "S" and a goal state denoted by "G". The agent can move in four directions: up, down, left, and right. The environment has a stochastic feature: the wind. The wind blows the agent up one or two additional steps (thin and thick arrows, respectively). The wind is present on 80% of the occasions, making the environment stochastic. The agent receives a reward of -1 at each step, a reward of +40 when reaching the goal state.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -43,12 +41,12 @@ The Stochastic Windy Gridworld environment is an adaptation of one of the exampl
     </div>
 </div>
 <div class="caption">
-    The Stochastic Windy Gridworld environment. The start point is denoted with "S" and the goal state with "G". The arrows indicate the direction of the wind, thicker arrows indicate stronger wind. The agent can move in four directions: up, down, left, and right.
+    The `Stochastic Windy Gridworld` environment. The start point is denoted with "S" and the goal state with "G". The arrows indicate the direction of the wind, thicker arrows indicate stronger wind. The agent can move in four directions: up, down, left, and right.
 </div>
 
 The goal of this project was to study a range of basic principles in tabular, value-based reinforcement learning. The first part focused on Dynamic Programming, which is a bridging method between planning and reinforcement learning. In Dynamic Programming, we have full access to a model of the environment, and we can get the transition probabilities and rewards for any state and action. This guarantees that we will find the optimal solution, given enough iterations. 
 
-We implemented the Dynamic Programming algorithm and applied it to the Stochastic Windy Gridworld environment. The figure below shows different iterations of the algorithm. The Q-values converge to the optimal policy, after 18 iterations. In the beginning, we see that the values are low in all states, as the agent has not yet learned the optimal policy. After 10 iterations, the agent has learned to navigate the environment and the Q-values are higher and more stable. After 18 iterations, the agent has learned the optimal policy and the Q-values guide the agent to the goal state, in the fewest number of steps, which is 23.3 steps on average. The fact that this number is not an integer is due to the stochastic nature of the environment.
+We implemented the Dynamic Programming algorithm and applied it to the `Stochastic Windy Gridworld` environment. The figure below shows different iterations of the algorithm. The Q-values converge to the optimal policy, after 18 iterations. In the beginning, we see that the values are low in all states, as the agent has not yet learned the optimal policy. After 10 iterations, the agent has learned to navigate the environment and the Q-values are higher and more stable. After 18 iterations, the agent has learned the optimal policy and the Q-values guide the agent to the goal state, in the fewest number of steps, which is 23.3 steps on average. The fact that this number is not an integer is due to the stochastic nature of the environment.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -62,7 +60,7 @@ We implemented the Dynamic Programming algorithm and applied it to the Stochasti
     </div>
 </div>
 <div class="caption">
-    Different iterations of the Dynamic Programming algorithm applied to the Stochastic Windy Gridworld environment.
+    Different iterations of the Dynamic Programming algorithm applied to the `Stochastic Windy Gridworld` environment.
 </div>
 
 The second part of the project focused on Model-free Reinforcement Learning. We implemented two agents: 
@@ -119,7 +117,7 @@ The final experiment compared the n-step back-ups and Monte Carlo back-ups for t
     Depth experiment. Left: comparison of Q-learning agents with 1-step, 3-step, 5-step, and Monte Carlo back-ups, using an ε-greedy policy with ε=0.1. Right: comparison of Q-learning agents with 1-step, 3-step, 5-step, and Monte Carlo back-ups, using a softmax policy with temperature=0.1.
 </div>
 
-Finally, we created some cool animations of the agent's behavior in the Stochastic Windy Gridworld environment. The three videos show the agent's behavior at the beginning of training (episodes 3), in the middle of training (episodes 56 and 57), and at the end of training (episodes 179, 180, and 181). The agent uses the Q-learning algorithm with a softmax (Boltzmann) policy with a temperature of 0.01. At the beginning of training, the agent has not yet learned how to navigate the environment and is moving randomly, constantly exploring the world. We have sped up the video 2x because of the many steps the agent takes, to reach the goal state just once. In the middle of training, the agent has greatly improved its performance and is moving more efficiently towards the goal state. It manages to reach the goal state twice within the video. At the end of training, the agent has learned the optimal policy and is moving directly towards the goal state, reaching it in the fewest number of steps. The video is shorter than the other two and yet the agent reaches the goal state three times.
+Finally, we created some cool animations of the agent's behavior in the `Stochastic Windy Gridworld` environment. The three videos show the agent's behavior at the beginning of training (episodes 3), in the middle of training (episodes 56 and 57), and at the end of training (episodes 179, 180, and 181). The agent uses the Q-learning algorithm with a softmax (Boltzmann) policy with a temperature of 0.01. At the beginning of training, the agent has not yet learned how to navigate the environment and is moving randomly, constantly exploring the world. We have sped up the video 2x because of the many steps the agent takes, to reach the goal state just once. In the middle of training, the agent has greatly improved its performance and is moving more efficiently towards the goal state. It manages to reach the goal state twice within the video. At the end of training, the agent has learned the optimal policy and is moving directly towards the goal state, reaching it in the fewest number of steps. The video is shorter than the other two and yet the agent reaches the goal state three times.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -133,14 +131,14 @@ Finally, we created some cool animations of the agent's behavior in the Stochast
     </div>
 </div>
 <div class="caption">
-    Video animations of the agent's behavior in the Stochastic Windy Gridworld environment. From left to right: beginning of training (episodes 3), middle of training (episodes 56 and 57), and end of training (episodes 179, 180, and 181). The video for the beginning of training has been sped up 2x because of the many steps the agent takes. The agent learns to navigate the environment and reach the goal state while taking into consideration the wind that blows the agent up. The agent was trained using the Q-learning algorithm with a softmax (Boltzmann) policy with a temperature of 0.01.
+    Video animations of the agent's behavior in the `Stochastic Windy Gridworld` environment. From left to right: beginning of training (episodes 3), middle of training (episodes 56 and 57), and end of training (episodes 179, 180, and 181). The video for the beginning of training has been sped up 2x because of the many steps the agent takes. The agent learns to navigate the environment and reach the goal state while taking into consideration the wind that blows the agent up. The agent was trained using the Q-learning algorithm with a softmax (Boltzmann) policy with a temperature of 0.01.
 </div>
 
-The assignment was a great introduction to reinforcement learning and the different algorithms used in the field. We solved the Stochastic Windy Gridworld environment using Dynamic Programming, Q-learning, and SARSA. We also explored various hyperparameters and strategies for exploration, on-policy vs. off-policy algorithms, and different back-ups. The animations of the agent's behavior in the environment were a great way to visualize the agent's learning process and how it improved over time. The full report can be found [here](/assets/pdf/tabular.pdf). The code for the project is not publicly available, as it is part of the course material. If requested, I can provide parts of the code privately.
+The assignment was a great introduction to reinforcement learning and the different algorithms used in the field. We solved the `Stochastic Windy Gridworld` environment using Dynamic Programming, Q-learning, and SARSA. We also explored various hyperparameters and strategies for exploration, on-policy vs. off-policy algorithms, and different back-ups. The animations of the agent's behavior in the environment were a great way to visualize the agent's learning process and how it improved over time. The full report can be found [here](/assets/pdf/tabular.pdf). The code for the project is not publicly available, as it is part of the course material. If requested, I can provide parts of the code privately.
 
 ## Cartpole -- Deep Q-Learning
 
-For the second project, we implemented a Deep Q-Learning agent to solve the Cartpole environment from [OpenAI Gym](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) using PyTorch. The Cartpole environment is a classic control problem from the reinforcement learning literature {% cite control_problems --file external %}. The environment consists of a cart that can move left or right, and a pole that is attached to the cart. The goal is to balance the pole by applying forces to the cart. The agent receives a reward of +1 for every step taken, including the termination step. The episode ends if the pole angle is greater than ±12°, the cart position is greater than ±2.4 (agent reaches the edge of the display), or the episode length is greater than 500 (maximum number of steps). The action space is discrete with two actions: push the cart to the left or push the cart to the right. The observation space consists of four values: cart position, cart velocity, pole angle, and pole angular velocity.
+For the second project, we implemented a Deep Q-Learning agent to solve the `Cartpole` environment from [OpenAI Gym](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) using PyTorch. The `Cartpole` environment is a classic control problem from the reinforcement learning literature {% cite control_problems --file external %}. The environment consists of a cart that can move left or right, and a pole that is attached to the cart. The goal is to balance the pole by applying forces to the cart. The agent receives a reward of +1 for every step taken, including the termination step. The episode ends if the pole angle is greater than ±12°, the cart position is greater than ±2.4 (agent reaches the edge of the display), or the episode length is greater than 500 (maximum number of steps). The action space is discrete with two actions: push the cart to the left or push the cart to the right. The observation space consists of four values: cart position, cart velocity, pole angle, and pole angular velocity.
 
 We implemented the Deep Q-Learning (DQN) algorithm with experience replay and target networks. The DQN agent uses a neural network to approximate the Q-values for each state-action pair. The pseudo-code for the DQN algorithm we implemented is from the book {% cite 2022arXiv220102135P --file external %}. We implemented DQN using PyTorch. We also implemented a Target Network (TN) to stabilize the learning process and an Experience Replay (ER) buffer to store and sample experiences for training. These features can be turned on or off by the user. We also implemented Double DQN (DDQN) to see if it improves the performance of the agent.
 
@@ -206,12 +204,12 @@ The best exploration method was the Boltzmann exploration strategy without linea
     </div>
 </div>
 <div class="caption">
-    Ablation study of the Deep Q-Learning agent in the Cartpole environment. Left: comparison of DQN with both TN and ER (DQN), and DQN without both (DQN-ER-TN). Middle: comparison of DQN with both TN and ER (DQN), and DQN without TN (DQN-ER). Right: comparison of DQN with both TN and ER (DQN), and DQN without ER (DQN-TN).
+    Ablation study of the Deep Q-Learning agent in the `Cartpole` environment. Left: comparison of DQN with both TN and ER (DQN), and DQN without both (DQN-ER-TN). Middle: comparison of DQN with both TN and ER (DQN), and DQN without TN (DQN-ER). Right: comparison of DQN with both TN and ER (DQN), and DQN without ER (DQN-TN).
 </div>
 
 We see that although the TN might help with the stability of the learning process, the ER is crucial for the performance of the agent. The best performing agent was the DQN agent with both the TN and ER turned on. 
 
-Finally, we train the best performing agent and save the weights of the neural network at various stages of training. We then evaluate the agent using the saved weights and create some cool video animations of the agent's behavior in the Cartpole environment. The videos show the agent's behavior at the beginning of training (episodes 20), in the middle of training (episodes 200 and 400), and at the end of training (episodes 800). We see how the agent goes from completely poor performance at the beginning of training to a perfect performance at the end of training. At mid-training, the agent seems to struggle more staying within the limits of the environment, and seems to be doing better at balancing the pole. The videos are shown below.
+Finally, we train the best performing agent and save the weights of the neural network at various stages of training. We then evaluate the agent using the saved weights and create some cool video animations of the agent's behavior in the `Cartpole` environment. The videos show the agent's behavior at the beginning of training (episodes 20), in the middle of training (episodes 200 and 400), and at the end of training (episodes 800). We see how the agent goes from completely poor performance at the beginning of training to a perfect performance at the end of training. At mid-training, the agent seems to struggle more staying within the limits of the environment, and seems to be doing better at balancing the pole. The videos are shown below.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -222,7 +220,7 @@ Finally, we train the best performing agent and save the weights of the neural n
     </div>
 </div>
 <div class="caption">
-    Video animations of the agent's behavior in the Cartpole environment, during different stages of the training process. Each video contains 10 evaluation episodes (no exploration or training). Left: beginning of training (after 20 episodes of training). Right: middle of training (after 200 episodes of training).
+    Video animations of the agent's behavior in the `Cartpole` environment, during different stages of the training process. Each video contains 10 evaluation episodes (no exploration or training). Left: beginning of training (after 20 episodes of training). Right: middle of training (after 200 episodes of training).
 </div>
 
 <div class="row">
@@ -254,9 +252,72 @@ We can also create histograms of the rewards obtained by the agent during evalua
     Histograms of the rewards obtained by the agent during evaluation after 200, 400, and 800 episodes of training.
 </div>
 
-Overall, we were successful in training a Deep Q-Learning agent to solve the Cartpole environment. We experimented with different exploration strategies, hyperparameters, and ablated the TN and ER. We found that the best performing agent was the DQN agent with both the TN and ER turned on, using the Boltzmann exploration strategy with a temperature of 0.1. We also implemented the DDQN agent and compared its performance with the DQN agent. We found that the DDQN agent performed at the same level as the DQN agent. The full report can be found [here](/assets/pdf/cartpole.pdf). The code for the project is not publicly available, as it is part of the course material. If requested, I can provide parts of the code privately.
+Overall, we were successful in training a Deep Q-Learning agent to solve the `Cartpole` environment. We experimented with different exploration strategies, hyperparameters, and ablated the TN and ER. We found that the best performing agent was the DQN agent with both the TN and ER turned on, using the Boltzmann exploration strategy with a temperature of 0.1. We also implemented the DDQN agent and compared its performance with the DQN agent. We found that the DDQN agent performed at the same level as the DQN agent. The full report can be found [here](/assets/pdf/cartpole.pdf). The code for the project is not publicly available, as it is part of the course material. If requested, I can provide parts of the code privately.
 
 ## Catch -- Actor-Critic
+
+<!--  Reinforcement learning environment where we need to move a paddle to catch balls that drop from the top of the screen. 
+    
+    -----------
+    |     o   |
+    |         |
+    |         | 
+    |         |
+    |   _     |
+    -----------
+    
+    o = ball
+    _ = paddle
+    
+    
+    State space: 
+        - The width and height of the problem can be adjusted with the 'rows' and 'columns' argument upon initialization.
+        - The observation space can either be a vector with xy-locations of paddle and lowest ball, 
+        or a binary two-channel pixel array, with the paddle location in the first channel, and all balls in the second channel.
+        This can be determined with the 'observation_type' argument upon initialization. 
+        
+    Action space: 
+        - Each timestep the paddle can move left, right or stay idle.
+        
+    Reward function: 
+        - When we catch a ball when it reaches the bottom row, we get a reward of +1. 
+        - When we miss a ball that reaches the bottom row, we get a penalty of -1. 
+        - All other situaties have a reward of 0.  
+        
+    Dynamcics function: 
+        - Balls randomly drop from one of the possible positions on top of the screen.
+        - The speed of dropping can be adjusted with the 'speed' parameter. 
+        
+    Termination: 
+        - The task terminates when 1) we reach 'max_steps' total steps (to be set upon initialization), 
+        or 2) we miss 'max_misses' total balls (to be set upon initialization). 
+    
+    """
+
+    def __init__(self, rows: int = 7, columns: int = 7, speed: float = 1.0,
+                 max_steps: int = 250, max_misses: int = 10,
+                 observation_type: str = 'pixel', seed=None,
+                 ):
+        """ Arguments: 
+        rows: the number of rows in the environment grid.
+        columns: number of columns in the environment grid.
+        speed: speed of dropping new balls. At 1.0 (default), we drop a new ball whenever the last one drops from the bottom. 
+        max_steps: number of steps after which the environment terminates.
+        max_misses: number of missed balls after which the environment terminates (when this happens before 'max_steps' is reached).
+        observation_type: type of observation, either 'vector' or 'pixel'. 
+              - 'vector': observation is a vector of length 3:  [x_paddle,x_lowest_ball,y_lowest_ball]
+              - 'pixel': observation is an array of size [rows x columns x 2], with one hot indicator for the paddle location in the first channel,
+              and one-hot indicator for every present ball in the second channel. 
+        seed: environment seed.  -->
+
+In this assignment we worked with a new environment called `Catch`, which is an extension from the `Catch` environment in {% cite 2013arXiv1312.5602M --file external %}. The environment consists of a paddle that moves left or right to catch balls that drop from the top of the screen. It has a 7x7 grid, and the agent can move the paddle left, right, or stay idle. The agent receives a reward of +1 when catching a ball, a reward of -1 when missing a ball, and a reward of 0 otherwise. The episode ends when the agent reaches the maximum number of steps (default is 250 steps) or misses the maximum number of balls(default is 10 balls). The observation space can be either a vector with the xy-locations of the paddle and the lowest ball, or a binary two-channel pixel array with the paddle location in the first channel and all balls in the second channel. The speed of dropping new balls can be adjusted, as well as the size of the grid.
+
+We implemented three agents in this project:
+- REINFORCE
+- Actor-Critic
+- Proximal Policy Optimization (PPO)
+
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -264,7 +325,7 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the Car
     </div>
 </div>
 <div class="caption">
-    Ablation study of the Actor-Critic agent in the Catch environment.
+    Ablation study of the Actor-Critic agent in the `Catch` environment.
 </div>
 
 <div class="row">
@@ -279,7 +340,7 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the Car
     </div>
 </div>
 <div class="caption">
-    Left: experiment with vector vs pixel input for the Catch environment. Middle: experiment with ε-clip for the PPO agent in the Catch environment. Right: experiment with the Actor-Critic agent in the Cartpole environment.
+    Left: experiment with vector vs pixel input for the `Catch` environment. Middle: experiment with ε-clip for the PPO agent in the `Catch` environment. Right: experiment with the Actor-Critic agent in the Cartpole environment.
 </div>
 
 <div class="row">
@@ -294,7 +355,7 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the Car
     </div>
 </div>
 <div class="caption">
-    Left: experiment with different grid sizes for the Actor-Critic agent in the Catch environment. Middle: experiment with different speeds for the Actor-Critic agent in the Catch environment. Right: experiment with different grid sizes and speeds for the Actor-Critic agent in the Catch environment.
+    Left: experiment with different grid sizes for the Actor-Critic agent in the `Catch` environment. Middle: experiment with different speeds for the Actor-Critic agent in the `Catch` environment. Right: experiment with different grid sizes and speeds for the Actor-Critic agent in the `Catch` environment.
 </div>
 
 <div class="row">
@@ -306,7 +367,7 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the Car
     </div>
 </div>
 <div class="caption">
-    Video animations of the agent's behavior in the Catch environment, during different stages of the training process. Each video contains 5 evaluation episodes (no exploration or training). Left: beginning of training (after 0 epochs of training). Right: middle of training (after 50 epochs of training).
+    Video animations of the agent's behavior in the `Catch` environment, during different stages of the training process. Each video contains 5 evaluation episodes (no exploration or training). Left: beginning of training (after 0 epochs of training). Right: middle of training (after 50 epochs of training).
 </div>
 
 <div class="row">
@@ -318,7 +379,7 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the Car
     </div>
 </div>
 <div class="caption">
-    Video animations of the agent's behavior in the Catch environment, during different stages of the training process. Each video contains 3 evaluation episodes (no exploration or training). Left: middle of training (after 100 epochs of training). Right: end of training (after 150 epochs of training).
+    Video animations of the agent's behavior in the `Catch` environment, during different stages of the training process. Each video contains 3 evaluation episodes (no exploration or training). Left: middle of training (after 100 epochs of training). Right: end of training (after 150 epochs of training).
 </div>
 
 <div class="row">
