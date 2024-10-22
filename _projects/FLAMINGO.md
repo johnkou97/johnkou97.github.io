@@ -2,7 +2,7 @@
 layout: page
 title: Applying a cross-power model for power suppression in FLAMINGO
 description: Master's thesis research project (2nd year)
-img: assets/img/flamingo.png # image taken from https://flamingo.strw.leidenuniv.nl/index.html
+img: assets/img/flamingo.png
 importance: 1
 category: research
 related_publications: false
@@ -10,6 +10,10 @@ giscus_comments: false
 redirect:
 pretty_table: true
 ---
+
+Cover Image by <a href="https://flamingo.strw.leidenuniv.nl/index.html">Leiden Observatory</a> created specifically for the <a href="https://flamingo.strw.leidenuniv.nl/">FLAMINGO project</a>
+<br>
+<br>
 
 Please find the thesis [here](/assets/pdf/flamingo.pdf). The description of the project and the code are not available yet, but will be soon. Stay tuned!
 

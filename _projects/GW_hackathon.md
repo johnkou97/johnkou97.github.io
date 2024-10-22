@@ -2,7 +2,7 @@
 layout: page
 title: Gravitational Wave Hackathon
 description: g2net hackathon in Malta (2020) and Thessaloniki (2023)
-img: assets/img/gravitational.jpg # image taken from www.ligo.caltech.edu/video/gravitational-waves
+img: assets/img/gravitational.jpg
 importance: 2
 category: personal
 related_publications: false
@@ -10,6 +10,10 @@ giscus_comments: false
 redirect:
 pretty_table: true
 ---
+
+Cover Image by <a href="https://www.ligo.caltech.edu/video/gravitational-waves">LIGO Caltech</a>
+<br>
+<br>
 
 I have had the pleasure to participate in two hackathons related to gravitational waves as part of the workshops organized by the [network for Gravitational Waves, Geophysics and Machine Learning (G2Net)](https://www.g2net.eu/). The first one was in Malta in 2020 where I participated in person and the second one was in Thessaloniki in 2023 where I participated remotely. The hackathons were a great opportunity to learn more about the field of gravitational waves and machine learning, and to meet other researchers in the field.
 

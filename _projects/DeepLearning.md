@@ -2,7 +2,7 @@
 layout: page
 title: Deep Learning
 description: projects from the course 'Deep Learning' at Leiden University
-img: assets/img/brain.jpg # Photo by <a href="https://unsplash.com/@growtika?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Growtika</a> on <a href="https://unsplash.com/photos/an-abstract-image-of-a-sphere-with-dots-and-lines-nGoCBxiaRO0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+img: assets/img/brain.jpg
 importance: 2
 category: courses
 related_publications: false
@@ -10,6 +10,10 @@ giscus_comments: false
 redirect:
 pretty_table: true
 ---
+
+Cover Image by <a href="https://unsplash.com/@growtika?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Growtika</a> on <a href="https://unsplash.com/photos/an-abstract-image-of-a-sphere-with-dots-and-lines-nGoCBxiaRO0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+<br>
+<br>
 
 The code for all the projects can be found in my [GitHub repository](https://github.com/johnkou97/DeepLearning). The two reports for the assignments can be found [here](/assets/pdf/DeepLearning_1.pdf) and [here](/assets/pdf/DeepLearning_2.pdf).
 
