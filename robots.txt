@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://johnkou97.github.io/sitemap.xml
+Sitemap: https://koutalios.space/sitemap.xml
