@@ -22,10 +22,10 @@ I obtained my BSc in Physics from the [Aristotle University of Thessaloniki](htt
 My other interests include Data Science, Machine and Deep Learning, Reinforcement Learning, Statistics and much more. I have completed many projects in these fields, some as a part of my studies and some as a hobby. You can find some of my projects on my [projects page](/projects). I am also a big fan of Linux and open-source software and believe in a more open and collaborative world. I am always looking for new opportunities to learn and grow, so feel free to contact me if you have any ideas or projects in mind.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/research/flamingo/poster.png" title="poster" class="img-fluid rounded z-depth-1" %}
-  </div>
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/MSc_Graduation.jpg" title="graduation" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/research/flamingo/poster.png" title="poster" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
