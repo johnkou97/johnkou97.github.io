@@ -16,10 +16,10 @@ We have presented the project at the [BNAIC/BeNeLearn 2024](https://bnaic2024.si
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/BNAIC24_poster.png" title="tab_env" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/BNAIC24_poster.png" title="poster" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/RL_poster.png" title="tab_env" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/RL_poster.png" title="poster_pers" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

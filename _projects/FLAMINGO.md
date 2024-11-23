@@ -21,10 +21,10 @@ This project was presented at the [79th Dutch Astronomers' Conference](https://w
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/research/flamingo/Flamingo_poster.png" title="tab_env" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/research/flamingo/Flamingo_poster.png" title="poster" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/research/flamingo/poster.png" title="tab_env" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/research/flamingo/poster.png" title="poster_pers" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
