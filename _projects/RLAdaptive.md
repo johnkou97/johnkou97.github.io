@@ -30,6 +30,21 @@ We have presented the project at the [BNAIC/BeNeLearn 2024](https://bnaic2024.si
 
 Adaptive optics (AO) is a technique used to correct for disturbances in optical systems, by adjusting a set of deformable mirrors (DM). The system consists of a wavefront sensor, a deformable mirror, and a control algorithm. The wavefront sensor measures the aberrations in the light path, the control algorithm calculates the commands to send to the deformable mirror to correct the aberrations, and the deformable mirror reshapes to correct the aberrations. Controlling a telescope's DM is a high-dimensional decision problem that follows a constant loop of adjusting mirrors and checking the adjustment's effect on the acquired image. Due to the sequential nature of this process and a clearly defined goal measure (reducing the noise), prior work increasingly focused on applying reinforcement learning (RL) to AO control {%cite Durech:21 landman2021self nousiainen2021adaptive parvizi2023reinforcement photonics10121371 Pou:22 --file external %}.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/ao_system.png" title="AO system" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/star_1.png" title="star" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/star_2.png" title="star" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: Schematic depiction of an Adaptive Optics system. Middle: Image of a double star system without AO. Right: Image of the same double star system with AO.
+</div>
+
 In this work, we demonstrate that RL can also be used for sensor-free AO control in the context of astronomical imaging. We argue that this approach is advantageous, as it reduces the overall system complexity by removing the sensor component and with it any potential noise or bias such a sensor can introduce.
 
 ## Methodology
@@ -42,7 +57,7 @@ We use [Soft Actor-Critic (SAC)](https://stable-baselines3.readthedocs.io/en/mas
 
 We have used several environments to train the agents. The environments are based on the Adaptive Optics system. The Adaptive Optics system is a system that corrects the aberrations in the light path caused by the atmosphere. The system consists of a wavefront sensor, a deformable mirror, and a control algorithm. The wavefront sensor measures the aberrations in the light path, the control algorithm calculates the commands to send to the deformable mirror to correct the aberrations, and the deformable mirror reshapes to correct the aberrations.
 
-The environment we use has the focal image of the telescope (48x48 pixels) as the observation space, and the reward function is a measure of image sharpness. The action space is continuous with the dimensionality depending on the number of Zernike modes used. To simplify the problem, atmosphere distortions are filtered so that they can always be described using the same number of Zernike modes that define the action dimensionality. This makes the environment harder to solve as we increase the number of Zernike modes used. Higher degrees of the polynomials produce smaller distortions, which means that after a certain point, further increasing the number of modes will not make any significant difference to the environment and the filtering will no longer play a crucial role.
+The environment we use has the focal image of the telescope as the observation space, and the reward function is a measure of image sharpness. The action space is continuous with the dimensionality depending on the number of Zernike modes used. To simplify the problem, atmosphere distortions are filtered so that they can always be described using the same number of Zernike modes that define the action dimensionality. This makes the environment harder to solve as we increase the number of Zernike modes used. Higher degrees of the polynomials produce smaller distortions, which means that after a certain point, further increasing the number of modes will not make any significant difference to the environment and the filtering will no longer play a crucial role.
 
 
 ### Image sharpening
@@ -92,7 +107,17 @@ Find the training results [here](https://api.wandb.ai/links/adapt_opt/gbkd3qfs).
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long.
 
-<!-- ![](figures/evaluation_centering_ao_system.png) -->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/centering.png" title="centering" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_centering.png" title="evaluation_centering" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: Learning curves for the different agents trained on the centering environment. Right: Evaluation of the best performing agent on 1000 episodes of 100 steps and comparison to the baseline.
+</div>
 
 ### Sharpening easy
 
@@ -105,57 +130,122 @@ Find the training results [here](https://api.wandb.ai/links/adapt_opt/5y122g06).
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long. 
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy.png) -->
-
 We also evaluate the best performing agent on 10000 episodes of 100 steps and compare it to the performance of the baseline.
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy-2.png) -->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/easy_2zer.png" title="easy_2zer" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening.png" title="evaluation_Sharpening" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening-2.png" title="evaluation_Sharpening-2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: Learning curves for the different agents trained on the sharpening easy environment with 2 zernike modes. Middle: Evaluation of all agents on 1000 episodes of 100 steps. Right: Evaluation of the best performing agent on 10000 episodes of 100 steps and comparison to the baseline.
+</div>
 
 #### Evaluation for 5 zernike modes
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long.
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy-6act.png) -->
-
 We also evaluate the best performing agent on 10000 episodes of 100 steps and compare it to the performance of the baseline.
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy-6act-2.png) -->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/easy_5zer.png" title="easy_5zer" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening-6act.png" title="evaluation_Sharpening-6act" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening-6act-2.png" title="evaluation_Sharpening-6act-2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: Learning curves for the different agents trained on the sharpening easy environment with 5 zernike modes. Middle: Evaluation of all agents on 1000 episodes of 100 steps. Right: Evaluation of the best performing agent on 10000 episodes of 100 steps and comparison to the baseline.
+</div>
 
 #### Evaluation for 9 zernike modes
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long.
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy-10act.png) -->
-
 We also evaluate the best performing agent on 10000 episodes of 100 steps and compare it to the performance of the baseline.
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy-10act-2.png) -->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/easy_9zer.png" title="easy_9zer" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening-10act.png" title="evaluation_Sharpening-10act" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening-10act-2.png" title="evaluation_Sharpening-10act-2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: Learning curves for the different agents trained on the sharpening easy environment with 9 zernike modes. Middle: Evaluation of all agents on 1000 episodes of 100 steps. Right: Evaluation of the best performing agent on 10000 episodes of 100 steps and comparison to the baseline.
+</div>
 
 #### Evaluation for 14 zernike modes
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long.
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy-15act.png) -->
-
 We also evaluate the best performing agent on 10000 episodes of 100 steps and compare it to the performance of the baseline.
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy-15act-2.png) -->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/easy_14zer.png" title="easy_14zer" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening-15act.png" title="evaluation_Sharpening-15act" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening-15act-2.png" title="evaluation_Sharpening-15act-2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: Learning curves for the different agents trained on the sharpening easy environment with 14 zernike modes. Middle: Evaluation of all agents on 1000 episodes of 100 steps. Right: Evaluation of the best performing agent on 10000 episodes of 100 steps and comparison to the baseline.
+</div>
 
 #### Evaluation for 20 zernike modes
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long.
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy-21act.png) -->
-
 We also evaluate the best performing agent on 10000 episodes of 100 steps and compare it to the performance of the baseline.
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy-21act-2.png) -->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/easy_20zer.png" title="easy_20zer" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening-21act.png" title="evaluation_Sharpening-21act" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening-21act-2.png" title="evaluation_Sharpening-21act-2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: Learning curves for the different agents trained on the sharpening easy environment with 20 zernike modes. Middle: Evaluation of all agents on 1000 episodes of 100 steps. Right: Evaluation of the best performing agent on 10000 episodes of 100 steps and comparison to the baseline.
+</div>
 
 #### Evaluation for 27 zernike modes
 
 Since we only trained one agent for 27 zernike modes, we evaluate it on 10000 episodes of 100 steps and compare it to the performance of the baseline.
 
-<!-- ![](figures/evaluation_Sharpening_AO_system_easy-28act.png) -->
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/easy_27zer.png" title="easy_27zer" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/research/adaptive/evaluation_Sharpening-28act.png" title="evaluation_Sharpening-28act" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Left: Learning curve for the agent trained on the sharpening easy environment with 27 zernike modes. Right: Evaluation of the agent on 10000 episodes of 100 steps and comparison to the baseline.
+</div>
 
 
 ## Animations
