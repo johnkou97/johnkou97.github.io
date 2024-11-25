@@ -26,26 +26,26 @@ We have presented the project at the [BNAIC/BeNeLearn 2024](https://bnaic2024.si
     Left: Poster presented at the BNAIC/BeNeLearn 2024 conference. Right: Me with the poster.
 </div>
 
-# Introduction
+## Introduction
 
 Adaptive optics (AO) is a technique used to correct for disturbances in optical systems, by adjusting a set of deformable mirrors (DM). The system consists of a wavefront sensor, a deformable mirror, and a control algorithm. The wavefront sensor measures the aberrations in the light path, the control algorithm calculates the commands to send to the deformable mirror to correct the aberrations, and the deformable mirror reshapes to correct the aberrations. Controlling a telescope's DM is a high-dimensional decision problem that follows a constant loop of adjusting mirrors and checking the adjustment's effect on the acquired image. Due to the sequential nature of this process and a clearly defined goal measure (reducing the noise), prior work increasingly focused on applying reinforcement learning (RL) to AO control {%cite Durech:21 landman2021self nousiainen2021adaptive parvizi2023reinforcement photonics10121371 Pou:22 --file external %}.
 
 In this work, we demonstrate that RL can also be used for sensor-free AO control in the context of astronomical imaging. We argue that this approach is advantageous, as it reduces the overall system complexity by removing the sensor component and with it any potential noise or bias such a sensor can introduce.
 
-# Methodology
+## Methodology
 
 The number of mirrors in an AO can be high, thus creating a high-dimensional space. Atmospheric distortions can be described using a set of Zernike polynomials {%cite 2004aoa --file external %}. We can therefore use the same polynomials to shape the set of DM and correct aberrations. This way we are able to naturally capture the action space dimensionality (to the number of used polynomials).
 
 We use [Soft Actor-Critic (SAC)](https://stable-baselines3.readthedocs.io/en/master/modules/sac.html) from the [Stable Baselines3](https://stable-baselines3.readthedocs.io/en/master/index.html) library. SAC is an off-policy algorithm that uses a maximum entropy reinforcement learning framework. It is well-suited for continuous action spaces and has shown to be effective in a variety of environments. We use the implementation from the library and adapt it to our environment. Our implementation and the full paper can be accessed via [GitHub](https://github.com/johnkou97/AdaptiveOptics).
 
-# Environments
+## Environments
 
 We have used several environments to train the agents. The environments are based on the Adaptive Optics system. The Adaptive Optics system is a system that corrects the aberrations in the light path caused by the atmosphere. The system consists of a wavefront sensor, a deformable mirror, and a control algorithm. The wavefront sensor measures the aberrations in the light path, the control algorithm calculates the commands to send to the deformable mirror to correct the aberrations, and the deformable mirror reshapes to correct the aberrations.
 
 The environment we use has the focal image of the telescope (48x48 pixels) as the observation space, and the reward function is a measure of image sharpness. The action space is continuous with the dimensionality depending on the number of Zernike modes used. To simplify the problem, atmosphere distortions are filtered so that they can always be described using the same number of Zernike modes that define the action dimensionality. This makes the environment harder to solve as we increase the number of Zernike modes used. Higher degrees of the polynomials produce smaller distortions, which means that after a certain point, further increasing the number of modes will not make any significant difference to the environment and the filtering will no longer play a crucial role.
 
 
-## Image sharpening
+### Image sharpening
 
 The goal of this environment is to maximize the Strehl ratio based on focal plane images. 
 
@@ -56,7 +56,7 @@ The goal of this environment is to maximize the Strehl ratio based on focal plan
     * Partially observable Markov decision process: twin image problem  (image intensity and not the electric field)
     * Possible solution: provide the agent a history of observations and commands or through the use of agents that have intrinsic memory
 
-## Dark hole 
+### Dark hole 
 
 The goal of this environment is to remove starlight from a small region if the image. 
 
@@ -64,7 +64,7 @@ The goal of this environment is to remove starlight from a small region if the i
 - *Action*: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. Default is 400 actuators.
 - *Reward*: The log of the contrast (mean of the image intensity in the dark hole region divided by the peak intensity of the starlight).
 
-## Image sharpening easy
+### Image sharpening easy
 
 The goal of this environment is to maximize the Strehl ratio based on focal plane images like in the image sharpening environment. The difference is that the aberrations from the atmosphere can always be corrected by the zernike modes of the deformable mirror. 
 
@@ -73,7 +73,7 @@ The goal of this environment is to maximize the Strehl ratio based on focal plan
 - *Reward*: The Strehl ratio, which is a measure of image sharpness and is between 0 and 1.
 
 
-## Image centering
+### Image centering
 
 The goal of this environment is to minimize the distance between the center of the image and the center of the focal plane.
 
@@ -81,28 +81,27 @@ The goal of this environment is to minimize the distance between the center of t
 - *Action*: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. For this environment we only use 2 zernike modes (tip and tilt) to correct the aberrations.
 - *Reward*: The negative of the distance between the center of the image and the center of the focal plane.
 
-# Results
+## Results
 
 We use Weights & Biases to track the results of the experiments. 
 
-## Centering
+### Centering
 
 Find the training results [here](https://api.wandb.ai/links/adapt_opt/gbkd3qfs).
 
-### Evaluation
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long.
 
 <!-- ![](figures/evaluation_centering_ao_system.png) -->
 
-## Sharpening easy
+### Sharpening easy
 
 We have trained agents on the sharpening easy environment with 2 and 5 and 9 zernike modes.
 Reminder that for this environment the aberrations can always be corrected by the zernike modes of the deformable mirror that we use each time.
 
 Find the training results [here](https://api.wandb.ai/links/adapt_opt/5y122g06).
 
-### Evaluation for 2 zernike modes
+#### Evaluation for 2 zernike modes
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long. 
 
@@ -112,7 +111,7 @@ We also evaluate the best performing agent on 10000 episodes of 100 steps and co
 
 <!-- ![](figures/evaluation_Sharpening_AO_system_easy-2.png) -->
 
-### Evaluation for 5 zernike modes
+#### Evaluation for 5 zernike modes
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long.
 
@@ -122,7 +121,7 @@ We also evaluate the best performing agent on 10000 episodes of 100 steps and co
 
 <!-- ![](figures/evaluation_Sharpening_AO_system_easy-6act-2.png) -->
 
-### Evaluation for 9 zernike modes
+#### Evaluation for 9 zernike modes
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long.
 
@@ -132,7 +131,7 @@ We also evaluate the best performing agent on 10000 episodes of 100 steps and co
 
 <!-- ![](figures/evaluation_Sharpening_AO_system_easy-10act-2.png) -->
 
-### Evaluation for 14 zernike modes
+#### Evaluation for 14 zernike modes
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long.
 
@@ -142,7 +141,7 @@ We also evaluate the best performing agent on 10000 episodes of 100 steps and co
 
 <!-- ![](figures/evaluation_Sharpening_AO_system_easy-15act-2.png) -->
 
-### Evaluation for 20 zernike modes
+#### Evaluation for 20 zernike modes
 
 We evaluate each agent on 1000 episodes. Each episode is 100 steps long.
 
@@ -152,25 +151,29 @@ We also evaluate the best performing agent on 10000 episodes of 100 steps and co
 
 <!-- ![](figures/evaluation_Sharpening_AO_system_easy-21act-2.png) -->
 
-### Evaluation for 27 zernike modes
+#### Evaluation for 27 zernike modes
 
 Since we only trained one agent for 27 zernike modes, we evaluate it on 10000 episodes of 100 steps and compare it to the performance of the baseline.
 
 <!-- ![](figures/evaluation_Sharpening_AO_system_easy-28act.png) -->
 
 
-# Animations
+## Animations
 
-## Centering
-
-
-
-## Sharpening easy with 20 zernike modes
+### Centering
 
 
 
-# Discussion and Conclusion
+### Sharpening easy with 20 zernike modes
+
+
+
+## Discussion and Conclusion
 
 This work serves as a proof-of-concept for the suitability of RL for controlling sensorless AO systems. Using an environment with controlled action dimensionality and noise, we iteratively increased complexity and achieved success for up to 27 Zernike modes. While this does not match the full complexity of real-world AO systems, it proves that RL can, in principle, effectively control sensorless AO.
 
 We see our work as a promising first step towards RL-based AO control. Future work could build on this and, for example, explore a curriculum learning approach where an agent starts learning a simple task and gradually evolves towards solving the full task. Additionally, we see value in comparing our method to that of a sensor-based approach or testing how it performs on a real-world telescope.
+
+## References
+
+{% bibliography --cited_in_order --file external %}
