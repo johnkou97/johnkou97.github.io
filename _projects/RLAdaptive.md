@@ -252,11 +252,31 @@ Since we only trained one agent for 27 zernike modes, we evaluate it on 10000 ep
 
 ### Centering
 
-
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/center.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/center_no_agent.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
+</div>
+<div class="caption">
+    Left: Centering with the agent. Right: Centering without the agent.
+</div>
 
 ### Sharpening easy with 20 zernike modes
 
-
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/sharp.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/sharp_no_agent.mp4" class="img-fluid rounded z-depth-1" controls=true %}
+    </div>
+</div>
+<div class="caption">
+    Left: Sharpening easy with the agent. Right: Sharpening easy without the agent.
+</div>
 
 ## Discussion and Conclusion
 
