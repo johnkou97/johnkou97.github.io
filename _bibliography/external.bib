@@ -263,8 +263,6 @@ archivePrefix = {arXiv},
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 
-
-
 @ARTICLE{2012ARA&A,
        author = {{Davies}, Richard and {Kasper}, Markus},
         title = "{Adaptive Optics for Astronomy}",
@@ -283,19 +281,18 @@ archivePrefix = {arXiv},
 }
 
 @article{Durech:21,
-author = {Eduard Durech and William Newberry and Jonas Franke and Marinko V. Sarunic},
-journal = {Biomed. Opt. Express},
-keywords = {Adaptive optics; Confocal laser scanning microscopy; Deep learning; Deformable mirrors; Imaging systems; Wavefront aberrations},
-number = {9},
-pages = {5423--5438},
-publisher = {Optica Publishing Group},
-title = {Wavefront sensor-less adaptive optics using deep reinforcement learning},
-volume = {12},
-month = {Sep},
-year = {2021},
-url = {https://opg.optica.org/boe/abstract.cfm?URI=boe-12-9-5423},
-doi = {10.1364/BOE.427970},
-abstract = {Image degradation due to wavefront aberrations can be corrected with adaptive optics (AO). In a typical AO configuration, the aberrations are measured directly using a Shack-Hartmann wavefront sensor and corrected with a deformable mirror in order to attain diffraction limited performance for the main imaging system. Wavefront sensor-less adaptive optics (SAO) uses the image information directly to determine the aberrations and provide guidance for shaping the deformable mirror, often iteratively. In this report, we present a Deep Reinforcement Learning (DRL) approach for SAO correction using a custom-built fluorescence confocal scanning laser microscope. The experimental results demonstrate the improved performance of the DRL approach relative to a Zernike Mode Hill Climbing algorithm for SAO.},
+      author = {Eduard Durech and William Newberry and Jonas Franke and Marinko V. Sarunic},
+      journal = {Biomed. Opt. Express},
+      keywords = {Adaptive optics; Confocal laser scanning microscopy; Deep learning; Deformable mirrors; Imaging systems; Wavefront aberrations},
+      number = {9},
+      pages = {5423--5438},
+      publisher = {Optica Publishing Group},
+      title = {Wavefront sensor-less adaptive optics using deep reinforcement learning},
+      volume = {12},
+      month = {Sep},
+      year = {2021},
+      url = {https://opg.optica.org/boe/abstract.cfm?URI=boe-12-9-5423},
+      doi = {10.1364/BOE.427970},
 }
 
 @article{landman2021self,
@@ -333,7 +330,6 @@ month = {Jan},
 year = {2022},
 url = {https://opg.optica.org/oe/abstract.cfm?URI=oe-30-2-2991},
 doi = {10.1364/OE.444099},
-abstract = {We present a novel formulation of closed-loop adaptive optics (AO) control as a multi-agent reinforcement learning (MARL) problem in which the controller is able to learn a non-linear policy and does not need a priori information on the dynamics of the atmosphere. We identify the different challenges of applying a reinforcement learning (RL) method to AO and, to solve them, propose the combination of model-free MARL for control with an autoencoder neural network to mitigate the effect of noise. Moreover, we extend current existing methods of error budget analysis to include a RL controller. The experimental results for an 8m telescope equipped with a 40x40 Shack-Hartmann system show a significant increase in performance over the integrator baseline and comparable performance to a model-based predictive approach, a linear quadratic Gaussian controller with perfect knowledge of atmospheric conditions. Finally, the error budget analysis provides evidence that the RL controller is partially compensating for bandwidth error and is helping to mitigate the propagation of aliasing.},
 }
 
 @misc{parvizi2023reinforcement,
@@ -356,7 +352,6 @@ doi = {https://doi.org/10.1016/j.ijleo.2018.09.160},
 url = {https://www.sciencedirect.com/science/article/pii/S0030402618314785},
 author = {Hu Ke and Bing Xu and Zhenxing Xu and Lianghua Wen and Ping Yang and Shuai Wang and Lizhi Dong},
 keywords = {Adaptive optics, Machine learning, Deep reinforcement learning},
-abstract = {An aberration correction algorithm for wavefront sensorless adaptive optics (WFSless AO) systems based on deep reinforcement learning is presented. An actor–critic structure is designed to evaluate a control policy through the deep deterministic policy gradient (DDPG) algorithm. The algorithm performance is verified with a set-up simulation environment. According to the correction results, the aberration correction process can be expressed as a Markov decision process (MDP). The method exhibits excellent performances in correction capacity and speed. Similar correction effects are obtained with the stochastic parallel-gradient descent (SPGD) algorithm and WFSless AO based on the general-modes (AOG) algorithm. Moreover, the correction speed is improved by approximately 9 and 2.5 times, respectively.}
 }
 
 @Article{photonics10121371,
@@ -369,7 +364,6 @@ NUMBER = {12},
 ARTICLE-NUMBER = {1371},
 URL = {https://www.mdpi.com/2304-6732/10/12/1371},
 ISSN = {2304-6732},
-ABSTRACT = {Optical satellite communications (OSC) downlinks can support much higher bandwidths than radio-frequency channels. However, atmospheric turbulence degrades the optical beam wavefront, leading to reduced data transfer rates. In this study, we propose using reinforcement learning (RL) as a lower-cost alternative to standard wavefront sensor-based solutions. We estimate that RL has the potential to reduce system latency, while lowering system costs by omitting the wavefront sensor and low-latency wavefront processing electronics. This is achieved by adopting a control policy learned through interactions with a cost-effective and ultra-fast readout of a low-dimensional photodetector array, rather than relying on a wavefront phase profiling camera. However, RL-based wavefront sensorless adaptive optics (AO) for OSC downlinks faces challenges relating to prediction latency, sample efficiency, and adaptability. To gain a deeper insight into these challenges, we have developed and shared the first OSC downlink RL environment and evaluated a diverse set of deep RL algorithms in the environment. Our results indicate that the Proximal Policy Optimization (PPO) algorithm outperforms the Soft Actor&ndash;Critic (SAC) and Deep Deterministic Policy Gradient (DDPG) algorithms. Moreover, PPO converges to within 86% of the maximum performance achievable by the predominant Shack&ndash;Hartmann wavefront sensor-based AO system. Our findings indicate the potential of RL in replacing wavefront sensor-based AO while reducing the cost of OSC downlinks.},
 DOI = {10.3390/photonics10121371}
 }
 

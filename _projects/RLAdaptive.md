@@ -49,10 +49,10 @@ The environment we use has the focal image of the telescope (48x48 pixels) as th
 
 The goal of this environment is to maximize the Strehl ratio based on focal plane images. 
 
-- *Observation*: The observed (noisy) image intensity in the focal plane. The image is normalized such that the values are always between 0 and 1. The image has a size of 96x96 pixels.
-- *Action*: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. Default is 400 actuators.
-- *Reward*: The Strehl ratio, which is a measure of image sharpness and is between 0 and 1.
-- *Things to consider*: 
+- **Observation**: The observed (noisy) image intensity in the focal plane. The image is normalized such that the values are always between 0 and 1. The image has a size of 96x96 pixels.
+- **Action**: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. Default is 400 actuators.
+- **Reward**: The Strehl ratio, which is a measure of image sharpness and is between 0 and 1.
+- **Things to consider**: 
     * Partially observable Markov decision process: twin image problem  (image intensity and not the electric field)
     * Possible solution: provide the agent a history of observations and commands or through the use of agents that have intrinsic memory
 
@@ -60,26 +60,26 @@ The goal of this environment is to maximize the Strehl ratio based on focal plan
 
 The goal of this environment is to remove starlight from a small region if the image. 
 
-- *Observation*: A measurement with information about the electric field in the dark hole region. The shape is N_probes x N_pixels, default is 5 x 499.
-- *Action*: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. Default is 400 actuators.
-- *Reward*: The log of the contrast (mean of the image intensity in the dark hole region divided by the peak intensity of the starlight).
+- **Observation**: A measurement with information about the electric field in the dark hole region. The shape is N_probes x N_pixels, default is 5 x 499.
+- **Action**: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. Default is 400 actuators.
+- **Reward**: The log of the contrast (mean of the image intensity in the dark hole region divided by the peak intensity of the starlight).
 
 ### Image sharpening easy
 
 The goal of this environment is to maximize the Strehl ratio based on focal plane images like in the image sharpening environment. The difference is that the aberrations from the atmosphere can always be corrected by the zernike modes of the deformable mirror. 
 
-- *Observation*: The observed (noisy) image intensity in the focal plane. The image is normalized such that the values are always between 0 and 1. The image has a size of 96x96 pixels.
-- *Action*: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. Default is with 20 modes of zernike.
-- *Reward*: The Strehl ratio, which is a measure of image sharpness and is between 0 and 1.
+- **Observation**: The observed (noisy) image intensity in the focal plane. The image is normalized such that the values are always between 0 and 1. The image has a size of 96x96 pixels.
+- **Action**: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. Default is with 20 modes of zernike.
+- **Reward**: The Strehl ratio, which is a measure of image sharpness and is between 0 and 1.
 
 
 ### Image centering
 
 The goal of this environment is to minimize the distance between the center of the image and the center of the focal plane.
 
-- *Observation*: The observed (noisy) image intensity in the focal plane. The image is normalized such that the values are always between 0 and 1. The image has a size of 96x96 pixels.
-- *Action*: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. For this environment we only use 2 zernike modes (tip and tilt) to correct the aberrations.
-- *Reward*: The negative of the distance between the center of the image and the center of the focal plane.
+- **Observation**: The observed (noisy) image intensity in the focal plane. The image is normalized such that the values are always between 0 and 1. The image has a size of 96x96 pixels.
+- **Action**: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. For this environment we only use 2 zernike modes (tip and tilt) to correct the aberrations.
+- **Reward**: The negative of the distance between the center of the image and the center of the focal plane.
 
 ## Results
 
