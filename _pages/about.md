@@ -26,6 +26,6 @@ My other interests include Data Science, Machine and Deep Learning, Reinforcemen
     {% include figure.liquid loading="eager" path="assets/img/MSc_Graduation.jpg" title="graduation" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/research/flamingo/poster.png" title="poster" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/research/adaptive/RL_poster.png" title="rl_poster" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
