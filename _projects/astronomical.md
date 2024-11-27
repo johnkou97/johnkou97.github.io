@@ -3,7 +3,7 @@ layout: page
 title: Other Astronomical Projects
 description: projects from various astronomical, astrophysical, and mathematical courses
 img: assets/img/astronomy.jpg 
-importance: 4
+importance: 5
 category: courses
 related_publications: false
 giscus_comments: false
