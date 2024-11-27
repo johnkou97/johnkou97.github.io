@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: # add a subtitle if you want
+subtitle: Astrophysicist, Data Scientist, AI Developer
 
 profile:
   align: right

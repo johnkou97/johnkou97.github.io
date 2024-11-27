@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: Some of the projects I have worked on. The projects are categorized into research, course and personal projects. You can find more information about each project by clicking on the cards below.
 nav: true

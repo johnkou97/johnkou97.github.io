@@ -61,7 +61,7 @@
       "url": "/projects/FLAMINGO"
     },
     {
-      "name": "Reinforcement learning for adaptive optics and exoplanet imaging",
+      "name": "Model-Free Reinforcement Learning for Sensorless Adaptive Optics",
       "summary": "",
       "highlights": "",
       "supervisor": "Dr. Rico Landman, Dr. Thomas Moerland, Dr. Aske Plaat",
@@ -95,7 +95,7 @@
         "location": "Utrecht -- The Netherlands",
         "url": "https://bnaic2024.sites.uu.nl/",
         "institution": "Utrecht University",
-        "summary": "Poster presentation of the research project: Reinforcement learning for adaptive optics and exoplanet imaging.",
+        "summary": "Poster presentation of the research project: <a href='/projects/RLAdaptive'>Model-Free Reinforcement Learning for Sensorless Adaptive Optics</a>.",
         "highlights": "" // []
       },
       {
@@ -104,7 +104,7 @@
         "location": "Egmond aan Zee -- The Netherlands",
         "url": "https://www.knvws.nl/actueel/nederlandse-astronomenconferentie-2024-13-15-mei/",
         "institution": "Anton Pannekoek Institute for Astronomy",
-        "summary": "Poster presentation of the M.Sc. Thesis Project: Applying a cross-power model for power suppression in FLAMINGO.",
+        "summary": "Poster presentation of the M.Sc. Thesis Project: <a href='/projects/FLAMINGO'>Applying a cross-power model for power suppression in FLAMINGO</a>.",
         "highlights": "" // []
       },
       {

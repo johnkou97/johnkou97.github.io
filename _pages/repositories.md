@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
+title: Repositories
 description: # Add a description of the page here
 nav: true
 nav_order: 4
