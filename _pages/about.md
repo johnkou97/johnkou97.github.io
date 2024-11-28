@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Astrophysicist #, Data Scientist, AI Developer
+subtitle: Astrophysicist, Data Scientist #, AI Developer
 
 profile:
   align: right

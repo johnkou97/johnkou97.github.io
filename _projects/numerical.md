@@ -38,10 +38,10 @@ With the Newton-Raphson method, we found all 3 roots of the equation, while with
 
 We also had to solve the system of equations:
 \begin{equation}
-\begin{cases}
+\begin{align*}
 -2x^3 + 3y^2 + 42 = 0 \\
 5x^2 + 3y^3 - 69 = 0
-\end{cases}
+\end{align*}
 \end{equation}
 
 The system has one real solution, which is $(x, y) = (3, 2)$. We used the Newton-Raphson method to find the solution to the system of equations. The implementation of the method was correct, but the method did not converge to the solution.
@@ -61,11 +61,11 @@ The system has one real solution, which is $(x, y) = (3, 2)$. We used the Newton
 
 The second set of problems was about solving the system of equations using the Gauss-Seidel method. The system of equations was:
 \begin{equation}
-\begin{cases}
+\begin{align*}
 4x + 3y = 24 \\
 3x + 4y - z = 30 \\
 -y + 4z = -24
-\end{cases}
+\end{align*}
 \end{equation}
 
 We used the Gauss-Seidel method to solve the system of equations. The starting point was $x_0 = (1, 1, 1)$. The code found the solution to the system of equations $x = 3, y = 4, z = -5$.
