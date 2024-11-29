@@ -175,8 +175,8 @@ This chapter analyzes real radial velocity data from β Pictoris b collected wit
 
 | | Mean Period (days) | Number of Spots |
 |-----------------------|-------------------|-----------------|
-| Run 1 | 0.271 $\pm$ 0.025 | 27-33 |
-| Run 2 | 0.345 $\pm$ 0.050 | 21-27 |
+| Run 1 | 0.271 +/- 0.025 | 27-33 |
+| Run 2 | 0.345 +/- 0.050 | 21-27 |
 
 <p></p>
 
