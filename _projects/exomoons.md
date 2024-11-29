@@ -112,15 +112,28 @@ Through Bayesian modeling, this chapter simulates the detection of exomoons by c
 <div class="caption">
     The radial velocity data generated from the exoplanet module for a moon of 60 Earth masses and a period of 10 days with added noise of 250m/s. The blue line represents the posterior, after fitting the Bayesian model, with the 16th and 84th percentile.
 </div>
+<!-- 
+Period
+Noise10 days20 days
+250 m/s> 20M⊕> 60M⊕
+500 m/s> 40M⊕> 130M⊕
+-->
 
-<!-- add a table here for the results like in the pdf of thesis-->
+| Orbital Period (days) | Observational Noise (m/s) | Minimum Detectable Moon Mass (Earth Masses) |
+|-----------------------|---------------------------|---------------------------------------------|
+| 10                    | 250                       | 20                                          |
+| 10                    | 500                       | 40                                          |
+| 20                    | 250                       | 60                                         |
+| 20                    | 500                       | 130                                          |
+
+<p></p>
 
 ## Real Data and Surface Spots
 This chapter analyzes real radial velocity data from β Pictoris b collected with the CRIRES+ spectrograph. Observed fluctuations are hypothesized to result from atmospheric phenomena, such as surface spots. Simulations show that patterns of 21–33 spots could plausibly explain the observed frequencies, though further analysis is needed to confirm.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/research/exomoon/rv_full.png" title="rv_full" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/research/exomoon/rv_full.jpg" title="rv_full" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -141,7 +154,7 @@ This chapter analyzes real radial velocity data from β Pictoris b collected wit
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/research/exomoon/lombscargle_both.png" title="lombscargle_both" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/research/exomoon/lombscargle_both.jpg" title="lombscargle_both" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -160,7 +173,13 @@ This chapter analyzes real radial velocity data from β Pictoris b collected wit
     Left: The period of the radial velocity signal as a function of the number of spots on the atmosphere of β Pictoris b. The red line represents the fitted function. Right: Radial velocity amplitudes as a function of the size of the spots. The colours indicate the number of spots that were used in the simulation.
 </div>
 
-<!-- add a table here for the results like in the pdf of thesis-->
+| | Mean Period (days) | Number of Spots |
+|-----------------------|-------------------|-----------------|
+| Run 1 | 0.271 $\pm$ 0.025 | 27-33 |
+| Run 2 | 0.345 $\pm$ 0.050 | 21-27 |
+
+<p></p>
+
 
 ## Conclusions and Future Work
 Detecting exomoons through radial velocity is a challenging but promising endeavor. This study demonstrates the potential for detection under current and future observational capabilities, especially for systems like β Pictoris b. Future research will aim to refine techniques, extend observational datasets, and explore other exoplanetary systems.
