@@ -91,8 +91,6 @@ By refining detection thresholds and observational strategies, this study lays t
 
 Radial velocity measurements rely on detecting Doppler shifts in spectral lines caused by the motion of an exoplanet or its potential moon. In this chapter, we explore the process of simulating β Pictoris b's spectrum, applying Doppler shifts, and extracting velocities using cross-correlation techniques. Two high-resolution spectra of β Pic b, provided by Dr. Tomas Stolker and Dr. Paul Mollière, serve as the basis for this analysis.
 
-### Methodology
-
 To analyze the spectra, the original high-resolution data were first rebinned into evenly spaced bins, each consisting of $10^5$ data points, allowing for easier computational handling. This step retained key spectral features while simplifying the data. The rebinned spectra were then convolved with a normalized normal distribution using a Tukey window, smoothing sharp edges and reducing noise. This process ensured that the spectra were suitable for cross-correlation analysis. The figure below illustrates the original, rebinned, and convolved spectra for both datasets.
 
 <div class="row">
@@ -117,7 +115,7 @@ z = \frac{\Delta \lambda}{\lambda} = \frac{v}{c},
 
 where $v$ is the velocity of the object, $c$ is the speed of light, and $z$ represents the fractional shift in spectral lines.
 
-The results of the convolution and Doppler-shift processes are illustrated below. Figures on the left panels show the convolved spectra in green and the Doppler-shifted spectra in red, while the right panels show the cross-correlation outputs. The peak of the cross-correlation closely matches the velocity used to shift the spectra ($v = 3.0 \times 10^7 \, \text{m/s}$).
+The results of the convolution and Doppler-shift processes are illustrated below. Figures on the left panels show the convolved spectra in green and the Doppler-shifted spectra in red, while the right panels show the cross-correlation outputs. The peak of the cross-correlation closely matches the velocity used to shift the spectra ($v = 3.0 \times 10^6 \, \text{m/s}$).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -128,15 +126,15 @@ The results of the convolution and Doppler-shift processes are illustrated below
     </div>
 </div>
 <div class="caption">
-    Each image has two panels showing. On the left, the convolved spectrum for β Pic b in green and the shifted spectrum due to the Doppler effect with v = 3000km/s with red. On the right the result of the cross-correlation of the two spectra on the left. The vertical line represents the v = 0. On the small panel, there is the peak of the cross-correlation that is clearly at a non-zero velocity, close to 0.3 × 107 m/s. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
+    Each image has two panels showing. On the left, the convolved spectrum for β Pic b in green and the shifted spectrum due to the Doppler effect with v = 3000km/s with red. On the right the result of the cross-correlation of the two spectra on the left. The vertical line represents the v = 0. On the small panel, there is the peak of the cross-correlation that is clearly at a non-zero velocity, close to $0.3 \times 10^7 \, \text{m/s}$. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
 </div>
 
 The following table summarizes the measured velocities and their deviations from the true Doppler shift:
 
-| Spectrum Provider       | Measured Velocity ($10^7 \, \text{m/s}$) | True Velocity ($10^7 \, \text{m/s}$) |
+| Spectrum Provider       | Measured Velocity (10^6 m/s) | True Velocity (10^6 m/s) |
 |--------------------------|-------------------------------------------|---------------------------------------|
-| Dr. Tomas Stolker       | $3.009 \pm 0.004$                       | $3.000$                             |
-| Dr. Paul Mollière       | $3.073 \pm 0.004$                       | $3.000$                             |
+| Dr. Tomas Stolker       | 3.009 +/- 0.004                       | 3.000                            |
+| Dr. Paul Mollière       | 3.073 +/- 0.004                       | 3.000                            |
 
 <p></p>
 
