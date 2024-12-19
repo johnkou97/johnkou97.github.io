@@ -30,10 +30,15 @@ Please find the thesis [here](/assets/pdf/exomoons.pdf). The code of the project
 This research delves into the detection of exomoons through radial velocity variations, focusing on the exoplanet β Pictoris b. Exomoons are natural satellites orbiting planets outside our solar system and may provide critical insights into planetary system formation and habitability. The study combines theoretical modeling, simulation, and real observational data to refine detection techniques and explore new frontiers in exoplanetary science.
 
 ## Introduction
-The search for exoplanets has revolutionized our understanding of the universe, uncovering thousands of planets beyond our solar system. Techniques like radial velocity and transit photometry have been central to these discoveries. However, detecting exomoons remains a formidable challenge due to their smaller size and weaker signals. This chapter sets the stage by discussing the importance of exomoons and introducing β Pictoris b as a prime candidate for detailed study due to its mass, orbit, and edge-on orientation.
 
-<!-- ![Exoplanet Detection Techniques](path-to-techniques-image.jpg)  
-*Figure 2: Overview of exoplanet detection techniques.* -->
+The discovery of exoplanets has profoundly transformed our understanding of the universe, uncovering a wealth of planetary systems that showcase the diversity and complexity of planetary formation and evolution. Since the first confirmed detection in the early 1990s, thousands of exoplanets have been identified, with techniques such as radial velocity and transit photometry playing central roles in these groundbreaking discoveries. These methods have provided invaluable insights into the masses, sizes, and orbits of these distant worlds, setting the foundation for a deeper understanding of planetary systems.
+
+Despite this remarkable progress, the detection of exomoons—natural satellites orbiting planets outside our solar system—remains an elusive goal. Unlike their host planets, exomoons are typically smaller and generate weaker observational signals, making their detection a formidable challenge. Yet, exomoons hold immense scientific potential: they can offer clues about the processes of planetary formation, the dynamical evolution of systems, and even the conditions for habitability. The ability to detect and study exomoons would thus mark a major milestone in exoplanetary science.
+
+This study focuses on the directly imaged exoplanet β Pictoris b, a massive planet in a young planetary system that offers unique advantages for exomoon detection. With a mass of roughly 12 Jupiter masses, β Pictoris b exerts significant gravitational influence, making it more likely to host detectable moons. Furthermore, its edge-on orientation and proximity to Earth make it an ideal target for high-precision observational campaigns. These characteristics provide a compelling opportunity to refine techniques for detecting exomoons through the analysis of radial velocity variations.
+
+The figure below summarizes the key exoplanet detection techniques and highlights the radial velocity variations caused by moons. On the left, we see an overview of methods used to identify exoplanets. On the right, there is a comparison of the radial velocities of Jupiter and β Pictoris b, showing the effects of Io and a hypothetical Earth-mass exomoon with a 10-day orbital period. These simulations illustrate the potential signals that exomoons can induce in their host planets, guiding the design of detection strategies.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/research/exomoon/exoplanets.jpg" title="exoplanets" class="img-fluid rounded z-depth-1" %}
@@ -47,7 +52,27 @@ The search for exoplanets has revolutionized our understanding of the universe, 
 </div>
 
 ## Radial Velocity Analysis
-We can now examine how moons induce radial velocity variations in their host planets. Using simulations, the study explores the impact of moon mass and orbital period on detectable signals. Comparisons between Jupiter-Io and hypothetical exomoons around β Pictoris b reveal that larger, closer moons produce stronger signals. These findings guide the design of detection strategies for exomoons.
+
+The radial velocity method has been successfully applied to the detection of exoplanets by measuring subtle Doppler shifts caused by a planet's gravitational pull on its host star. Extending this method to detect exomoons is an exciting but challenging frontier. This chapter focuses on the induced radial velocity signals caused by potential moons orbiting the directly imaged exoplanet β Pictoris b, emphasizing how factors like moon mass and orbital period affect signal strength.
+
+Using the `exoplanet` module, simulations were performed to explore the effect of moon mass and orbital period on the radial velocity signals. For reference, Io—one of Jupiter’s moons—was modeled to illustrate the dynamics of moon-induced radial velocity changes in a familiar system. This approach provided a comparative baseline against hypothetical Earth-mass exomoons orbiting β Pic b. The parameters for β Pic b and Io used in the simulations are outlined in Tables 2.1 and 2.2 of the thesis.
+
+Key assumptions included circular orbits and an inclination of 90° (edge-on). This ensured consistency between scenarios while facilitating comparisons between the well-understood Jupiter-Io system and β Pic b.
+
+Simulations generated radial velocity data across a grid of moon masses (0–80 Earth masses) and orbital periods (up to 100 days). The results were visualized using contour plots, highlighting the peak radial velocity as a function of these two variables. Noise thresholds of 500 m/s and lower were considered to determine detectability under current and near-future observational capabilities.
+
+The comparison between Io and a hypothetical Earth-mass moon around β Pic b demonstrated the stark differences in induced radial velocities due to the vastly different planetary masses. While Io induces a peak velocity of approximately 0.815 m/s on Jupiter, an Earth-mass moon with a 10-day orbit induces a much larger signal of about 5.87 m/s on β Pic b. This difference underscores the advantages of targeting massive planets like β Pic b for exomoon searches.
+
+The derived formula for estimating radial velocity amplitudes, based on the conservation of momentum and Kepler's laws, aligns well with simulated data:
+
+\begin{equation}
+v_{\text{planet}} = \left(\frac{2\pi G}{M^2 P}\right)^{\frac{1}{3}} \cdot m
+\end{equation}
+
+For β Pic b, the formula confirmed that both moon mass and orbital period significantly influence radial velocity amplitudes. Larger and closer moons produce stronger signals, with longer orbital periods leading to diminishing amplitudes.
+
+
+The contour plot below illustrates peak radial velocity as a function of moon mass and orbital period. The dotted line represents the detection threshold of 500 m/s, which corresponds to the capabilities of instruments like CRIRES+. Observational sensitivities for β Pic b, based on 25 simulated observations, are marked with blue crosses. Proposed exomoons around Kepler-1708 b-i and Kepler-1625 b-i are highlighted for context.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -58,8 +83,17 @@ We can now examine how moons induce radial velocity variations in their host pla
     A contour plot showing the peak radial velocity for different masses and orbital periods of a potential exomoon around β Pic b. Note that the x-axis showing the orbital period is in logarithmic scale. The dotted line is representing the isoline for 500 m/s. Blue crosses are the modelled sensitivities for 25 observations with CRIRES+ (more details on that in the next chapters). White and yellow spots show already proposed exomoon candidates for Kepler 1708 and Kepler1625 respectively.
 </div>
 
+The results highlight β Pic b's suitability for exomoon detection due to its mass and favorable orbital orientation. The findings also emphasize the importance of high-precision instruments for reducing noise and enhancing sensitivity. CRIRES+ and similar spectrographs hold significant potential for advancing this frontier.
+
+By refining detection thresholds and observational strategies, this study lays the groundwork for uncovering exomoons in systems like β Pic b, marking a critical step toward characterizing these elusive companions.
+
 ## Cross-Correlation of Spectra
-Radial velocity measurements rely on detecting Doppler shifts in spectral lines. This chapter details the process of simulating β Pictoris b's spectrum, applying Doppler shifts, and extracting velocities using cross-correlation techniques. The study validates these methods with high-resolution spectra, showcasing their potential for detecting subtle exomoon-induced shifts.
+
+Radial velocity measurements rely on detecting Doppler shifts in spectral lines caused by the motion of an exoplanet or its potential moon. In this chapter, we explore the process of simulating β Pictoris b's spectrum, applying Doppler shifts, and extracting velocities using cross-correlation techniques. Two high-resolution spectra of β Pic b, provided by Dr. Tomas Stolker and Dr. Paul Mollière, serve as the basis for this analysis.
+
+### Methodology
+
+To analyze the spectra, the original high-resolution data were first rebinned into evenly spaced bins, each consisting of $10^5$ data points, allowing for easier computational handling. This step retained key spectral features while simplifying the data. The rebinned spectra were then convolved with a normalized normal distribution using a Tukey window, smoothing sharp edges and reducing noise. This process ensured that the spectra were suitable for cross-correlation analysis. The figure below illustrates the original, rebinned, and convolved spectra for both datasets.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -73,6 +107,17 @@ Radial velocity measurements rely on detecting Doppler shifts in spectral lines.
     High-resolution simulated spectra of β Pic b used for the cross-correlation analysis. With blue points showing the original spectrum, green points showing the rebinned spectrum, and the red line showing the convolved spectrum. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
 </div>
 
+Next, the Doppler effect was simulated by shifting the convolved spectra by a known velocity $v = 3000 \, \text{km/s}$) using the `pyasl.dopplerShift` function from the `PyAstronomy` library. The shifted spectra were then cross-correlated with the original, allowing us to determine the applied velocity by identifying the peak of the cross-correlation function. The process demonstrated the method's ability to accurately recover velocities within a small margin of error.
+
+The non-relativistic Doppler effect was used in these calculations, defined as:
+
+\begin{equation}
+z = \frac{\Delta \lambda}{\lambda} = \frac{v}{c},
+\end{equation}
+
+where $v$ is the velocity of the object, $c$ is the speed of light, and $z$ represents the fractional shift in spectral lines.
+
+The results of the convolution and Doppler-shift processes are illustrated below. Figures on the left panels show the convolved spectra in green and the Doppler-shifted spectra in red, while the right panels show the cross-correlation outputs. The peak of the cross-correlation closely matches the velocity used to shift the spectra ($v = 3.0 \times 10^7 \, \text{m/s}$).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -86,7 +131,21 @@ Radial velocity measurements rely on detecting Doppler shifts in spectral lines.
     Each image has two panels showing. On the left, the convolved spectrum for β Pic b in green and the shifted spectrum due to the Doppler effect with v = 3000km/s with red. On the right the result of the cross-correlation of the two spectra on the left. The vertical line represents the v = 0. On the small panel, there is the peak of the cross-correlation that is clearly at a non-zero velocity, close to 0.3 × 107 m/s. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
 </div>
 
+The following table summarizes the measured velocities and their deviations from the true Doppler shift:
+
+| Spectrum Provider       | Measured Velocity ($10^7 \, \text{m/s}$) | True Velocity ($10^7 \, \text{m/s}$) |
+|--------------------------|-------------------------------------------|---------------------------------------|
+| Dr. Tomas Stolker       | $3.009 \pm 0.004$                       | $3.000$                             |
+| Dr. Paul Mollière       | $3.073 \pm 0.004$                       | $3.000$                             |
+
+<p></p>
+
+These results confirm the effectiveness of cross-correlation in accurately determining radial velocities with minimal error and validates the feasibility of extracting radial velocity data using high-resolution spectra, a critical step toward detecting exomoon-induced shifts. The ability to measure velocities with such precision opens the door for further exploration of smaller perturbations caused by potential exomoons.
+
+By integrating these methods with observational data, future studies can improve the accuracy and sensitivity of exomoon detection techniques, enabling a more comprehensive understanding of planetary systems like β Pictoris b.
+
 ## Simulating Exomoon Detection
+
 Through Bayesian modeling, this chapter simulates the detection of exomoons by creating synthetic radial velocity data with added observational noise. Results demonstrate that moons with higher masses and shorter orbital periods are easier to detect. For β Pictoris b, exomoons larger than 20 Earth masses with a 10-day period or shorter are within detectable thresholds, depending on noise levels.
 
 <div class="row">
@@ -112,12 +171,7 @@ Through Bayesian modeling, this chapter simulates the detection of exomoons by c
 <div class="caption">
     The radial velocity data generated from the exoplanet module for a moon of 60 Earth masses and a period of 10 days with added noise of 250m/s. The blue line represents the posterior, after fitting the Bayesian model, with the 16th and 84th percentile.
 </div>
-<!-- 
-Period
-Noise10 days20 days
-250 m/s> 20M⊕> 60M⊕
-500 m/s> 40M⊕> 130M⊕
--->
+
 
 | Orbital Period (days) | Observational Noise (m/s) | Minimum Detectable Moon Mass (Earth Masses) |
 |-----------------------|---------------------------|---------------------------------------------|
