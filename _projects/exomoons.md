@@ -91,7 +91,7 @@ By refining detection thresholds and observational strategies, this study lays t
 
 Radial velocity measurements rely on detecting Doppler shifts in spectral lines caused by the motion of an exoplanet or its potential moon. In this chapter, we explore the process of simulating β Pictoris b's spectrum, applying Doppler shifts, and extracting velocities using cross-correlation techniques. Two high-resolution spectra of β Pic b, provided by Dr. Tomas Stolker and Dr. Paul Mollière, serve as the basis for this analysis.
 
-To analyze the spectra, the original high-resolution data were first rebinned into evenly spaced bins, each consisting of $10^5$ data points, allowing for easier computational handling. This step retained key spectral features while simplifying the data. The rebinned spectra were then convolved with a normalized normal distribution using a Tukey window, smoothing sharp edges and reducing noise. This process ensured that the spectra were suitable for cross-correlation analysis. The figure below illustrates the original, rebinned, and convolved spectra for both datasets.
+To analyze the spectra, the original high-resolution data were first rebinned into evenly spaced bins, each consisting of $$10^5$$ data points, allowing for easier computational handling. This step retained key spectral features while simplifying the data. The rebinned spectra were then convolved with a normalized normal distribution using a Tukey window, smoothing sharp edges and reducing noise. This process ensured that the spectra were suitable for cross-correlation analysis. The figure below illustrates the original, rebinned, and convolved spectra for both datasets.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
