@@ -105,7 +105,7 @@ To analyze the spectra, the original high-resolution data were first rebinned in
     High-resolution simulated spectra of β Pic b used for the cross-correlation analysis. With blue points showing the original spectrum, green points showing the rebinned spectrum, and the red line showing the convolved spectrum. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
 </div>
 
-Next, the Doppler effect was simulated by shifting the convolved spectra by a known velocity $v = 3000 \, \text{km/s}$) using the `pyasl.dopplerShift` function from the `PyAstronomy` library. The shifted spectra were then cross-correlated with the original, allowing us to determine the applied velocity by identifying the peak of the cross-correlation function. The process demonstrated the method's ability to accurately recover velocities within a small margin of error.
+Next, the Doppler effect was simulated by shifting the convolved spectra by a known velocity $$v = 3000 \, \text{km/s}$$) using the `pyasl.dopplerShift` function from the `PyAstronomy` library. The shifted spectra were then cross-correlated with the original, allowing us to determine the applied velocity by identifying the peak of the cross-correlation function. The process demonstrated the method's ability to accurately recover velocities within a small margin of error.
 
 The non-relativistic Doppler effect was used in these calculations, defined as:
 
@@ -113,9 +113,9 @@ The non-relativistic Doppler effect was used in these calculations, defined as:
 z = \frac{\Delta \lambda}{\lambda} = \frac{v}{c},
 \end{equation}
 
-where $v$ is the velocity of the object, $c$ is the speed of light, and $z$ represents the fractional shift in spectral lines.
+where $$v$$ is the velocity of the object, $$c$$ is the speed of light, and $$z$$ represents the fractional shift in spectral lines.
 
-The results of the convolution and Doppler-shift processes are illustrated below. Figures on the left panels show the convolved spectra in green and the Doppler-shifted spectra in red, while the right panels show the cross-correlation outputs. The peak of the cross-correlation closely matches the velocity used to shift the spectra ($v = 3.0 \times 10^6 \, \text{m/s}$).
+The results of the convolution and Doppler-shift processes are illustrated below. Figures on the left panels show the convolved spectra in green and the Doppler-shifted spectra in red, while the right panels show the cross-correlation outputs. The peak of the cross-correlation closely matches the velocity used to shift the spectra ($$v = 3.0 \times 10^6 \, \text{m/s}$$).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -126,15 +126,15 @@ The results of the convolution and Doppler-shift processes are illustrated below
     </div>
 </div>
 <div class="caption">
-    Each image has two panels showing. On the left, the convolved spectrum for β Pic b in green and the shifted spectrum due to the Doppler effect with v = 3000km/s with red. On the right the result of the cross-correlation of the two spectra on the left. The vertical line represents the v = 0. On the small panel, there is the peak of the cross-correlation that is clearly at a non-zero velocity, close to $0.3 \times 10^7 \, \text{m/s}$. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
+    Each image has two panels showing. On the left, the convolved spectrum for β Pic b in green and the shifted spectrum due to the Doppler effect with v = 3000km/s with red. On the right the result of the cross-correlation of the two spectra on the left. The vertical line represents the v = 0. On the small panel, there is the peak of the cross-correlation that is clearly at a non-zero velocity, close to $$0.3 \times 10^7 \, \text{m/s}$$. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
 </div>
 
 The following table summarizes the measured velocities and their deviations from the true Doppler shift:
 
-| Spectrum Provider       | Measured Velocity (10^6 m/s) | True Velocity (10^6 m/s) |
+| Spectrum Provider       | Measured Velocity ($$10^6 \, \text{m/s}$$)| True Velocity ($$10^6 \, \text{m/s}$$) |
 |--------------------------|-------------------------------------------|---------------------------------------|
-| Dr. Tomas Stolker       | 3.009 +/- 0.004                       | 3.000                            |
-| Dr. Paul Mollière       | 3.073 +/- 0.004                       | 3.000                            |
+| Dr. Tomas Stolker       | $$3.009 \pm 0.004$$                       | 3.000                            |
+| Dr. Paul Mollière       | $$3.073 \pm 0.004$$                       | 3.000                            |
 
 <p></p>
 
@@ -227,8 +227,8 @@ This chapter analyzes real radial velocity data from β Pictoris b collected wit
 
 | | Mean Period (days) | Number of Spots |
 |-----------------------|-------------------|-----------------|
-| Run 1 | 0.271 +/- 0.025 | 27-33 |
-| Run 2 | 0.345 +/- 0.050 | 21-27 |
+| Run 1 | $$0.271 \pm 0.025$$ | 27-33 |
+| Run 2 | $$0.345 \pm 0.050$$ | 21-27 |
 
 <p></p>
 

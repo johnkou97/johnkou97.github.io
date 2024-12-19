@@ -31,7 +31,7 @@ where $$A$$ is a geometric prefactor (averaged over all angles making $$A = 2/5$
     f_{\text{GW}}(t) = B x^{-5/8} (t_c - t)^{-3/8}, 
     \label{eq:chirpline}
 \end{equation}
-where $$B = 16.6 \, \text{s}^{-5/8}$$, $x$ is the chirp mass in solar masses, and $$t_c$$ is the moment of merger. The phase of the wave is given by
+where $$B = 16.6 \, \text{s}^{-5/8}$$, $$x$$ is the chirp mass in solar masses, and $$t_c$$ is the moment of merger. The phase of the wave is given by
 \begin{equation}
     \phi(t) = 2\pi B x^{-5/8} (t_c - t)^{5/8}.
     \label{eq:phase}

@@ -125,7 +125,7 @@ For the centering environment, we have trained agents with the SAC and A2C algor
 
 We have trained agents on the sharpening easy environment with 2, 5, 9, 14, 20, and 27 Zernike modes. Reminder that for this environment the aberrations can always be corrected by the zernike modes of the deformable mirror that we use each time. The learning curves can also be found in our [WandB report](https://api.wandb.ai/links/adapt_opt/5y122g06).
 
-Each time we increase the number of modes, the environment gets harder to solve. For the 27 Zernike modes environment, we see that our agent is able to learn and reaches a plateau around 0.6 in the learning curve. The evaluation shows that higher performance can be achieved, there are however episodes with worse performance. The agent was also tested in the environment with a smaller number of modes and was always successful in learning a policy with an average return above $0.6$. Above 27 Zernike modes, we were unable to see any, probably due to limitations in computational resources (e.g., buffer size and training time).
+Each time we increase the number of modes, the environment gets harder to solve. For the 27 Zernike modes environment, we see that our agent is able to learn and reaches a plateau around 0.6 in the learning curve. The evaluation shows that higher performance can be achieved, there are however episodes with worse performance. The agent was also tested in the environment with a smaller number of modes and was always successful in learning a policy with an average return above $$0.6$$. Above 27 Zernike modes, we were unable to see any, probably due to limitations in computational resources (e.g., buffer size and training time).
 
 #### Evaluation for 2 zernike modes
 
