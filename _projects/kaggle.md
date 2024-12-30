@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Kaggle Challenges
-description: collection of Kaggle challenges I have participated in.
+description: collection of Kaggle challenges I have participated in
 img: assets/img/tree.jpg  
-importance: 1
+importance: 2
 category: personal
 related_publications: false
 giscus_comments: false
