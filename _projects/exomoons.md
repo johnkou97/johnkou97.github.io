@@ -91,7 +91,7 @@ By refining detection thresholds and observational strategies, this study lays t
 
 Radial velocity measurements rely on detecting Doppler shifts in spectral lines caused by the motion of an exoplanet or its potential moon. In this chapter, we explore the process of simulating β Pictoris b's spectrum, applying Doppler shifts, and extracting velocities using cross-correlation techniques. Two high-resolution spectra of β Pic b, provided by Dr. Tomas Stolker and Dr. Paul Mollière, serve as the basis for this analysis.
 
-To analyze the spectra, the original high-resolution data were first rebinned into evenly spaced bins, each consisting of $$10^5$$ data points, allowing for easier computational handling. This step retained key spectral features while simplifying the data. The rebinned spectra were then convolved with a normalized normal distribution using a Tukey window, smoothing sharp edges and reducing noise. This process ensured that the spectra were suitable for cross-correlation analysis. The figure below illustrates the original, rebinned, and convolved spectra for both datasets.
+To analyze the spectra, the original high-resolution data were first rebinned into evenly spaced bins, each consisting of $$10^5$$ data points, allowing for easier computational handling. This step retained key spectral features while simplifying the data. The rebinned spectra were then convolved with a normal distribution using a Tukey window, smoothing sharp edges and reducing noise. This process ensured that the spectra were suitable for cross-correlation analysis. The figure below illustrates the original, rebinned, and convolved spectra for both datasets.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -126,7 +126,7 @@ The results of the convolution and Doppler-shift processes are illustrated below
     </div>
 </div>
 <div class="caption">
-    Each image has two panels showing. On the left, the convolved spectrum for β Pic b in green and the shifted spectrum due to the Doppler effect with v = 3000km/s with red. On the right the result of the cross-correlation of the two spectra on the left. The vertical line represents the v = 0. On the small panel, there is the peak of the cross-correlation that is clearly at a non-zero velocity, close to $$0.3 \times 10^7 \, \text{m/s}$$. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
+    Each image has two panels showing. On the left, the convolved spectrum for β Pic b in green and the shifted spectrum due to the Doppler effect with v = 3000km/s with red. On the right the result of the cross-correlation of the two spectra on the left. The vertical line represents the v = 0. On the small panel, there is the peak of the cross-correlation that is clearly at a non-zero velocity, close to $0.3 \times 10^7 \, \text{m/s}$. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
 </div>
 
 The following table summarizes the measured velocities and their deviations from the true Doppler shift:
@@ -142,9 +142,23 @@ These results confirm the effectiveness of cross-correlation in accurately deter
 
 By integrating these methods with observational data, future studies can improve the accuracy and sensitivity of exomoon detection techniques, enabling a more comprehensive understanding of planetary systems like β Pictoris b.
 
+
+
+
+
+
 ## Simulating Exomoon Detection
 
-Through Bayesian modeling, this chapter simulates the detection of exomoons by creating synthetic radial velocity data with added observational noise. Results demonstrate that moons with higher masses and shorter orbital periods are easier to detect. For β Pictoris b, exomoons larger than 20 Earth masses with a 10-day period or shorter are within detectable thresholds, depending on noise levels.
+Through Bayesian modeling, this chapter simulates the detection of exomoons by creating synthetic radial velocity data with added observational noise. The study focuses on β Pictoris b, a massive exoplanet with favorable characteristics for exomoon detection. By varying moon masses, orbital periods, and noise levels, we investigate the detectability thresholds for exomoons around β Pic b, providing insights into the challenges and opportunities of exomoon detection through radial velocity analysis.
+
+
+To simulate exomoon signals, we use the `exoplanet` module, setting β Pictoris b as the central body with known parameters such as mass ($$11.9 \(M_{\text{J}}\)$$) and radius ($$1.65 \(R_{\text{J}}\)$$). Orbital inclinations are fixed at $$\(90^\circ\)$$ to simulate edge-on orbits, and we assume circular orbits for simplicity.
+
+Synthetic radial velocity data is generated for 25 observations spanning 130 days, consistent with observing schedules from the VLT’s CRIRES+ spectrograph. To mimic real conditions, observational noise is added, modeled as a Gaussian distribution with amplitudes of 500 m/s (current capabilities) and 250 m/s (near-future improvements).
+
+We apply a Bayesian model using PyMC3 to fit orbital parameters, including the moon's period and semi-amplitude. The model uses Markov Chain Monte Carlo (MCMC) sampling, with 1000 tuning iterations and 1000 draws per chain. Successful detections occur when the model converges, producing well-constrained posteriors for key parameters.
+
+In the figure below, we simulate a moon with 80 Earth masses and a 10-day orbital period. Despite 500 m/s noise, the Bayesian model fits the radial velocity data well, converging on a posterior period of the same value, within the confidence interval. The model's accuracy demonstrates that such moons are detectable with current observational noise thresholds.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -157,6 +171,8 @@ Through Bayesian modeling, this chapter simulates the detection of exomoons by c
 <div class="caption">
     The radial velocity data generated from the exoplanet module for a moon of 80 Earth masses and a period of 10 days with added noise of 500m/s. The blue line represents the posterior, after fitting the Bayesian model, with the 16th and 84th percentile.
 </div>
+
+In the next figure we simulate a moon with 60 Earth masses and the same orbital period but with reduced noise (250 m/s). The Bayesian model is able to detect the moon, although the period is not as well constrained as in the previous case. It is important to note that the reduced noise allowed for a detection that would not be possible with the higher noise level. Reduced noise significantly improves detection capabilities, even for smaller moons, highlighting the value of technological advancements.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -179,6 +195,9 @@ Through Bayesian modeling, this chapter simulates the detection of exomoons by c
 | 20                    | 500                       | 130                                          |
 
 <p></p>
+
+The study demonstrates that moons with higher masses and shorter orbital periods are easier to detect. With current noise levels (500 m/s), only moons above 40 Earth masses with 10-day periods are detectable. However, reducing noise to 250 m/s lowers this threshold to 20 Earth masses. For longer periods (20 days), the minimum detectable mass increases, showing that orbital characteristics significantly impact detectability. These findings emphasize the importance of high-precision instruments like CRIRES+ in advancing exomoon detection capabilities.
+
 
 ## Real Data and Surface Spots
 This chapter analyzes real radial velocity data from β Pictoris b collected with the CRIRES+ spectrograph. Observed fluctuations are hypothesized to result from atmospheric phenomena, such as surface spots. Simulations show that patterns of 21–33 spots could plausibly explain the observed frequencies, though further analysis is needed to confirm.
