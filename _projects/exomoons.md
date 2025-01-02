@@ -23,7 +23,7 @@ Please find the thesis [here](/assets/pdf/exomoons.pdf). The code of the project
     </div>
 </div>
 <div class="caption">
-    Beta Pictoris as seen in infrared light - annotated. Image taken from [ESO](https://www.eso.org/public/images/eso0842b/)
+    Beta Pictoris as seen in infrared light - annotated. Image taken from <a href="https://www.eso.org/public/images/eso0842b/">ESO</a>.
 </div>
 
 ## Overview
@@ -55,7 +55,7 @@ The figure below summarizes the key exoplanet detection techniques and highlight
 
 The radial velocity method has been successfully applied to the detection of exoplanets by measuring subtle Doppler shifts caused by a planet's gravitational pull on its host star. Extending this method to detect exomoons is an exciting but challenging frontier. This chapter focuses on the induced radial velocity signals caused by potential moons orbiting the directly imaged exoplanet β Pictoris b, emphasizing how factors like moon mass and orbital period affect signal strength.
 
-Using the `exoplanet` module, simulations were performed to explore the effect of moon mass and orbital period on the radial velocity signals. For reference, Io—one of Jupiter’s moons—was modeled to illustrate the dynamics of moon-induced radial velocity changes in a familiar system. This approach provided a comparative baseline against hypothetical Earth-mass exomoons orbiting β Pic b. The parameters for β Pic b and Io used in the simulations are outlined in Tables 2.1 and 2.2 of the thesis.
+Using the `exoplanet` module, simulations were performed to explore the effect of moon mass and orbital period on the radial velocity signals. For reference, Io (one of Jupiter’s moons) was modeled to illustrate the dynamics of moon-induced radial velocity changes in a familiar system. This approach provided a comparative baseline against hypothetical Earth-mass exomoons orbiting β Pic b.
 
 Key assumptions included circular orbits and an inclination of 90° (edge-on). This ensured consistency between scenarios while facilitating comparisons between the well-understood Jupiter-Io system and β Pic b.
 
@@ -105,7 +105,7 @@ To analyze the spectra, the original high-resolution data were first rebinned in
     High-resolution simulated spectra of β Pic b used for the cross-correlation analysis. With blue points showing the original spectrum, green points showing the rebinned spectrum, and the red line showing the convolved spectrum. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
 </div>
 
-Next, the Doppler effect was simulated by shifting the convolved spectra by a known velocity $$v = 3000 \, \text{km/s}$$) using the `pyasl.dopplerShift` function from the `PyAstronomy` library. The shifted spectra were then cross-correlated with the original, allowing us to determine the applied velocity by identifying the peak of the cross-correlation function. The process demonstrated the method's ability to accurately recover velocities within a small margin of error.
+Next, the Doppler effect was simulated by shifting the convolved spectra by a known velocity ($$v = 3000 \, \text{km/s}$$) using a modified (for the purpose of this study) version of the `pyasl.dopplerShift` function from the `PyAstronomy` library. The shifted spectra were then cross-correlated with the original, allowing us to determine the applied velocity by identifying the peak of the cross-correlation function. The process demonstrated the method's ability to accurately recover velocities within a small margin of error.
 
 The non-relativistic Doppler effect was used in these calculations, defined as:
 
@@ -152,7 +152,7 @@ To simulate exomoon signals, we use the `exoplanet` module, setting β Pictoris 
 
 Synthetic radial velocity data is generated for 25 observations spanning 130 days, consistent with observing schedules from the VLT’s CRIRES+ spectrograph. To mimic real conditions, observational noise is added, modeled as a Gaussian distribution with amplitudes of 500 m/s (current capabilities) and 250 m/s (near-future improvements).
 
-We apply a Bayesian model using PyMC3 to fit orbital parameters, including the moon's period and semi-amplitude. The model uses Markov Chain Monte Carlo (MCMC) sampling, with 1000 tuning iterations and 1000 draws per chain. Successful detections occur when the model converges, producing well-constrained posteriors for key parameters.
+We apply a Bayesian model using `PyMC3` to fit orbital parameters, including the moon's period and semi-amplitude. The model uses Markov Chain Monte Carlo (MCMC) sampling, with 1000 tuning iterations and 1000 draws per chain. Successful detections occur when the model converges, producing well-constrained posteriors for key parameters.
 
 In the figure below, we simulate a moon with 80 Earth masses and a 10-day orbital period. Despite 500 m/s noise, the Bayesian model fits the radial velocity data well, converging on a posterior period of the same value, within the confidence interval. The model's accuracy demonstrates that such moons are detectable with current observational noise thresholds.
 
@@ -182,6 +182,7 @@ In the next figure we simulate a moon with 60 Earth masses and the same orbital 
     The radial velocity data generated from the exoplanet module for a moon of 60 Earth masses and a period of 10 days with added noise of 250m/s. The blue line represents the posterior, after fitting the Bayesian model, with the 16th and 84th percentile.
 </div>
 
+The table below summarizes the minimum detectable moon masses for different orbital periods and noise levels, highlighting the impact of these factors on exomoon detectability. Shorter periods and lower noise levels significantly enhance detection capabilities, allowing for the identification of smaller moons around β Pic b.
 
 | Orbital Period (days) | Observational Noise (m/s) | Minimum Detectable Moon Mass (Earth Masses) |
 |-----------------------|---------------------------|---------------------------------------------|
@@ -199,7 +200,7 @@ The study demonstrates that moons with higher masses and shorter orbital periods
 
 This chapter focuses on explaining the peculiar radial velocity (RV) data observed for β Pictoris b, using CRIRES+ spectrograph data collected during two one-hour observational runs on November 11 and November 13, 2022. The observed variations in radial velocity are hypothesized to result from the Rossiter-McLaughlin effect caused by atmospheric spots on the planet's surface, rather than the presence of an orbiting body. 
 
-The RV data were provided by Dr. Rico Landman and reduced using the pycrires pipeline combined with the official esorex pipeline. Each dataset corresponds to 17 and 20 data points for the respective runs. These data show rapid fluctuations over short time periods, which cannot be explained by planetary orbital mechanics alone.
+The RV data were provided by Dr. Rico Landman and reduced using the `pycrires` pipeline combined with the official `esorex` pipeline. Each dataset corresponds to 17 and 20 data points for the respective runs. These data show rapid fluctuations over short time periods, which cannot be explained by planetary orbital mechanics alone.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
