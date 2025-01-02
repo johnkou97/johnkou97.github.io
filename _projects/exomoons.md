@@ -126,7 +126,7 @@ The results of the convolution and Doppler-shift processes are illustrated below
     </div>
 </div>
 <div class="caption">
-    Each image has two panels showing. On the left, the convolved spectrum for β Pic b in green and the shifted spectrum due to the Doppler effect with v = 3000km/s with red. On the right the result of the cross-correlation of the two spectra on the left. The vertical line represents the v = 0. On the small panel, there is the peak of the cross-correlation that is clearly at a non-zero velocity, close to $0.3 \times 10^7 \, \text{m/s}$. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
+    Each image has two panels showing. On the left, the convolved spectrum for β Pic b in green and the shifted spectrum due to the Doppler effect with v = 3000 km/s with red. On the right the result of the cross-correlation of the two spectra on the left. The vertical line represents the v = 0. On the small panel, there is the peak of the cross-correlation that is clearly at a non-zero velocity, close to the true value of v = 3000 km/s. Left: Simulated spectrum provided by Dr. Tomas Stolker. Right: Simulated spectrum provided by Dr. Paul Mollière (based on the best-fit model of GRAVITY Collaboration).
 </div>
 
 The following table summarizes the measured velocities and their deviations from the true Doppler shift:
@@ -143,16 +143,12 @@ These results confirm the effectiveness of cross-correlation in accurately deter
 By integrating these methods with observational data, future studies can improve the accuracy and sensitivity of exomoon detection techniques, enabling a more comprehensive understanding of planetary systems like β Pictoris b.
 
 
-
-
-
-
 ## Simulating Exomoon Detection
 
 Through Bayesian modeling, this chapter simulates the detection of exomoons by creating synthetic radial velocity data with added observational noise. The study focuses on β Pictoris b, a massive exoplanet with favorable characteristics for exomoon detection. By varying moon masses, orbital periods, and noise levels, we investigate the detectability thresholds for exomoons around β Pic b, providing insights into the challenges and opportunities of exomoon detection through radial velocity analysis.
 
 
-To simulate exomoon signals, we use the `exoplanet` module, setting β Pictoris b as the central body with known parameters such as mass ($$11.9 \(M_{\text{J}}\)$$) and radius ($$1.65 \(R_{\text{J}}\)$$). Orbital inclinations are fixed at $$\(90^\circ\)$$ to simulate edge-on orbits, and we assume circular orbits for simplicity.
+To simulate exomoon signals, we use the `exoplanet` module, setting β Pictoris b as the central body with known parameters such as mass ($$11.9 M_{\text{J}}$$) and radius ($$1.65 R_{\text{J}}$$). Orbital inclinations are fixed at $$90^\circ$$ to simulate edge-on orbits, and we assume circular orbits for simplicity.
 
 Synthetic radial velocity data is generated for 25 observations spanning 130 days, consistent with observing schedules from the VLT’s CRIRES+ spectrograph. To mimic real conditions, observational noise is added, modeled as a Gaussian distribution with amplitudes of 500 m/s (current capabilities) and 250 m/s (near-future improvements).
 
@@ -200,7 +196,10 @@ The study demonstrates that moons with higher masses and shorter orbital periods
 
 
 ## Real Data and Surface Spots
-This chapter analyzes real radial velocity data from β Pictoris b collected with the CRIRES+ spectrograph. Observed fluctuations are hypothesized to result from atmospheric phenomena, such as surface spots. Simulations show that patterns of 21–33 spots could plausibly explain the observed frequencies, though further analysis is needed to confirm.
+
+This chapter focuses on explaining the peculiar radial velocity (RV) data observed for β Pictoris b, using CRIRES+ spectrograph data collected during two one-hour observational runs on November 11 and November 13, 2022. The observed variations in radial velocity are hypothesized to result from the Rossiter-McLaughlin effect caused by atmospheric spots on the planet's surface, rather than the presence of an orbiting body. 
+
+The RV data were provided by Dr. Rico Landman and reduced using the pycrires pipeline combined with the official esorex pipeline. Each dataset corresponds to 17 and 20 data points for the respective runs. These data show rapid fluctuations over short time periods, which cannot be explained by planetary orbital mechanics alone.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -210,6 +209,8 @@ This chapter analyzes real radial velocity data from β Pictoris b collected wit
 <div class="caption">
     The radial velocity data for β Pictoris b that were provided by Dr. Rico Landman. The two panels contain the two separate observational runs on November 11 (left) and November 13 (right) of 2022.
 </div>
+
+The `starry` package was utilized to model the effects of surface spots on the RV signal. Spherical harmonic coefficients were used to represent the planet’s surface. The model simulated spots by varying parameters such as size, latitude, and number, while the planet's rotational velocity was fixed. In a test example, six spots were placed along the equator of β Pictoris b. Limitations in the package restricted the maximum number of spots to 11 and the minimum spot radius to 15 degrees.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -223,6 +224,8 @@ This chapter analyzes real radial velocity data from β Pictoris b collected wit
     Spot creation using the `starry` package. For this figure, we created 6 spots with 0 latitude and different longitudes. On the left, we see the equirectangular view of the map while on the right panel we find the spherical view of the planet with the spots.
 </div>
 
+Fourier transforms of the RV time series revealed a primary frequency peak around 5.5 mHz for both observational runs. A sinusoidal model was then fitted to the time series to extract the angular frequency and amplitude of the signal.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/research/exomoon/lombscargle_both.jpg" title="lombscargle_both" class="img-fluid rounded z-depth-1" %}
@@ -231,6 +234,8 @@ This chapter analyzes real radial velocity data from β Pictoris b collected wit
 <div class="caption">
     The Fourier Transformation of the radial velocity time-series shown before. On the left panel, we have the first observational run, while the second one is on the right panel. With the red vertical lines showing the main peak frequencies.
 </div>
+
+Using the `starry` package, simulations demonstrated that the number of spots on the surface directly impacts the periodicity of the RV signal. Latitude had no significant effect on the period. By extrapolating the simulated data, the number of spots required to produce the observed RV signal periods was estimated.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -244,6 +249,8 @@ This chapter analyzes real radial velocity data from β Pictoris b collected wit
     Left: The period of the radial velocity signal as a function of the number of spots on the atmosphere of β Pictoris b. The red line represents the fitted function. Right: Radial velocity amplitudes as a function of the size of the spots. The colours indicate the number of spots that were used in the simulation.
 </div>
 
+The table below summarizes the results of the simulations, showing the mean period of each run and the range of spot numbers that could explain the observed RV fluctuations. The analysis suggests that atmospheric spots could account for the observed RV variations in β Pictoris b, with spot size and number influencing the RV amplitude. Further simulations using advanced tools are needed to refine these results and explore the full range of possibilities.
+
 | | Mean Period (days) | Number of Spots |
 |-----------------------|-------------------|-----------------|
 | Run 1 | $$0.271 \pm 0.025$$ | 27-33 |
@@ -251,11 +258,15 @@ This chapter analyzes real radial velocity data from β Pictoris b collected wit
 
 <p></p>
 
+The analysis supports the hypothesis that atmospheric spots, can explain the observed radial velocity fluctuations in β Pictoris b. While spot size and number influence the RV amplitude, additional simulations with advanced tools are required to refine these results. The work demonstrates that spots could explain RV fluctuations on scales consistent with those observed in β Pictoris b.
+
 
 ## Conclusions and Future Work
+
 Detecting exomoons through radial velocity is a challenging but promising endeavor. This study demonstrates the potential for detection under current and future observational capabilities, especially for systems like β Pictoris b. Future research will aim to refine techniques, extend observational datasets, and explore other exoplanetary systems.
 
 ---
 
 ## Acknowledgments
+
 This work was conducted under the supervision of Prof. Matthew Kenworthy at Leiden Observatory. Special thanks to Dr. Rico Landmann, Dr. Tomas Stolker, and Dr. Paul Mollière for their invaluable contributions.
