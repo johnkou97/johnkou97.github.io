@@ -263,7 +263,39 @@ The analysis supports the hypothesis that atmospheric spots, can explain the obs
 
 ## Conclusions and Future Work
 
-Detecting exomoons through radial velocity is a challenging but promising endeavor. This study demonstrates the potential for detection under current and future observational capabilities, especially for systems like β Pictoris b. Future research will aim to refine techniques, extend observational datasets, and explore other exoplanetary systems.
+Detecting exomoons via radial velocity techniques represents a frontier in astronomical research, pushing the limits of current observational technologies. This thesis has focused extensively on β Pictoris b, leveraging its nearly edge-on orbit and high mass, which make it an optimal candidate for such studies.
+
+Key findings include:
+
+1. **Radial Velocity Simulations**:  
+   - The detectability of exomoons depends significantly on their **mass** and **orbital period**.  
+   - Shorter orbital periods and higher masses produce stronger radial velocity signals.  
+   - Detection thresholds were established for two noise levels:
+     - At 500 m/s noise: moons >40 Earth masses with 10-day orbital periods are detectable.  
+     - At 250 m/s noise: moons >20 Earth masses with 10-day orbital periods are detectable.  
+
+2. **Cross-Correlation Analysis**:  
+   - Simulated spectra of β Pictoris b validated the cross-correlation technique for extracting Doppler shifts.  
+   - This method proved robust even under noisy conditions, emphasizing its utility for radial velocity studies.  
+
+3. **Surface Spots as a Contaminant**:  
+   - Real data from CRIRES+ revealed rapid radial velocity variations likely caused by **atmospheric spots**.  
+   - These findings highlighted the importance of accounting for planetary atmospheric phenomena to avoid misinterpreting noise as exomoon signals.  
+
+
+Building on these findings, several avenues for future research emerge:
+
+1. **Extended Observational Campaigns**: Increasing the number and duration of radial velocity observations for β Pictoris b would improve sensitivity to smaller moons and longer orbital periods. Observations should ideally be spaced to capture multiple orbital cycles, reducing ambiguities in signal interpretation.
+
+2. **Advances in Instrumentation**: Future spectrographs with higher resolution and lower noise floors could significantly enhance the detectability of exomoons. Next-generation facilities could be pivotal in overcoming current technological limitations.
+
+3. **Refined Models for Noise and Contaminants**: Expanding simulations to include more complex atmospheric phenomena (e.g., differential rotation zones, turbulence) could help disentangle exomoon-induced signals from planetary noise. Machine learning models may also assist in identifying subtle periodic signals buried in observational data.
+
+4. **Application to Other Systems**: While β Pictoris b is an ideal testbed, applying the techniques developed in this study to other high-mass, edge-on exoplanets could broaden the scope of exomoon detection efforts.
+
+5. **Integration of Complementary Techniques**: Combining radial velocity methods with other detection techniques, such as transit timing variations, could provide corroborative evidence for exomoons and enhance detection confidence.
+
+In conclusion, while the detection of exomoons remains a formidable challenge, this study lays critical groundwork for future explorations. By refining existing methodologies and leveraging advances in observational technology, the dream of detecting and characterizing exomoons may soon become a reality.
 
 ---
 
