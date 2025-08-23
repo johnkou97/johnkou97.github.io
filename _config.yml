@@ -278,7 +278,7 @@ defaults:
 sitemap:
   exclude:
     - "/blog/"
-    
+
 sass:
   style: compressed
 

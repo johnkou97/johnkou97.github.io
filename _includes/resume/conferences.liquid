@@ -16,7 +16,8 @@
                 <td>
                   <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">
                     {% for part in date_parts %}
-                      {{ part }}<br/>
+                      {{ part -}}
+                      <br>
                     {% endfor %}
                   </span>
                 </td>
@@ -24,9 +25,7 @@
               {% if content.location %}
                 <tr>
                   <td>
-                    <p class="location">
-                      <i class="fa-solid fa-location-dot iconlocation"></i> {{ content.location | replace: '--', '<br>' }}
-                    </p>
+                    <p class="location"><i class="fa-solid fa-location-dot iconlocation"></i> {{ content.location | replace: '--', '<br>' }}</p>
                   </td>
                 </tr>
               {% endif %}

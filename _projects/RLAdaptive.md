@@ -59,18 +59,18 @@ We have used several environments to train the agents. The environments are base
 
 ### Image sharpening
 
-The goal of this environment is to maximize the Strehl ratio based on focal plane images. 
+The goal of this environment is to maximize the Strehl ratio based on focal plane images.
 
 - **Observation**: The observed (noisy) image intensity in the focal plane. The image is normalized such that the values are always between 0 and 1. The image has a size of 96x96 pixels.
 - **Action**: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. Default is 400 actuators.
 - **Reward**: The Strehl ratio, which is a measure of image sharpness and is between 0 and 1.
-- **Things to consider**: 
-    * Partially observable Markov decision process: twin image problem  (image intensity and not the electric field)
-    * Possible solution: provide the agent a history of observations and commands or through the use of agents that have intrinsic memory
+- **Things to consider**:
+  - Partially observable Markov decision process: twin image problem (image intensity and not the electric field)
+  - Possible solution: provide the agent a history of observations and commands or through the use of agents that have intrinsic memory
 
 ### Dark hole (not yet used in the experiments)
 
-The goal of this environment is to remove starlight from a small region if the image. 
+The goal of this environment is to remove starlight from a small region if the image.
 
 - **Observation**: A measurement with information about the electric field in the dark hole region. The shape is N_probes x N_pixels, default is 5 x 499.
 - **Action**: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. Default is 400 actuators.
@@ -78,12 +78,11 @@ The goal of this environment is to remove starlight from a small region if the i
 
 ### Image sharpening easy
 
-The goal of this environment is to maximize the Strehl ratio based on focal plane images like in the image sharpening environment. The difference is that the aberrations from the atmosphere can always be corrected by the zernike modes of the deformable mirror. 
+The goal of this environment is to maximize the Strehl ratio based on focal plane images like in the image sharpening environment. The difference is that the aberrations from the atmosphere can always be corrected by the zernike modes of the deformable mirror.
 
 - **Observation**: The observed (noisy) image intensity in the focal plane. The image is normalized such that the values are always between 0 and 1. The image has a size of 96x96 pixels.
 - **Action**: An array of commands to send to the actuators to reshape the deformable mirror. This is in units of radians and should have an absolute value smaller than 0.3 to avoid divergence. Default is with 20 modes of zernike.
 - **Reward**: The Strehl ratio, which is a measure of image sharpness and is between 0 and 1.
-
 
 ### Image centering
 
@@ -95,9 +94,9 @@ The goal of this environment is to minimize the distance between the center of t
 
 ## Experiments
 
-From the above environments, we have chosen to focus on the **Centering** and **Image sharpening easy** environments. The **Image sharpening** environment is a more complex version of the **Image sharpening easy** environment were no filtering is applied to the atmosphere distortions. The idea is to start with a simple environment and gradually increase the complexity to see how the agent performs. 
+From the above environments, we have chosen to focus on the **Centering** and **Image sharpening easy** environments. The **Image sharpening** environment is a more complex version of the **Image sharpening easy** environment were no filtering is applied to the atmosphere distortions. The idea is to start with a simple environment and gradually increase the complexity to see how the agent performs.
 
-The **Centering** environment is the simplest environment we have used. The agent has to center the image in the focal plane. The action space is 2-dimensional and the observation space is the image intensity in the focal plane. The reward function is the negative of the distance between the center of the image and the center of the focal plane. The environment is easier to solve as the action space is smaller and the observation space is simpler. 
+The **Centering** environment is the simplest environment we have used. The agent has to center the image in the focal plane. The action space is 2-dimensional and the observation space is the image intensity in the focal plane. The reward function is the negative of the distance between the center of the image and the center of the focal plane. The environment is easier to solve as the action space is smaller and the observation space is simpler.
 
 For the **Image sharpening easy** environment we have the focal image of the telescope as the observation space, and the reward function is a measure of image sharpness. The action space is continuous with the dimensionality depending on the number of Zernike modes used. To simplify the problem, atmosphere distortions are filtered so that they can always be described using the same number of Zernike modes that define the action dimensionality. This makes the environment harder to solve as we increase the number of Zernike modes used. Higher degrees of the polynomials produce smaller distortions, which means that after a certain point, further increasing the number of modes will not make any significant difference to the environment and the filtering will no longer play a crucial role.
 
@@ -225,7 +224,6 @@ Each time we increase the number of modes, the environment gets harder to solve.
 <div class="caption">
     Left: Learning curve for the agent trained on the sharpening easy environment with 27 zernike modes. Right: Evaluation of the agent on 10000 episodes of 100 steps and comparison to the baseline.
 </div>
-
 
 ## Animations
 

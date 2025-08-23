@@ -22,6 +22,7 @@ I have had the pleasure to participate in two hackathons related to gravitationa
 The data used for the challenge contains earthquake from all over the world, together with noise (non-earthquake ambient noise). Earthquakes are very similar to gravitational waves, and in this context, have no meaningful difference. The goal of this challenge is to correctly classify an unknown set of data using any model that was trained on a provided dataset where the correct labels are provided. The full dataset is available on [Kaggle](https://www.kaggle.com/datasets/zerafachris/g2net-training-school-hackaton)
 
 For each of the samples in the dataset, there is a number of features that describe the data. The main features are the `E`, `N`, and `Z` components of the data, which are the three components of the seismic wave. Each component contains 6000 samples. There are other features that describe the location of the receiver and the source, the arrival times of the P and S waves, and the signal-to-noise ratio of the three components. Each element is labeled as one of the following classes:
+
 - `0`: Noise
 - `1`: Near_Small
 - `2`: Near_Medium
@@ -45,12 +46,12 @@ For the optimization of the CNN model, I used the `Optuna` library to search for
 
 The results of the challenge were evaluated based on the accuracy of the predictions. The CNN model greatly outperformed the AdaBoost model, which was not able to achieve a high accuracy. The results of the CNN model are shown in the table below:
 
-| Metric           | Score |
-|------------------|-------|
-| Precision        | 79.5% |
-| Recall           | 79.6% |
-| F1-score         | 79.5% |
-| Balanced accuracy| 79.6% |
+| Metric            | Score |
+| ----------------- | ----- |
+| Precision         | 79.5% |
+| Recall            | 79.6% |
+| F1-score          | 79.5% |
+| Balanced accuracy | 79.6% |
 
 <p></p>
 
@@ -72,6 +73,7 @@ Overall, the hackathon in Malta was a great experience and I learned a lot about
 The hackathon in Thessaloniki was a great opportunity to participate in a similar challenge and learn more about the field of gravitational waves and machine learning. The challenge was to classify noise segments of the Hanford detector during the O3 run into one of three categories based on the signal-to-noise ratio (SNR). The full dataset is available on [Kaggle](https://www.kaggle.com/competitions/g2net-hackathon)
 
 Each sample in the dataset consists of a single time series of 2048 data points. The three categories used for the classification are:
+
 - `0`: 0 <= SNR < 6
 - `1`: 6 <= SNR < 10
 - `2`: SNR >= 10
@@ -96,7 +98,7 @@ For the model, I used a convolutional neural network (CNN) with `Optuna` for hyp
 The results of the challenge were evaluated based on the accuracy of the predictions. The submission was done on the Kaggle platform and the results are shown in the table below:
 
 | Dataset    | Accuracy |
-|------------|----------|
+| ---------- | -------- |
 | Training   | 87.53%   |
 | Validation | 82.35%   |
 | Test       | 83.91%   |

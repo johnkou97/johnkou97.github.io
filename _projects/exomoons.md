@@ -27,6 +27,7 @@ Please find the thesis [here](/assets/pdf/exomoons.pdf). The code of the project
 </div>
 
 ## Overview
+
 This research delves into the detection of exomoons through radial velocity variations, focusing on the exoplanet β Pictoris b. Exomoons are natural satellites orbiting planets outside our solar system and may provide critical insights into planetary system formation and habitability. The study combines theoretical modeling, simulation, and real observational data to refine detection techniques and explore new frontiers in exoplanetary science.
 
 ## Introduction
@@ -66,11 +67,10 @@ The comparison between Io and a hypothetical Earth-mass moon around β Pic b dem
 The derived formula for estimating radial velocity amplitudes, based on the conservation of momentum and Kepler's laws, aligns well with simulated data:
 
 \begin{equation}
-v_{\text{planet}} = \left(\frac{2\pi G}{M^2 P}\right)^{\frac{1}{3}} \cdot m
+v\_{\text{planet}} = \left(\frac{2\pi G}{M^2 P}\right)^{\frac{1}{3}} \cdot m
 \end{equation}
 
 For β Pic b, the formula confirmed that both moon mass and orbital period significantly influence radial velocity amplitudes. Larger and closer moons produce stronger signals, with longer orbital periods leading to diminishing amplitudes.
-
 
 The contour plot below illustrates peak radial velocity as a function of moon mass and orbital period. The dotted line represents the detection threshold of 500 m/s, which corresponds to the capabilities of instruments like CRIRES+. Observational sensitivities for β Pic b, based on 25 simulated observations, are marked with blue crosses. Proposed exomoons around Kepler-1708 b-i and Kepler-1625 b-i are highlighted for context.
 
@@ -131,10 +131,10 @@ The results of the convolution and Doppler-shift processes are illustrated below
 
 The following table summarizes the measured velocities and their deviations from the true Doppler shift:
 
-| Spectrum Provider       | Measured Velocity ($$10^6 \, \text{m/s}$$)| True Velocity ($$10^6 \, \text{m/s}$$) |
-|--------------------------|-------------------------------------------|---------------------------------------|
-| Dr. Tomas Stolker       | $$3.009 \pm 0.004$$                       | 3.000                            |
-| Dr. Paul Mollière       | $$3.073 \pm 0.004$$                       | 3.000                            |
+| Spectrum Provider | Measured Velocity ($$10^6 \, \text{m/s}$$) | True Velocity ($$10^6 \, \text{m/s}$$) |
+| ----------------- | ------------------------------------------ | -------------------------------------- |
+| Dr. Tomas Stolker | $$3.009 \pm 0.004$$                        | 3.000                                  |
+| Dr. Paul Mollière | $$3.073 \pm 0.004$$                        | 3.000                                  |
 
 <p></p>
 
@@ -142,11 +142,9 @@ These results confirm the effectiveness of cross-correlation in accurately deter
 
 By integrating these methods with observational data, future studies can improve the accuracy and sensitivity of exomoon detection techniques, enabling a more comprehensive understanding of planetary systems like β Pictoris b.
 
-
 ## Simulating Exomoon Detection
 
 Through Bayesian modeling, this chapter simulates the detection of exomoons by creating synthetic radial velocity data with added observational noise. The study focuses on β Pictoris b, a massive exoplanet with favorable characteristics for exomoon detection. By varying moon masses, orbital periods, and noise levels, we investigate the detectability thresholds for exomoons around β Pic b, providing insights into the challenges and opportunities of exomoon detection through radial velocity analysis.
-
 
 To simulate exomoon signals, we use the `exoplanet` module, setting β Pictoris b as the central body with known parameters such as mass ($$11.9 M_{\text{J}}$$) and radius ($$1.65 R_{\text{J}}$$). Orbital inclinations are fixed at $$90^\circ$$ to simulate edge-on orbits, and we assume circular orbits for simplicity.
 
@@ -185,20 +183,19 @@ In the next figure we simulate a moon with 60 Earth masses and the same orbital 
 The table below summarizes the minimum detectable moon masses for different orbital periods and noise levels, highlighting the impact of these factors on exomoon detectability. Shorter periods and lower noise levels significantly enhance detection capabilities, allowing for the identification of smaller moons around β Pic b.
 
 | Orbital Period (days) | Observational Noise (m/s) | Minimum Detectable Moon Mass (Earth Masses) |
-|-----------------------|---------------------------|---------------------------------------------|
+| --------------------- | ------------------------- | ------------------------------------------- |
 | 10                    | 250                       | 20                                          |
 | 10                    | 500                       | 40                                          |
-| 20                    | 250                       | 60                                         |
-| 20                    | 500                       | 130                                          |
+| 20                    | 250                       | 60                                          |
+| 20                    | 500                       | 130                                         |
 
 <p></p>
 
 The study demonstrates that moons with higher masses and shorter orbital periods are easier to detect. With current noise levels (500 m/s), only moons above 40 Earth masses with 10-day periods are detectable. However, reducing noise to 250 m/s lowers this threshold to 20 Earth masses. For longer periods (20 days), the minimum detectable mass increases, showing that orbital characteristics significantly impact detectability. These findings emphasize the importance of high-precision instruments like CRIRES+ in advancing exomoon detection capabilities.
 
-
 ## Real Data and Surface Spots
 
-This chapter focuses on explaining the peculiar radial velocity (RV) data observed for β Pictoris b, using CRIRES+ spectrograph data collected during two one-hour observational runs on November 11 and November 13, 2022. The observed variations in radial velocity are hypothesized to result from the Rossiter-McLaughlin effect caused by atmospheric spots on the planet's surface, rather than the presence of an orbiting body. 
+This chapter focuses on explaining the peculiar radial velocity (RV) data observed for β Pictoris b, using CRIRES+ spectrograph data collected during two one-hour observational runs on November 11 and November 13, 2022. The observed variations in radial velocity are hypothesized to result from the Rossiter-McLaughlin effect caused by atmospheric spots on the planet's surface, rather than the presence of an orbiting body.
 
 The RV data were provided by Dr. Rico Landman and reduced using the `pycrires` pipeline combined with the official `esorex` pipeline. Each dataset corresponds to 17 and 20 data points for the respective runs. These data show rapid fluctuations over short time periods, which cannot be explained by planetary orbital mechanics alone.
 
@@ -252,15 +249,14 @@ Using the `starry` package, simulations demonstrated that the number of spots on
 
 The table below summarizes the results of the simulations, showing the mean period of each run and the range of spot numbers that could explain the observed RV fluctuations. The analysis suggests that atmospheric spots could account for the observed RV variations in β Pictoris b, with spot size and number influencing the RV amplitude. Further simulations using advanced tools are needed to refine these results and explore the full range of possibilities.
 
-| | Mean Period (days) | Number of Spots |
-|-----------------------|-------------------|-----------------|
-| Run 1 | $$0.271 \pm 0.025$$ | 27-33 |
-| Run 2 | $$0.345 \pm 0.050$$ | 21-27 |
+|       | Mean Period (days)  | Number of Spots |
+| ----- | ------------------- | --------------- |
+| Run 1 | $$0.271 \pm 0.025$$ | 27-33           |
+| Run 2 | $$0.345 \pm 0.050$$ | 21-27           |
 
 <p></p>
 
 The analysis supports the hypothesis that atmospheric spots, can explain the observed radial velocity fluctuations in β Pictoris b. While spot size and number influence the RV amplitude, additional simulations with advanced tools are required to refine these results. The work demonstrates that spots could explain RV fluctuations on scales consistent with those observed in β Pictoris b.
-
 
 ## Conclusions and Future Work
 
@@ -268,21 +264,22 @@ Detecting exomoons via radial velocity techniques represents a frontier in astro
 
 Key findings include:
 
-1. **Radial Velocity Simulations**:  
-   - The detectability of exomoons depends significantly on their **mass** and **orbital period**.  
-   - Shorter orbital periods and higher masses produce stronger radial velocity signals.  
+1. **Radial Velocity Simulations**:
+
+   - The detectability of exomoons depends significantly on their **mass** and **orbital period**.
+   - Shorter orbital periods and higher masses produce stronger radial velocity signals.
    - Detection thresholds were established for two noise levels:
-     - At 500 m/s noise: moons >40 Earth masses with 10-day orbital periods are detectable.  
-     - At 250 m/s noise: moons >20 Earth masses with 10-day orbital periods are detectable.  
+     - At 500 m/s noise: moons >40 Earth masses with 10-day orbital periods are detectable.
+     - At 250 m/s noise: moons >20 Earth masses with 10-day orbital periods are detectable.
 
-2. **Cross-Correlation Analysis**:  
-   - Simulated spectra of β Pictoris b validated the cross-correlation technique for extracting Doppler shifts.  
-   - This method proved robust even under noisy conditions, emphasizing its utility for radial velocity studies.  
+2. **Cross-Correlation Analysis**:
 
-3. **Surface Spots as a Contaminant**:  
-   - Real data from CRIRES+ revealed rapid radial velocity variations likely caused by **atmospheric spots**.  
-   - These findings highlighted the importance of accounting for planetary atmospheric phenomena to avoid misinterpreting noise as exomoon signals.  
+   - Simulated spectra of β Pictoris b validated the cross-correlation technique for extracting Doppler shifts.
+   - This method proved robust even under noisy conditions, emphasizing its utility for radial velocity studies.
 
+3. **Surface Spots as a Contaminant**:
+   - Real data from CRIRES+ revealed rapid radial velocity variations likely caused by **atmospheric spots**.
+   - These findings highlighted the importance of accounting for planetary atmospheric phenomena to avoid misinterpreting noise as exomoon signals.
 
 Building on these findings, several avenues for future research emerge:
 

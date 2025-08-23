@@ -2,7 +2,7 @@
 layout: page
 title: Advent of Code
 description: programming puzzles from the famous Advent of Code challenge
-img: assets/img/advent.jpg 
+img: assets/img/advent.jpg
 importance: 1
 category: personal
 related_publications: false
@@ -28,7 +28,6 @@ In December 2024, I decided to participate in the [Advent of Code](https://adven
 
 I participated in the challenge using Python. I solved the puzzles for each day and shared my solutions on [GitHub](https://github.com/johnkou97/AdventOfCode2024). The repository contains the solutions for each day, as well as a script to download the input data for each day. There is also a bash script to run the solutions for all days and measure the time it takes to solve each puzzle.
 
-
 ## Algorithms Used
 
 For the solutions, I used a variety of algorithms, depending on the requirements of the puzzle. Some of the algorithms I used include:
@@ -40,7 +39,7 @@ For the solutions, I used a variety of algorithms, depending on the requirements
 - **Memoization**: I used memoization to optimize recursive solutions by storing the results of subproblems.
 - **Breadth-First Search (BFS)**: I used BFS to solve puzzles that required exploring all possible paths in a graph.
 - **Djikstra's Algorithm**: I used Djikstra's algorithm to solve puzzles that required finding the shortest path in a weighted graph.
-- **A* Search Algorithm**: I used the A* search algorithm as an extension of Djikstra's algorithm to solve puzzles that required finding the shortest path in a weighted graph with a heuristic function.
+- **A\* Search Algorithm**: I used the A\* search algorithm as an extension of Djikstra's algorithm to solve puzzles that required finding the shortest path in a weighted graph with a heuristic function.
 - **Binary Search**: I used binary search to solve puzzles that required finding a specific value in a sorted list.
 - **Entropy**: I used entropy to solve puzzles that required finding the entropy of an image.
 - **Permutations**: I used permutations to solve puzzles that required finding all possible arrangements of a set of elements.
@@ -48,7 +47,6 @@ For the solutions, I used a variety of algorithms, depending on the requirements
 - **Bron-Kerbosch Algorithm**: I used the Bron-Kerbosch algorithm to solve puzzles that required finding all maximal cliques in a graph.
 - **Double-Ended Queue (Deque)**: I used deques to solve puzzles that required efficient insertion and deletion at both ends of a queue.
 - **Heap Queue**: I used heap queues to solve puzzles that required maintaining a priority queue.
-
 
 ## Results
 
@@ -63,7 +61,6 @@ The Advent of Code challenge had a story arc that unfolded as the days went by. 
 > As each location is checked, they will mark it on their list with a star. They figure the Chief Historian must be in one of the first fifty places they'll look, so in order to save Christmas, you need to help them get fifty stars on their list before Santa takes off on December 25th.
 
 > Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
-
 
 ## Disclaimer
 

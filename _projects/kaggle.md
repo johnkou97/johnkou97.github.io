@@ -2,7 +2,7 @@
 layout: page
 title: Kaggle Challenges
 description: collection of Kaggle challenges I have participated in
-img: assets/img/tree.jpg  
+img: assets/img/tree.jpg
 importance: 2
 category: personal
 related_publications: false
@@ -20,7 +20,9 @@ I have participated in four Kaggle challenges so far. My participation in the ch
 ## [Titanic - Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic)
 
 The Titanic challenge is a classic challenge for introducing beginners to the Kaggle platform. The challenge is to predict which passengers survived the Titanic shipwreck. The dataset contains the following information for each passenger:
+
 <!-- PassengerId,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked -->
+
 - PassengerId: a unique identifier for each passenger
 - Pclass: the class of the ticket (1st, 2nd, or 3rd)
 - Name: the name of the passenger
@@ -36,6 +38,7 @@ The Titanic challenge is a classic challenge for introducing beginners to the Ka
 The training dataset contains the information for 891 passengers, and the test dataset contains the information for 418 passengers. The test dataset does not contain the information about the survival of the passengers. The goal is to predict the survival of the passengers in the test dataset (0 = not survived, 1 = survived).
 
 My goal for this challenge was to get familiar with the Kaggle platform and to practice on some decision tree algorithms. I used the following algorithms:
+
 - Logistic Regression (LogReg)
 - Light Gradient Boosting Machine (LightGBM)
 - eXtreme Gradient Boosting (XGBoost)
@@ -44,8 +47,8 @@ For the data preprocessing, I dropped the columns for the passenger ID, name, ti
 
 I trained the algorithms on the training dataset and created a submission file for the test dataset. The submission file contained the passenger ID and the predicted survival. I made several submissions to the Kaggle platform for the different algorithms I used (for some of them I submitted multiple times). The scores I achieved are shown in the table below:
 
-| Algorithm | Score |
-|-----------|-------|
+| Algorithm | Score   |
+| --------- | ------- |
 | LogReg    | 0.76794 |
 | LightGBM  | 0.77511 |
 | XGBoost   | 0.77751 |
@@ -57,6 +60,7 @@ The scores are based on the accuracy of the predictions. The best score I achiev
 ## [Spaceship Titanic](https://www.kaggle.com/competitions/spaceship-titanic)
 
 The Spaceship Titanic challenge is a fictional challenge that takes place in the year 2912. The challenge is to predict which passengers were transported by a spacetime anomaly using records recovered from the spaceship's damaged computer system. The dataset contains the following information for each passenger:
+
 - PassengerId: a unique identifier for each passenger
 - HomePlanet: the home planet of the passenger
 - CryoSleep: the passenger was in cryosleep (yes or no)
@@ -73,7 +77,7 @@ The Spaceship Titanic challenge is a fictional challenge that takes place in the
 
 The training dataset contains the information for 8693 passengers, and the test dataset contains the information for 4277 passengers. The target variable is the `Transported` column, which indicates whether the passenger was transported by the spacetime anomaly (True or False).
 
-For this challenge, I wanted to test many different models from the `scikit-learn` library and compare their performance. I also created a visualization notebook to get some useful insights from the data. 
+For this challenge, I wanted to test many different models from the `scikit-learn` library and compare their performance. I also created a visualization notebook to get some useful insights from the data.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -88,7 +92,8 @@ For this challenge, I wanted to test many different models from the `scikit-lear
 </div>
 
 The full list of models I tested is as follows:
-- AdaBoost 
+
+- AdaBoost
 - Bagging
 - ExtraTrees
 - Gradient Boosting Machine (GBM)
@@ -104,18 +109,17 @@ The full list of models I tested is as follows:
 
 For some of the models, I also played with the hyperparameters to see if I could improve the performance. The voting model was created by combining the predictions of the Random Forest, GBM, AdaBoost, Bagging, Stacking, Neural Network, and SVM models. The majority voting was used to predict the final outcome.
 
-
-In order to compare the performance of the models, I used the same preprocessing steps for all of them. I filled the missing values in the `Age` column with the median age, dropped the missing values, encoded the categorical variables, and scaled the numerical features. I also split the data into a training and a validation set (75% training, 25% validation). 
+In order to compare the performance of the models, I used the same preprocessing steps for all of them. I filled the missing values in the `Age` column with the median age, dropped the missing values, encoded the categorical variables, and scaled the numerical features. I also split the data into a training and a validation set (75% training, 25% validation).
 
 The performance of the models was evaluated based on the accuracy of the predictions, as given by the Kaggle platform. The 5 models with the best performance are shown in the table below:
 
-| Model | Accuracy |
-|-------|----------|
-| AdaBoost | 0.79541 |
-| Gradient Boosting | 0.79237 |
-| Bagging | 0.79191 |
-| SVM | 0.79074 |
-| Voting | 0.79074 |
+| Model             | Accuracy |
+| ----------------- | -------- |
+| AdaBoost          | 0.79541  |
+| Gradient Boosting | 0.79237  |
+| Bagging           | 0.79191  |
+| SVM               | 0.79074  |
+| Voting            | 0.79074  |
 
 <p></p>
 

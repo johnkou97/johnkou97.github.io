@@ -2,7 +2,7 @@
 layout: page
 title: Numerical Analysis
 description: projects in numerical analysis
-img: assets/img/numerical.jpg 
+img: assets/img/numerical.jpg
 importance: 4
 category: courses
 related_publications: false
@@ -12,7 +12,6 @@ pretty_table: true
 ---
 
 Cover Image by <a href="https://unsplash.com/@kommumikation?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mika Baumeister</a> on <a href="https://unsplash.com/photos/white-printing-paper-with-numbers-Wpnoqo2plFA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-
 
 This page contains some of the projects I have done in the field of numerical analysis, as part of my coursework during my undergraduate and graduate studies. The page is still under construction and will be updated as I add more projects.
 
@@ -29,7 +28,7 @@ for x>0.
 
 We used the $$x=g(x)$$ method (fixed-point iteration) to solve the equation. We simplified the equation to the form $$x=g(x)$$ and selected a starting point to iterate the function until we reached the desired accuracy. We also used the Newton-Raphson method to find the roots of the equation. The Newton-Raphson method uses the formula:
 \begin{equation}
-x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+x\_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
 \end{equation}
 
 The \eqref{eq:1} equation has 3 roots, which we tried to find using both methods.
@@ -38,7 +37,7 @@ With the Newton-Raphson method, we found all 3 roots of the equation, while with
 
 We also had to solve the system of equations:
 \begin{equation}
--2x^3 + 3y^2 + 42 = 0 
+-2x^3 + 3y^2 + 42 = 0
 \end{equation}
 
 $$5x^2 + 3y^3 - 69 = 0$$
@@ -80,11 +79,11 @@ The Lagrange polynomial is a polynomial that passes through all the points given
 
 The third set of problems was about calculating integrals using the Simpson's rule. We had to calculate the following integrals:
 \begin{equation}
-\int_{0}^{3} \frac{1}{5x^2 + 1} dx
+\int*{0}^{3} \frac{1}{5x^2 + 1} dx
 \end{equation}
 and
 \begin{equation}
-\int_{0}^{2\pi} e^{-x/4} \sin(20x) dx
+\int*{0}^{2\pi} e^{-x/4} \sin(20x) dx
 \end{equation}
 
 The Simpson's rule is a method for numerical integration that approximates the integral of a function as the sum of the areas of a series of trapezoids. The code found the value of the first integral to be $$0.636301999167$$ and the value of the second integral to be $$0.039599888602$$. The code used $$n = 31$$ subintervals for the first integral and $$n = 999$$ subintervals for the second integral. We notice that for the second integral, a very high number of subintervals is needed to get an accurate result. This is because the function oscillates very quickly, and the Simpson's rule is not very accurate for such functions.
@@ -95,7 +94,7 @@ y'' + \omega^2 y = 0
 \end{equation}
 where $$\omega = 4$$ and $$y(0) = 1, y'(0) = 0$$.
 
-We used the Runge-Kutta method of order 2 and 4 to solve the differential equation. 
+We used the Runge-Kutta method of order 2 and 4 to solve the differential equation.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -119,7 +118,7 @@ We used the shooting method to solve the differential equation. The code used th
 
 The fifth set of problems was about solving boundary value problems using the Liebmann method and the wave equation using the Lax-Wendroff method. We had to solve the following boundary value problem:
 \begin{equation}
-u_{xx} + u_{yy} = 10.0e^{-0.5(\sqrt{(x-0.5)^2 + (y-0.5)^2})}
+u*{xx} + u*{yy} = 10.0e^{-0.5(\sqrt{(x-0.5)^2 + (y-0.5)^2})}
 \end{equation}
 with the boundary conditions: $$u(x, y) = 1.0$$ in all the boundaries.
 
@@ -139,9 +138,8 @@ The Liebmann method is an iterative method for solving the boundary value proble
 
 We also had to solve the wave equation:
 \begin{equation}
-u_{tt} - \alpha^2 u_{xx} = 0
+u*{tt} - \alpha^2 u*{xx} = 0
 \end{equation}
 with $$\alpha^2 = \frac{2}{\pi^2}$$ in the interval $$0 \leq x \leq 12$$ and with the initial conditions: $$u(x, 0) = \sin(\pi x)$$ for $$2 \leq x \leq 4$$ and $$u(x, 0) = 0$$ for $$0 \leq x < 2$$ and $$4 < x \leq 12$$ and the boundary conditions: $$u(0, t) = 0$$ and $$u(12, t) = 0$$.
 
 The Lax-Wendroff method is a method for solving the wave equation. It is a finite difference method that approximates the solution to the wave equation. The wave equation can be solved by iterating the method for different time steps.
-

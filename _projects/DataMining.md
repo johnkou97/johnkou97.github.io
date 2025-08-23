@@ -16,6 +16,7 @@ pretty_table: true
 In this assignment, we implemented several recommendation algorithms using the MovieLens 1M dataset, which contains 1,000,209 ratings of approximately 3,900 movies made by 6,040 MovieLens users who joined MovieLens in 2000. The ratings are on a 5-star scale (whole-star ratings only). Each user has at least 20 ratings. The dataset also includes user information about their gender, age, occupation and zip-code, and movie information about the title and genres. The whole dataset can be downloaded from [here](https://grouplens.org/datasets/movielens/1m/).
 
 For this assignment, we used the following algorithms:
+
 - Naive Approaches: global average rating, average rating per item, average rating per user, and an "optimal" linear combination of the two averages (per user and per item), with and without the parameter γ.
 - UV matrix decomposition algorithm
 - Matrix Factorization with Gradient Descent and Regularization
@@ -52,19 +53,20 @@ The final comparison of the models shows that the Matrix Factorization model per
 
 The results can, also, be summarized in a table:
 
-| Model | RMSE Test | MAE Test | Execution Time (s) | Memory (MB) |
-| --- | --- | --- | --- | --- |
-| Global Average | 1.117 | 0.934 | 15.330 | 375.5 |
-| Movie Average | 0.980 | 0.782 | 88.707 | 389.4 |
-| User Average | 1.035 | 0.829 | 55.218 | 389.4 |
-| Lin Reg with intercept | 0.924 | 0.733 | 178.778 | 416.6 |
-| Lin Reg without intercept | 0.953 | 0.763 | 172.274 | 447.5 |
-| UV Decomposition | 0.871 | 0.828 | 822.069 | 1948.0 |
-| Matrix factorisation | 0.885 | 0.689 | 1190.862 | 2054.6 |
+| Model                     | RMSE Test | MAE Test | Execution Time (s) | Memory (MB) |
+| ------------------------- | --------- | -------- | ------------------ | ----------- |
+| Global Average            | 1.117     | 0.934    | 15.330             | 375.5       |
+| Movie Average             | 0.980     | 0.782    | 88.707             | 389.4       |
+| User Average              | 1.035     | 0.829    | 55.218             | 389.4       |
+| Lin Reg with intercept    | 0.924     | 0.733    | 178.778            | 416.6       |
+| Lin Reg without intercept | 0.953     | 0.763    | 172.274            | 447.5       |
+| UV Decomposition          | 0.871     | 0.828    | 822.069            | 1948.0      |
+| Matrix factorisation      | 0.885     | 0.689    | 1190.862           | 2054.6      |
 
 <p></p>
 
 The next part of the assignment was to use dimensionality reduction techniques to visualize the data. We used three different techniques:
+
 - PCA (Principal Component Analysis)
 - t-SNE (t-Distributed Stochastic Neighbor Embedding)
 - UMAP (Uniform Manifold Approximation and Projection)
@@ -102,14 +104,14 @@ As it is clear, the different genders are not separable using these techniques. 
 
 In conclusion, this assignment was a great opportunity to learn about recommendation algorithms and dimensionality reduction techniques. We were able to implement several models and compare their performance on the MovieLens 1M dataset. We also learned how to use PCA, t-SNE, and UMAP to visualize the data and see if clusters can emerge from different features of the dataset. The results were very informative and helped us understand the strengths and weaknesses of each model and technique. For more details, you can check the full report [here](/assets/pdf/recommender.pdf). The full code can be found on my [GitHub repository](https://github.com/johnkou97/RecommenderSystem).
 
-
 ## Predict Future Sales - Kaggle Competition
 
 In this assignment, we participated in the Kaggle competition "Predict Future Sales", where we had to predict total sales for every product and store in the next month. The dataset consists of daily sales data, provided by one of the largest Russian software firms - 1C Company. The task was to predict the total sales for every product and store in the next month. The dataset can be downloaded from [here](https://www.kaggle.com/competitions/competitive-data-science-predict-future-sales).
 
- Each item in the dataset has a unique identifier, which is a tuple of the shop_id and item_id. The dataset also includes:
+Each item in the dataset has a unique identifier, which is a tuple of the shop_id and item_id. The dataset also includes:
+
 - item_category_id: unique identifier of item category
-- item_cnt_day: number of products sold. 
+- item_cnt_day: number of products sold.
 - item_price: current price of an item
 - date: date in format dd/mm/yyyy
 - date_block_num: a consecutive month number starting from January 2013 (0) to October 2015 (33)
@@ -118,6 +120,7 @@ In this assignment, we participated in the Kaggle competition "Predict Future Sa
 - item_category_name: name of item category
 
 The aim of the assignment was to perform exploratory data analysis (EDA) on the dataset, preprocess the data, and implement several existing forecasting models. We used the following models:
+
 - LGB (Light Gradient Boosting)
 - XGB (Extreme Gradient Boosting)
 - Random Forest
@@ -136,7 +139,7 @@ Before generating the predictions, we performed EDA on the dataset to understand
 	Left: Total sales per month from January 2013 to October 2015. Each line represents a different year. Right: Number of items per category.
 </div>
 
-For the preprocessing of the data, we decided to use the last available month (October 2015) as our validation set, to make sure that our model generalizes well to unseen data. We created two different training sets, one with the date_block_num, shop_id, and item_id, and another one that also included the item_category_id, item_maincategory_id, and item_subcategory_id (extended version). For the main and subcategories, we used the LabelEncoder to generate integers that will act as a unique identifier of each of the two names of the item’s category. The Y train includes the values of item_cnt_month, which is the goal of the prediction. These values are clipped between 0 and 20 to remove the outliers and give us better results in our predictions. 
+For the preprocessing of the data, we decided to use the last available month (October 2015) as our validation set, to make sure that our model generalizes well to unseen data. We created two different training sets, one with the date_block_num, shop_id, and item_id, and another one that also included the item_category_id, item_maincategory_id, and item_subcategory_id (extended version). For the main and subcategories, we used the LabelEncoder to generate integers that will act as a unique identifier of each of the two names of the item’s category. The Y train includes the values of item_cnt_month, which is the goal of the prediction. These values are clipped between 0 and 20 to remove the outliers and give us better results in our predictions.
 
 The models were trained using the training set and validated using the validation set. For the XGB we could also plot the feature importance, which is shown in the figure below.
 
@@ -150,7 +153,7 @@ The models were trained using the training set and validated using the validatio
 </div>
 <div class="caption">
 	Feature importance of the XGB model using the training set (left) and the extended version (right).
-</div> 
+</div>
 
 We used the RMSE as the evaluation metric to compare the performance of the models. The results of the models, for the extended version, on the training, validation, and test sets, as well as the training time, are shown in the figure below.
 
@@ -165,14 +168,14 @@ We used the RMSE as the evaluation metric to compare the performance of the mode
 
 All the results can be summarized in the table below:
 
-| Model | RMSE Train | RMSE Validation | RMSE Test | Training Time (s) |
-| --- | --- | --- | --- | --- |
-| LGB | 1.39 | 1.24 | 1.19 | 20.56 |
-| LGB Extended | 1.13 | 1.02 | 1.098 | 24.39 |
-| XGB | 1.18 | 1.11 | 1.180 | 705.53 |
-| XGB Extended | 1.07 | 1.00 | 1.080 | 853.44 |
-| Random Forest | - | - | 1.119 | 678.73 |
-| Random Forest Extended | - | - | 1.099 | 945.32 |
+| Model                  | RMSE Train | RMSE Validation | RMSE Test | Training Time (s) |
+| ---------------------- | ---------- | --------------- | --------- | ----------------- |
+| LGB                    | 1.39       | 1.24            | 1.19      | 20.56             |
+| LGB Extended           | 1.13       | 1.02            | 1.098     | 24.39             |
+| XGB                    | 1.18       | 1.11            | 1.180     | 705.53            |
+| XGB Extended           | 1.07       | 1.00            | 1.080     | 853.44            |
+| Random Forest          | -          | -               | 1.119     | 678.73            |
+| Random Forest Extended | -          | -               | 1.099     | 945.32            |
 
 <p></p>
 

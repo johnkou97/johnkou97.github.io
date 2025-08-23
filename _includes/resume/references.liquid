@@ -26,30 +26,26 @@
           </tr>
           <!-- Add Email -->
           {% if content.email %}
-          <tr>
-            <td></td>
-            <td class="list-group-email">
-              Email: <a href="mailto:{{ content.email }}">{{ content.email }}</a>
-            </td>
-          </tr>
+            <tr>
+              <td></td>
+              <td class="list-group-email">
+                Email: <a href="mailto:{{ content.email }}">{{ content.email }}</a>
+              </td>
+            </tr>
           {% endif %}
           <!-- Add Phone -->
           {% if content.phone %}
-          <tr>
-            <td></td>
-            <td class="list-group-phone">
-              Phone: {{ content.phone }}
-            </td>
-          </tr>
+            <tr>
+              <td></td>
+              <td class="list-group-phone">Phone: {{ content.phone }}</td>
+            </tr>
           {% endif %}
           <!-- Add URL -->
           {% if content.url %}
-          <tr>
-            <td></td>
-            <td class="list-group-url">
-              Website: <a href="{{ content.url }}" target="_blank">link</a>
-            </td>
-          </tr>
+            <tr>
+              <td></td>
+              <td class="list-group-url">Website: <a href="{{ content.url }}" target="_blank">link</a></td>
+            </tr>
           {% endif %}
         </tbody>
       </table>

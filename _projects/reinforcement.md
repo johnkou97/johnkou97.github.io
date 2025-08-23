@@ -43,7 +43,7 @@ The `Stochastic Windy Gridworld` environment is an adaptation of one of the exam
     The `Stochastic Windy Gridworld` environment. The start point is denoted with "S" and the goal state with "G". The arrows indicate the direction of the wind, thicker arrows indicate stronger wind. The agent can move in four directions: up, down, left, and right.
 </div>
 
-The goal of this project was to study a range of basic principles in tabular, value-based reinforcement learning. The first part focused on Dynamic Programming, which is a bridging method between planning and reinforcement learning. In Dynamic Programming, we have full access to a model of the environment, and we can get the transition probabilities and rewards for any state and action. This guarantees that we will find the optimal solution, given enough iterations. 
+The goal of this project was to study a range of basic principles in tabular, value-based reinforcement learning. The first part focused on Dynamic Programming, which is a bridging method between planning and reinforcement learning. In Dynamic Programming, we have full access to a model of the environment, and we can get the transition probabilities and rewards for any state and action. This guarantees that we will find the optimal solution, given enough iterations.
 
 We implemented the Dynamic Programming algorithm and applied it to the `Stochastic Windy Gridworld` environment. The figure below shows different iterations of the algorithm. The Q-values converge to the optimal policy, after 18 iterations. In the beginning, we see that the values are low in all states, as the agent has not yet learned the optimal policy. After 10 iterations, the agent has learned to navigate the environment and the Q-values are higher and more stable. After 18 iterations, the agent has learned the optimal policy and the Q-values guide the agent to the goal state, in the fewest number of steps, which is 23.3 steps on average. The fact that this number is not an integer is due to the stochastic nature of the environment.
 
@@ -62,15 +62,17 @@ We implemented the Dynamic Programming algorithm and applied it to the `Stochast
     Different iterations of the Dynamic Programming algorithm applied to the `Stochastic Windy Gridworld` environment.
 </div>
 
-The second part of the project focused on Model-free Reinforcement Learning. We implemented two agents: 
+The second part of the project focused on Model-free Reinforcement Learning. We implemented two agents:
+
 - Q-learning
 - SARSA
-The difference between these two agents is that Q-learning is an off-policy algorithm, while SARSA is an on-policy algorithm. 
+  The difference between these two agents is that Q-learning is an off-policy algorithm, while SARSA is an on-policy algorithm.
 
 For the exploration strategy, we implemented two methods:
+
 - ε-greedy policy
 - softmax (Boltzmann) policy
-This will help us explore the trade-off between exploration and exploitation by comparing the two methods and the hyperparameters that control the exploration in each method (ε for ε-greedy and temperature for softmax).
+  This will help us explore the trade-off between exploration and exploitation by comparing the two methods and the hyperparameters that control the exploration in each method (ε for ε-greedy and temperature for softmax).
 
 Finally we also implemented the n-step back-ups and Monte Carlo back-ups for the Q-learning agent. The n-step back-ups are a generalization of the 1-step back-ups (used by the default Q-learning agent), where we sum more rewards in a trace. The Monte Carlo back-ups are a special case of n-step back-ups, where we sum all rewards until the end of the episode (no bootstrapping).
 
@@ -206,7 +208,7 @@ The best exploration method was the Boltzmann exploration strategy without linea
     Ablation study of the Deep Q-Learning agent in the `Cartpole` environment. Left: comparison of DQN with both TN and ER (DQN), and DQN without both (DQN-ER-TN). Middle: comparison of DQN with both TN and ER (DQN), and DQN without TN (DQN-ER). Right: comparison of DQN with both TN and ER (DQN), and DQN without ER (DQN-TN).
 </div>
 
-We see that although the TN might help with the stability of the learning process, the ER is crucial for the performance of the agent. The best performing agent was the DQN agent with both the TN and ER turned on. 
+We see that although the TN might help with the stability of the learning process, the ER is crucial for the performance of the agent. The best performing agent was the DQN agent with both the TN and ER turned on.
 
 Finally, we train the best performing agent and save the weights of the neural network at various stages of training. We then evaluate the agent using the saved weights and create some cool video animations of the agent's behavior in the `Cartpole` environment. The videos show the agent's behavior at the beginning of training (episodes 20), in the middle of training (episodes 200 and 400), and at the end of training (episodes 800). We see how the agent goes from completely poor performance at the beginning of training to a perfect performance at the end of training. At mid-training, the agent seems to struggle more staying within the limits of the environment, and seems to be doing better at balancing the pole. The videos are shown below.
 
@@ -258,6 +260,7 @@ Overall, we were successful in training a Deep Q-Learning agent to solve the `Ca
 In this assignment we worked with a new environment called `Catch`, which is an extension from the `Catch` environment in {% cite 2019arXiv190803568O --file external %}. The environment consists of a paddle that moves left or right to catch balls that drop from the top of the screen. It has a 7x7 grid, and the agent can move the paddle left, right, or stay idle. The agent receives a reward of +1 when catching a ball, a reward of -1 when missing a ball, and a reward of 0 otherwise. The episode ends when the agent reaches the maximum number of steps (default is 250 steps) or misses the maximum number of balls(default is 10 balls). The observation space can be either a vector with the xy-locations of the paddle and the lowest ball, or a binary two-channel pixel array with the paddle location in the first channel and all balls in the second channel. The speed of dropping new balls can be adjusted, as well as the size of the grid.
 
 We implemented three agents in this project:
+
 - REINFORCE
 - Actor-Critic
 - Proximal Policy Optimization (PPO)
@@ -313,10 +316,9 @@ After that we experimented with some environment variations. We used the best pe
     Left: experiment with different grid sizes for the Actor-Critic agent in the `Catch` environment. Middle: experiment with different speeds for the Actor-Critic agent in the `Catch` environment. Right: experiment with different grid sizes and speeds for the Actor-Critic agent in the `Catch` environment. For all the figures, the y-axis shows the fraction of caught balls for each episode (x-axis).
 </div>
 
-As we can see, making the grid smaller helped the agent to learn faster, but increasing it too much made the learning process unstable and suboptimal. Increasing the speed of the balls also lowered the performance of the agent, it was however expected, since it was no longer possible to catch all the balls, even when playing perfectly. What is surprising is that a slower speed for the balls made the learning process very unstable, with some runs reaching the optimal performance, and others being very far from it. 
+As we can see, making the grid smaller helped the agent to learn faster, but increasing it too much made the learning process unstable and suboptimal. Increasing the speed of the balls also lowered the performance of the agent, it was however expected, since it was no longer possible to catch all the balls, even when playing perfectly. What is surprising is that a slower speed for the balls made the learning process very unstable, with some runs reaching the optimal performance, and others being very far from it.
 
 Finally, we created some nice video animations of the performance of our best agent (Actor-Critic with Baseline and Bootstrapping) at various stages of the learning process. The videos show the agent's behavior at the start of training (after 0 epochs), in the first stages of training (after 50 epochs), in the middle of training (after 100 epochs), and at the end of training (after 150 epochs). The agent kept learning after that, but the performance did not improve as it had already reached the optimal performance. For each evaluation we turned off the exploration and training, and the agent played 10 episodes. The videos only show 5 episodes for the first two stages and 3 episodes for the last two stages, to keep the videos short. The videos are shown below.
-
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
