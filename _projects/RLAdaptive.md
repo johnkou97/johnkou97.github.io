@@ -55,7 +55,7 @@ We mainly use [Soft Actor-Critic (SAC)](https://stable-baselines3.readthedocs.io
 
 ## Environments
 
-We have used several environments to train the agents. The environments are based on the Adaptive Optics system and were created by Rico Landman. The environments are implemented in the [Gym](https://gym.openai.com/) framework. You can find the original version of the environments [here](https://github.com/ricolandman/gym_ao). The environments were adapted to work with the Stable Baselines3 library and perform the desired experiments. You can find the adapted environments [here](https://github.com/johnkou97/gym_ao).
+We have used several environments to train the agents. The environments are based on the Adaptive Optics system and were created by Rico Landman. The environments are implemented in the [Gym](https://www.gymlibrary.dev/) framework. You can find the original version of the environments [here](https://github.com/ricolandman/gym_ao). The environments were adapted to work with the Stable Baselines3 library and perform the desired experiments. You can find the adapted environments [here](https://github.com/johnkou97/gym_ao).
 
 ### Image sharpening
 
