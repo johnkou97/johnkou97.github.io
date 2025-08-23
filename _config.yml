@@ -275,6 +275,10 @@ defaults:
     values:
       sitemap: true
 
+sitemap:
+  exclude:
+    - "/blog/"
+    
 sass:
   style: compressed
 
