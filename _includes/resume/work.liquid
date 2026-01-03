@@ -5,61 +5,67 @@
     {% assign company = group.items.first %}
     
     <li class="list-group-item">
-      <div class="row">
-        <div class="col-md-12">
-          
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <h5 class="title font-weight-bold mb-0">
-              {% if company.url %}
-                <a href="{{ company.url }}" target="_blank" style="text-decoration: none;">{{ group.name }}</a>
-              {% else %}
-                {{ group.name }}
-              {% endif %}
-            </h5>
-
-            {% if company.location %}
-              <p class="location mb-0">
-                <i class="fa-solid fa-location-dot iconlocation"></i>
-                {{ company.location }}
-              </p>
+      <div class="row mb-2">
+        <div class="col-md-12 d-flex justify-content-between align-items-center">
+          <h5 class="title font-weight-bold mb-0">
+            {% if company.url %}
+              <a href="{{ company.url }}" target="_blank" style="text-decoration: none; color: inherit;">{{ group.name }}</a>
+            {% else %}
+              {{ group.name }}
             {% endif %}
-          </div>
-
-          <div style="border-left: 2px solid #e0e0e0; margin-left: 6px; padding-left: 20px;">
-            {% for role in group.items %}
-              
-              {% if role.startDate %}
-                {% assign startDate = role.startDate | split: '-' | slice: 0, 2 | join: '.' %}
-                {% assign endDate = role.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
-                {% assign date = startDate | append: ' - ' | append: endDate %}
-              {% else %}
-                {% assign date = '' %}
-              {% endif %}
-
-              <div class="mb-4">
-                <div class="d-flex justify-content-between align-items-baseline flex-wrap">
-                  <h6 class="font-weight-bold" style="font-size: 1rem;">{{ role.position }}</h6>
-                  
-                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px; font-size: 0.75rem;">
-                     {{ date }}
-                  </span>
-                </div>
-
-                <h6 class="mt-1" style="font-size: 0.95rem; font-style: italic">{{ role.summary }}</h6>
-
-                {% if role.highlights %}
-                  <ul class="items mt-2">
-                    {% for item in role.highlights %}
-                      <li><span class="item">{{ item }}</span></li>
-                    {% endfor %}
-                  </ul>
-                {% endif %}
-              </div>
-            {% endfor %}
-          </div>
-
+          </h5>
+          
+          {% if company.location %}
+            <p class="location mb-0">
+              <i class="fa-solid fa-location-dot iconlocation"></i>
+              {{ company.location }}
+            </p>
+          {% endif %}
         </div>
       </div>
+
+      {% for role in group.items %}
+        <div class="row">
+          
+          <div class="col-md-2 text-center" style="padding-right: 0;">
+            {% if role.startDate %}
+              {% assign startDate = role.startDate | split: '-' | slice: 0, 2 | join: '.' %}
+              {% assign endDate = role.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
+              {% assign date = startDate | append: ' - ' | append: endDate %}
+            {% else %}
+              {% assign date = '' %}
+            {% endif %}
+            
+            <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px; font-size: 0.7rem; margin-top: 4px;">
+              {{ date }}
+            </span>
+          </div>
+
+          <div class="col-md-10 mt-2 mt-md-0" style="border-left: 2px solid #f0f0f0; padding-left: 15px; margin-bottom: 15px;">
+            
+            <h6 class="title font-weight-bold ml-1">
+              {{ role.position }}
+            </h6>
+
+            {% if role.summary %}
+              <h6 class="ml-1 text-muted" style="font-size: 0.95rem; font-style: italic">
+                {{ role.summary }}
+              </h6>
+            {% endif %}
+
+            {% if role.highlights %}
+              <ul class="items ml-1 pl-3">
+                {% for item in role.highlights %}
+                  <li>
+                    <span class="item">{{ item }}</span>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            
+          </div>
+        </div>
+      {% endfor %}
     </li>
   {% endfor %}
 </ul>
