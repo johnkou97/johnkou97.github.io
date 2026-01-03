@@ -287,40 +287,52 @@
   ],
   "skills": [
     {
-      "name": "Languages, Frameworks and Tools (Expert)",
+      "name": "Core Programming & Cloud",
       "level": "",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["Python", "Jupyter", "Git", "Linux OS", "LaTeX", "VS Code"]
+      "icon": "fa-solid fa-cloud",
+      "keywords": [
+        "Python", 
+        "SQL", 
+        "AWS", 
+        "Git (GitHub & GitLab)", 
+        "Linux"
+      ]
     },
     {
-      "name": "Languages, Frameworks and Tools (Intermediate)",
+      "name": "Machine Learning",
       "level": "",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["SQL", "C/C++", "Mathematica", "Matlab"]
-    },
-    {
-      "name": "Machine and Deep Learning",
-      "level": "",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "JAX"]
+      "icon": "fa-solid fa-brain",
+      "keywords": [
+        "PyTorch", 
+        "TensorFlow", 
+        "Keras", 
+        "Scikit-learn",
+        "JAX"
+      ]
     },
     {
       "name": "Data Science",
       "level": "",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["Pandas", "Numpy", "Matplotlib", "Scipy", "Seaborn", "Nbodykit"]
+      "icon": "fa-solid fa-chart-line",
+      "keywords": [
+        "Pandas", 
+        "NumPy", 
+        "Matplotlib", 
+        "Seaborn", 
+        "SciPy"
+      ]
     },
     {
-      "name": "I.T. and Networking",
+      "name": "Infrastructure & Tools",
       "level": "",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["Bash", "SSH", "Anaconda", "Docker", "JupyterHub"]
-    },
-    {
-      "name": "Soft Skills",
-      "level": "",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["Problem Solving", "Critical Thinking", "Teamwork", "Communication", "Time Management", "Adaptability"]
+      "icon": "fa-solid fa-server",
+      "keywords": [
+        "Prefect", 
+        "Grafana", 
+        "Bash", 
+        "SSH",
+        "Docker"
+      ]
     }
   ],
   "languages": [
