@@ -17,7 +17,7 @@ Cover Image by <a href="https://flamingo.strw.leidenuniv.nl/index.html">Leiden O
 
 Please find the thesis [here](/assets/pdf/flamingo.pdf). The description of the project and the code are not available yet, but will be soon. Stay tuned!
 
-This project was presented at the [79th Dutch Astronomers' Conference](https://www.knvws.nl/actueel/nederlandse-astronomenconferentie-2024-13-15-mei/). See the pictures below! You can also find the poster in [pdf format](/assets/pdf/FLAMINGO_poster.pdf).
+This project contributed to the publication of the paper {% cite 2026MNRAS.545f2086V --file papers %}. It was also presented at the [79th Dutch Astronomers' Conference](https://www.knvws.nl/actueel/nederlandse-astronomenconferentie-2024-13-15-mei/) (see the pictures below!). You can also find the poster in [pdf format](/assets/pdf/FLAMINGO_poster.pdf).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -30,3 +30,7 @@ This project was presented at the [79th Dutch Astronomers' Conference](https://w
 <div class="caption">
     Left: Poster presented at the 79th Dutch Astronomers' Conference. Right: Me with the poster.
 </div>
+
+## References
+
+{% bibliography --cited_in_order --file papers %}
