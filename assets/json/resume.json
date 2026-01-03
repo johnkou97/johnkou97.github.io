@@ -290,49 +290,25 @@
       "name": "Core Programming & Cloud",
       "level": "",
       "icon": "fa-solid fa-cloud",
-      "keywords": [
-        "Python", 
-        "SQL", 
-        "AWS", 
-        "Git (GitHub & GitLab)", 
-        "Linux"
-      ]
+      "keywords": ["Python", "SQL", "AWS", "Git (GitHub & GitLab)", "Linux"]
     },
     {
       "name": "Machine Learning",
       "level": "",
       "icon": "fa-solid fa-brain",
-      "keywords": [
-        "PyTorch", 
-        "TensorFlow", 
-        "Keras", 
-        "Scikit-learn",
-        "JAX"
-      ]
+      "keywords": ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "JAX"]
     },
     {
       "name": "Data Science",
       "level": "",
       "icon": "fa-solid fa-chart-line",
-      "keywords": [
-        "Pandas", 
-        "NumPy", 
-        "Matplotlib", 
-        "Seaborn", 
-        "SciPy"
-      ]
+      "keywords": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "SciPy"]
     },
     {
       "name": "Infrastructure & Tools",
       "level": "",
       "icon": "fa-solid fa-server",
-      "keywords": [
-        "Prefect", 
-        "Grafana", 
-        "Bash", 
-        "SSH",
-        "Docker"
-      ]
+      "keywords": ["Prefect", "Grafana", "Bash", "SSH", "Docker"]
     }
   ],
   "languages": [
