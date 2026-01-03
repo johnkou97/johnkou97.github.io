@@ -33,6 +33,15 @@
     },
     {
       "name": "Leiden University",
+      "position": "Graduate Student Researcher",
+      "url": "https://local.strw.leidenuniv.nl/",
+      "startDate": "MAR 2022",
+      "endDate": "JUN 2024",
+      "summary": "Graduate Student Researcher at the Leiden Observatory, working as part of different research teams and projects in the fields of Cosmology, Exoplanets and Reinforcement Learning.",
+      "highlights": "" //[""]
+    },
+    {
+      "name": "Leiden University",
       "position": "Teaching Assistant for the course 'Reinforcement Learning' (M.Sc.)",
       "url": "https://studiegids.universiteitleiden.nl/en/courses/116615/introduction-to-reinforcement-learning",
       "startDate": "FEB 2024",
@@ -59,14 +68,14 @@
       "highlights": "" //[""]
     },
     {
-      "name": "Self-employed",
-      "position": "Private Tutor in Physics, Mathematics and Chemistry",
-      "url": "",
-      "startDate": "SEP 2018",
-      "endDate": "JUN 2024",
-      "summary": "Private tutor in Physics, Mathematics and Chemistry for high school and undergraduate students. I have been teaching students for the high school exams in Greece and university students from many different departments for their exams.",
+      "name": "Aristotle University of Thessaloniki",
+      "position": "Undergraduate Student Researcher",
+      "url": "https://niksterg.github.io/gw-group/",
+      "startDate": "SEP 2019",
+      "endDate": "NOV 2020",
+      "summary": "Undergraduate Student Researcher at the Gravitational Wave Group of the Physics department of Aristotle University of Thessaloniki. My research focused on the spectral classification of neutron star post-merger gravitational wave emission.",
       "highlights": "" //[""]
-    },
+    }
     {
       "name": "Aristotle University of Thessaloniki",
       "position": "Grading Assistant for the course 'Astronomy and Astrophysics' (B.Sc.)",
