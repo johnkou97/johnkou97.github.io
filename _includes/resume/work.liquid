@@ -10,7 +10,7 @@
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
             <h5 class="title font-weight-bold" style="margin: 0;">
               {% if company.url %}
-                <a href="{{ company.url }}" target="_blank" style="text-decoration: none; color: inherit;">{{ group.name }}</a>
+                <a href="{{ company.url }}" target="_blank" style="text-decoration: none;">{{ group.name }}</a>
               {% else %}
                 {{ group.name }}
               {% endif %}
