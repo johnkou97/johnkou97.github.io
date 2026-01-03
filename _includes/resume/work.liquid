@@ -6,61 +6,59 @@
     
     <li class="list-group-item">
       <div class="row">
-        
         <div class="col-md-12">
-          <div class="d-flex justify-content-between align-items-center">
+          
+          <div class="d-flex justify-content-between align-items-center mb-2">
             <h5 class="title font-weight-bold mb-0">
               {% if company.url %}
-                <a href="{{ company.url }}" target="_blank" class="text-dark" style="text-decoration: none;">{{ group.name }}</a>
+                <a href="{{ company.url }}" target="_blank" style="text-decoration: none;">{{ group.name }}</a>
               {% else %}
                 {{ group.name }}
               {% endif %}
             </h5>
 
             {% if company.location %}
-              <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle">
-                <i class="fa-solid fa-location-dot iconlocation mr-1"></i>
+              <p class="location mb-0">
+                <i class="fa-solid fa-location-dot iconlocation"></i>
                 {{ company.location }}
-              </span>
+              </p>
             {% endif %}
           </div>
-        </div>
 
-        <div class="col-md-12 mt-2">
-          <div style="border-left: 2px solid #e0e0e0; margin-left: 10px; padding-left: 20px;">
+          <div style="border-left: 2px solid #e0e0e0; margin-left: 6px; padding-left: 20px;">
             {% for role in group.items %}
+              
+              {% if role.startDate %}
+                {% assign startDate = role.startDate | split: '-' | slice: 0, 2 | join: '.' %}
+                {% assign endDate = role.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
+                {% assign date = startDate | append: ' - ' | append: endDate %}
+              {% else %}
+                {% assign date = '' %}
+              {% endif %}
+
               <div class="mb-4">
-                
                 <div class="d-flex justify-content-between align-items-baseline flex-wrap">
-                  <h6 class="font-weight-bold text-dark mb-1">{{ role.position }}</h6>
+                  <h6 class="font-weight-bold" style="font-size: 1rem;">{{ role.position }}</h6>
                   
-                  <span style="font-size: 0.85rem; font-style: italic; color: #666;">
-                    {{ role.startDate }} 
-                    {% if role.endDate != '' %}
-                      - {{ role.endDate }}
-                    {% else %}
-                      - Present
-                    {% endif %}
+                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px; font-size: 0.75rem;">
+                     {{ date }}
                   </span>
                 </div>
 
-                {% if role.summary %}
-                  <div class="text-muted mt-1" style="font-size: 0.95rem;">{{ role.summary }}</div>
-                {% endif %}
+                <h6 class="mt-1" style="font-size: 0.95rem; font-style: italic">{{ role.summary }}</h6>
 
-                {% if role.highlights and role.highlights.size > 0 %}
+                {% if role.highlights %}
                   <ul class="items mt-2">
                     {% for item in role.highlights %}
                       <li><span class="item">{{ item }}</span></li>
                     {% endfor %}
                   </ul>
                 {% endif %}
-                
               </div>
             {% endfor %}
           </div>
-        </div>
 
+        </div>
       </div>
     </li>
   {% endfor %}
