@@ -4,8 +4,8 @@
     "label": "",
     "image": "",
     "email": "jkoutalios@gmail.com",
-    "phone": "+30 6989855203",
-    "url": "https://koutalios.space/",
+    "phone": "+31 623361414",
+    "linkedin": "https://www.linkedin.com/in/koutalios-ioannis/",
     "summary": "",
     "location": {
       "city": "The Hague",
@@ -24,10 +24,19 @@
   "work": [
     {
       "name": "Sensorfact",
+      "position": "Data Scientist",
+      "url": "https://sensorfact.com/",
+      "startDate": "JAN 2026",
+      "endDate": "Present",
+      "summary": "Data Scientist at Sensorfact, a company that provides energy monitoring solutions for businesses. ",
+      "highlights": "" //[""]
+    },
+    {
+      "name": "Sensorfact",
       "position": "Data Analyst",
       "url": "https://sensorfact.com/",
-      "startDate": "MAR 2024",
-      "endDate": "Present",
+      "startDate": "MAR 2025",
+      "endDate": "DEC 2025",
       "summary": "Data Analyst at Sensorfact, a company that provides energy monitoring solutions for businesses. ",
       "highlights": "" //[""]
     },
