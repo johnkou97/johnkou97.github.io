@@ -10,9 +10,9 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
-<p style="text-align: center; margin-bottom: 2rem;">
-  Check out more on my <a href="https://github.com/johnkou97" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-</p>
+<a href="https://github.com/johnkou97" target="_blank" style="display: inline-block; padding: 0.5rem 1.2rem; border: 1px solid var(--global-text-color, #333); border-radius: 2rem; text-decoration: none; color: inherit; transition: all 0.3s ease; margin-bottom: 2rem;" onmouseover="this.style.backgroundColor='var(--global-bg-color, #f8f9fa)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';" onmouseout="this.style.backgroundColor='transparent'; this.style.boxShadow='none';">
+  <i class="fa-brands fa-github"></i> GitHub
+</a>
 
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
