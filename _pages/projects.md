@@ -10,6 +10,10 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
+<p style="text-align: center; margin-bottom: 2rem;">
+  Check out more on my <a href="https://github.com/johnkou97" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+</p>
+
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
