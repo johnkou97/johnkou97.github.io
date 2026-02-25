@@ -7,7 +7,7 @@ subtitle: Astrophysicist, Data Scientist, and Machine Learning Enthusiast
 profile:
   align: right
   image: profile.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: > # add more info below the image
 
 news: false # includes a list of news items
