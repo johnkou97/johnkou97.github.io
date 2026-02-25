@@ -6,7 +6,7 @@ subtitle: Astrophysicist, Data Scientist, and Machine Learning Enthusiast
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile.jpg
   image_circular: false # crops the image to make it circular
   more_info: > # add more info below the image
 
