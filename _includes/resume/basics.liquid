@@ -20,7 +20,9 @@
         {% elsif content[0] == 'phone' %}
           <a href="tel:{{ content[1] }}">{{ content[1] }}</a>
         {% elsif content[0] == 'linkedin' %}
-          <a href="{{ content[1] }}" target="_blank" rel="noopener noreferrer">{{ content[1] | remove: 'https://www.' | remove: 'https://' | remove: 'http://www.' | remove: 'http://' }}</a>
+          <a href="{{ content[1] }}" target="_blank" rel="noopener noreferrer">
+            {{- content[1] | remove: 'https://www.' | remove: 'https://' | remove: 'http://www.' | remove: 'http://' -}}
+          </a>
         {% else %}
           {{ content[1] }}
         {% endif %}
