@@ -10,7 +10,10 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
-<a href="https://github.com/johnkou97" target="_blank" style="display: inline-block; padding: 0.5rem 1.2rem; border: 1px solid var(--global-text-color, #333); border-radius: 2rem; text-decoration: none; color: inherit; transition: all 0.3s ease; margin-bottom: 2rem;" onmouseover="this.style.backgroundColor='var(--global-bg-color, #f8f9fa)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';" onmouseout="this.style.backgroundColor='transparent'; this.style.boxShadow='none';">
+<style>
+.github-profile-btn:hover { background-color: var(--global-bg-color); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+</style>
+<a href="https://github.com/{{ site.github_username }}" target="_blank" class="github-profile-btn" style="display: inline-block; padding: 0.5rem 1.2rem; border: 1px solid var(--global-text-color); border-radius: 2rem; text-decoration: none; color: inherit; transition: all 0.3s ease; margin-bottom: 2rem;">
   <i class="fa-brands fa-github"></i> GitHub
 </a>
 
