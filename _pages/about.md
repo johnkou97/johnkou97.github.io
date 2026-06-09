@@ -9,6 +9,8 @@ profile:
   image: profile.jpg
   image_circular: true # crops the image to make it circular
   more_info: > # add more info below the image
+    <p>The Hague, The Netherlands<br>
+    Data Scientist @ <a href="https://sensorfact.com/">Sensorfact</a></p>
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -27,9 +29,9 @@ I am also an advocate for Linux and open-source software, driven by a belief in 
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/MSc_Graduation.jpg" title="graduation" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/MSc_Graduation.jpg" alt="M.Sc. graduation photo" title="graduation" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/research/adaptive/RL_poster.png" title="rl_poster" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/research/adaptive/RL_poster.png" alt="Reinforcement Learning for Adaptive Optics poster presentation" title="rl_poster" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
