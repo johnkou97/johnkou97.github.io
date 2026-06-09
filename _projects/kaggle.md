@@ -3,6 +3,7 @@ layout: page
 title: Kaggle Challenges
 description: collection of Kaggle challenges I have participated in
 img: assets/img/tree.jpg
+og_image: assets/img/tree.jpg
 importance: 2
 category: personal
 related_publications: false

@@ -3,6 +3,7 @@ layout: page
 title: Reinforcement Learning
 description: projects from the course 'Reinforcement Learning' at Leiden University
 img: assets/img/learning.jpg
+og_image: assets/img/learning.jpg
 importance: 1
 category: courses
 related_publications: false

@@ -3,6 +3,7 @@ layout: page
 title: Model-Free Reinforcement Learning for Sensorless Adaptive Optics
 description: research project on Advanced Reinforcement Learning
 img: assets/img/optics.gif
+og_image: assets/img/optics.gif
 importance: 3
 category: research
 related_publications: false

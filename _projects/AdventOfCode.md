@@ -3,6 +3,7 @@ layout: page
 title: Advent of Code
 description: programming puzzles from the famous Advent of Code challenge
 img: assets/img/advent.jpg
+og_image: assets/img/advent.jpg
 importance: 1
 category: personal
 related_publications: false

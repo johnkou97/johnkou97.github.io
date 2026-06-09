@@ -3,6 +3,7 @@ layout: page
 title: Deep Learning
 description: projects from the course 'Deep Learning' at Leiden University
 img: assets/img/brain.jpg
+og_image: assets/img/brain.jpg
 importance: 2
 category: courses
 related_publications: false

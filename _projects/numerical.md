@@ -3,6 +3,7 @@ layout: page
 title: Numerical Analysis
 description: projects in numerical analysis
 img: assets/img/numerical.jpg
+og_image: assets/img/numerical.jpg
 importance: 4
 category: courses
 related_publications: false

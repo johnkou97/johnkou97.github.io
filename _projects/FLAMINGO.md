@@ -3,6 +3,7 @@ layout: page
 title: Applying a cross-power model for power suppression in FLAMINGO
 description: Master's thesis research project (2nd year)
 img: assets/img/flamingo.png
+og_image: assets/img/flamingo.png
 importance: 1
 category: research
 related_publications: false

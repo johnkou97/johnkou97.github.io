@@ -3,6 +3,7 @@ layout: page
 title: Data Mining
 description: projects from the course 'Data Mining' at Leiden University
 img: assets/img/mining.jpg # created by Leonardo.ai
+og_image: assets/img/mining.jpg
 importance: 3
 category: courses
 related_publications: false
