@@ -273,6 +273,10 @@ defaults:
       path: "assets"
     values:
       sitemap: true
+  - scope:
+      path: "assets/pdf"
+    values:
+      sitemap: false
 
 sitemap:
   exclude: []
