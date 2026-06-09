@@ -66,12 +66,14 @@ let applyTheme = () => {
   let jupyterNotebooks = document.getElementsByClassName("jupyter-notebook-iframe-container");
   for (let i = 0; i < jupyterNotebooks.length; i++) {
     let bodyElement = jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow.document.body;
-    if (theme == "dark") {
-      bodyElement.setAttribute("data-jp-theme-light", "false");
-      bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Dark");
-    } else {
-      bodyElement.setAttribute("data-jp-theme-light", "true");
-      bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Light");
+    if (bodyElement) {
+      if (theme == "dark") {
+        bodyElement.setAttribute("data-jp-theme-light", "false");
+        bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Dark");
+      } else {
+        bodyElement.setAttribute("data-jp-theme-light", "true");
+        bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Light");
+      }
     }
   }
 
@@ -240,9 +242,11 @@ let initTheme = () => {
   document.addEventListener("DOMContentLoaded", function () {
     const mode_toggle = document.getElementById("light-toggle");
 
-    mode_toggle.addEventListener("click", function () {
-      toggleThemeSetting();
-    });
+    if (mode_toggle) {
+      mode_toggle.addEventListener("click", function () {
+        toggleThemeSetting();
+      });
+    }
   });
 
   // Add event listener to the system theme preference change.

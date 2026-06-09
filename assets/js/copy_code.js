@@ -31,15 +31,12 @@ codeBlocks.forEach(function (codeBlock) {
         // get code from code block when line numbers are not displayed
         var code = codeBlock.querySelector("code").innerText.trim();
       }
-      window.navigator.clipboard.writeText(code);
-      copyButton.innerText = "Copied";
-      copyButton.innerHTML = '<i class="fa-solid fa-clipboard-check"></i>';
-      var waitFor = 3000;
-
-      setTimeout(function () {
-        copyButton.innerText = "Copy";
-        copyButton.innerHTML = '<i class="fa-solid fa-clipboard"></i>';
-      }, waitFor);
+      window.navigator.clipboard.writeText(code).then(function () {
+        copyButton.innerHTML = '<i class="fa-solid fa-clipboard-check"></i>';
+        setTimeout(function () {
+          copyButton.innerHTML = '<i class="fa-solid fa-clipboard"></i>';
+        }, 3000);
+      });
     });
 
     // create wrapper div
