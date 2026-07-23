@@ -52,9 +52,23 @@
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
 
+      {% assign self_index = -1 %}
+      {%- for author in entry.author_array -%}
+        {%- assign a_last = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
+        {%- if site.scholar.last_name contains a_last and site.scholar.first_name contains author.first -%}
+          {% assign self_index = forloop.index0 %}
+        {%- endif -%}
+      {%- endfor -%}
+
       {% assign author_array_limit = author_array_size %}
       {% if site.max_author_limit and author_array_size > site.max_author_limit %}
         {% assign author_array_limit = site.max_author_limit %}
+      {% endif %}
+
+      {% assign self_hidden = false %}
+      {% if self_index >= 0 and self_index >= author_array_limit %}
+        {% assign self_hidden = true %}
+        {% assign author_array_limit = author_array_limit | minus: 1 %}
       {% endif %}
 
       {%- for author in entry.author_array limit: author_array_limit -%}
@@ -99,6 +113,9 @@
         {%- endif -%}
       {% endfor %}
       {%- assign more_authors = author_array_size | minus: author_array_limit -%}
+      {% if self_hidden %}
+        {% assign more_authors = more_authors | minus: 1 %}
+      {% endif %}
 
       {%- assign more_authors_hide = more_authors | append: ' more author' -%}
       {% if more_authors > 0 %}
@@ -106,10 +123,15 @@
           {% assign more_authors_hide = more_authors_hide | append: 's' %}
         {%- endif -%}
         {% assign more_authors_show = '' %}
+        {% assign shown_hidden_count = 0 %}
         {%- for author in entry.author_array offset: author_array_limit -%}
-          {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
-          {% unless forloop.last %}
-            {% assign more_authors_show = more_authors_show | append: ', ' %}
+          {% assign hidden_abs_index = author_array_limit | plus: forloop.index0 %}
+          {% unless self_hidden and hidden_abs_index == self_index %}
+            {% if shown_hidden_count > 0 %}
+              {% assign more_authors_show = more_authors_show | append: ', ' %}
+            {% endif %}
+            {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
+            {% assign shown_hidden_count = shown_hidden_count | plus: 1 %}
           {% endunless %}
         {%- endfor -%}
         {%- assign more_authors_show = more_authors_show | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
@@ -132,6 +154,15 @@
         >
           {{- more_authors_hide -}}
         </span>
+      {% endif %}
+      {% if self_hidden %}
+        {%- assign self_author = entry.author_array[self_index] -%}
+        {%- assign self_last_html = self_author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+        , and
+        <em>
+          {{- self_author.first }}
+          {{ self_last_html -}}
+        </em>
       {% endif %}
       {% if entry.annotation %}
         <i
