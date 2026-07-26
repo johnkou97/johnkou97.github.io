@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Astrophysicist, Data Scientist, and Machine Learning Enthusiast
+subtitle: Data Scientist, Astrophysicist, and Machine Learning Enthusiast
 
 profile:
   align: right
@@ -17,15 +17,13 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Welcome! I am a Data Scientist at [Sensorfact](https://sensorfact.com/) and a graduate of the [M.Sc. in Astronomy and Data Science](https://www.universiteitleiden.nl/en/education/study-programmes/master/astronomy/astronomy-and-data-science) program at [Leiden University](https://www.universiteitleiden.nl/en). In my current role, I leverage my analytical background to derive actionable insights from complex data, bridging the gap between scientific research and industrial application. My journey has been deeply rooted in exploring the intersections of astrophysics, machine learning, and data science.
+Welcome! I am a Data Scientist at [Sensorfact](https://sensorfact.com/), where I turn complex industrial sensor data into models and insights that help businesses cut energy waste. I hold an [M.Sc. in Astronomy and Data Science](https://www.universiteitleiden.nl/en/education/study-programmes/master/astronomy/astronomy-and-data-science) from [Leiden University](https://www.universiteitleiden.nl/en), and my work sits at the intersection of astrophysics, machine learning, and data science, a thread that runs from peer-reviewed research to the practical problems I solve today.
 
-During my M.Sc., I contributed to a variety of research projects tackling complex challenges in both astronomy and data science. My Master's thesis, [“A Cross-Power Model for Power Suppression in FLAMINGO”](/projects/FLAMINGO/), involved advanced modeling techniques applied to large-scale simulations. Earlier, I explored planetary science through my first-year thesis, [“Finding the Best Exoplanets to Search for Exomoons by Radial Velocity”](/projects/exomoons/). Additionally, I ventured into artificial intelligence with a project on [“Reinforcement Learning for Adaptive Optics and Exoplanet Imaging”](/projects/RLAdaptive/).
+My research has spanned cosmology, exoplanets, and machine learning. My Master's thesis, [“A Cross-Power Model for Power Suppression in FLAMINGO”](/projects/FLAMINGO/), developed modeling techniques for large-scale cosmological simulations and led to a publication in *Monthly Notices of the Royal Astronomical Society*. Alongside [Matthew Kenworthy’s](https://www.universiteitleiden.nl/en/staffmembers/matthew-kenworthy) exoplanet group, where my earlier thesis, [“Finding the Best Exoplanets to Search for Exomoons by Radial Velocity”](/projects/exomoons/), got its start, I contributed to two 2026 studies of the young planet β Pictoris b, on its carbon isotope ratio and on limits for its exosatellites. I also explored AI for astronomy through a project on [“Reinforcement Learning for Adaptive Optics”](/projects/RLAdaptive/), presented at BNAIC/BeNeLearn 2024.
 
-Prior to my Master's studies, I earned a [B.Sc. in Physics](https://www.physics.auth.gr/en/) from [Aristotle University of Thessaloniki](https://www.auth.gr/en), where I joined the [Gravitational Waves Group](https://niksterg.github.io/gw-group/). My undergraduate thesis, [“Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission”](/projects/spectral/), sparked my fascination with the applications of AI in astrophysics. Following graduation, I continued collaborating with the group as a research assistant, culminating in our publication, [“Predicting Binary Neutron Star Postmerger Spectra Using Artificial Neural Networks”](https://ui.adsabs.harvard.edu/abs/2024PhRvD.110f3008P), in Physical Review D.
+Before Leiden, I earned a [B.Sc. in Physics](https://www.physics.auth.gr/en/) from [Aristotle University of Thessaloniki](https://www.auth.gr/en) and joined the [Gravitational Waves Group](https://niksterg.github.io/gw-group/). My undergraduate thesis, [“Spectral Classification of Neutron Star Post-Merger Gravitational Wave Emission”](/projects/spectral/), first sparked my fascination with applying AI in astrophysics, and my continued collaboration with the group led to a publication in *Physical Review D*, [“Predicting Binary Neutron Star Postmerger Spectra Using Artificial Neural Networks”](https://ui.adsabs.harvard.edu/abs/2024PhRvD.110f3008P). You can find my full list of papers on the [publications page](/publications/).
 
-Beyond academia and my current work, I am passionate about data science, machine and deep learning, reinforcement learning, and statistics. Many of my projects in these fields have been driven by curiosity and a desire to solve practical problems. You can explore some of them on my [projects page](/projects).
-
-I am also an advocate for Linux and open-source software, driven by a belief in the power of collaboration and openness to advance knowledge and technology. Always eager to learn, grow, and tackle new challenges, I would love to connect and collaborate on exciting ideas or projects. Feel free to reach out if you'd like to discuss anything!
+Beyond my day-to-day work, I'm driven by curiosity. Most of my side projects grow out of a desire to solve practical problems with machine learning, statistics, and open-source tools, and you can explore some on my [projects page](/projects). I'm a firm believer in Linux and open source, always eager to learn and take on new challenges, and happy to connect over an interesting idea or problem. Feel free to [reach out](mailto:jkoutalios@gmail.com)!
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
