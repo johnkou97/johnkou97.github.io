@@ -26,18 +26,27 @@
       "name": "Sensorfact",
       "position": "Data Scientist",
       "url": "https://sensorfact.com/",
-      "startDate": "JAN 2026",
+      "startDate": "JUL 2026",
       "endDate": "Present",
       "summary": "Data Scientist at Sensorfact, a company that provides energy monitoring solutions for businesses. ",
       "highlights": []
     },
     {
       "name": "Sensorfact",
-      "position": "Data Analyst",
+      "position": "Junior Data Scientist",
+      "url": "https://sensorfact.com/",
+      "startDate": "JAN 2026",
+      "endDate": "JUN 2026",
+      "summary": "Junior Data Scientist at Sensorfact, a company that provides energy monitoring solutions for businesses. ",
+      "highlights": []
+    },
+    {
+      "name": "Sensorfact",
+      "position": "Junior Data Analyst",
       "url": "https://sensorfact.com/",
       "startDate": "MAR 2025",
       "endDate": "DEC 2025",
-      "summary": "Data Analyst at Sensorfact, a company that provides energy monitoring solutions for businesses. ",
+      "summary": "Junior Data Analyst at Sensorfact, a company that provides energy monitoring solutions for businesses. ",
       "highlights": []
     },
     {
@@ -53,7 +62,7 @@
       "name": "Leiden University",
       "position": "Teaching Assistant for the course 'Reinforcement Learning' (M.Sc.)",
       "url": "https://studiegids.universiteitleiden.nl/en/courses/116615/introduction-to-reinforcement-learning",
-      "startDate": "FEB 2024",
+      "startDate": "JAN 2024",
       "endDate": "JUN 2024",
       "summary": "Teaching Assistant for the Master level course 'Reinforcement Learning' at the Computer Science department of Leiden University.",
       "highlights": []
@@ -62,8 +71,8 @@
       "name": "Leiden University",
       "position": "Teaching Assistant for the course 'Science and the Public' (M.Sc.)",
       "url": "https://studiegids.universiteitleiden.nl/en/courses/117190/science-and-the-public-contemporary-and-historical-perspectives",
-      "startDate": "FEB 2023",
-      "endDate": "JUN 2024",
+      "startDate": "MAR 2023",
+      "endDate": "JUL 2024",
       "summary": "Teaching Assistant for the Master level course 'Science and the Public' at the Astronomy department of Leiden University. for two academic years (spring semester 2023 and 2024).",
       "highlights": []
     },
@@ -89,7 +98,7 @@
       "name": "Aristotle University of Thessaloniki",
       "position": "Grading Assistant for the course 'Astronomy and Astrophysics' (B.Sc.)",
       "url": "https://www.physics.auth.gr/courses/268",
-      "startDate": "FEB 2018",
+      "startDate": "MAR 2018",
       "endDate": "JUN 2020",
       "summary": "Grading Assistant for the Bachelor level course 'Astronomy and Astrophysics' at the Physics department of Aristotle University of Thessaloniki. I was responsible for the grading of the students' homework and exercises.",
       "highlights": []
@@ -117,10 +126,28 @@
   ],
   "publications": [
     {
+      "name": "The carbon isotope ratio of β Pic b with high-resolution spectroscopy",
+      "publisher": "Astronomy & Astrophysics",
+      "releaseDate": "2026-07-01",
+      "url": "https://doi.org/10.1051/0004-6361/202660276"
+    },
+    {
+      "name": "Upper limits on exosatellites around β Pictoris b",
+      "publisher": "Monthly Notices of the Royal Astronomical Society",
+      "releaseDate": "2026-07-01",
+      "url": "https://doi.org/10.1093/mnras/stag1060"
+    },
+    {
       "name": "The resummation model in FLAMINGO: precisely predicting matter power suppression from observed halo baryon fractions",
       "publisher": "Monthly Notices of the Royal Astronomical Society",
-      "releaseDate": "2026-01-01",
+      "releaseDate": "2025-11-01",
       "url": "https://ui.adsabs.harvard.edu/abs/2026MNRAS.545f2086V"
+    },
+    {
+      "name": "Reinforcement learning for sensorless astronomical imaging",
+      "publisher": "36th Benelux Conference on Artificial Intelligence (BNAIC/BeNeLearn), extended abstract",
+      "releaseDate": "2024-11-01",
+      "url": "https://bnaic2024.sites.uu.nl/wp-content/uploads/sites/986/2024/11/Reinforcement-Learning-for-Sensorless-Astronomical-Imaging.pdf"
     },
     {
       "name": "Predicting binary neutron star postmerger spectra using artificial neural networks",
@@ -255,8 +282,8 @@
       "location": "Volos, Greece",
       "position": "Instructor for the preparation of the Greek Team for the International Olympiad on Astronomy and Astrophysics",
       "url": "https://astronomos.gr/",
-      "startDate": "JUN 2015",
-      "endDate": "AUG 2023",
+      "startDate": "2016",
+      "endDate": "2023",
       "summary": "I have been teaching the students the theoretical and practical aspects of Astronomy and Astrophysics, as well as the necessary skills for the competition. The preparation includes lectures, exercises, and exams and takes place during the summer months.",
       "highlights": []
     },
@@ -299,7 +326,7 @@
       "name": "Core Programming & Cloud",
       "level": "",
       "icon": "fa-solid fa-cloud",
-      "keywords": ["Python", "SQL", "AWS", "Git (GitHub & GitLab)", "Linux"]
+      "keywords": ["Python", "TypeScript", "SQL", "AWS", "Git (GitHub & GitLab)", "Linux", "LaTeX"]
     },
     {
       "name": "Machine Learning",
