@@ -151,7 +151,6 @@ giscus:
 # Newsletter
 # -----------------------------------------------------------------------------
 
-
 # -----------------------------------------------------------------------------
 # Collections
 # -----------------------------------------------------------------------------
@@ -254,7 +253,6 @@ jekyll-minifier:
   exclude: ["robots.txt"]
   uglifier_args:
     harmony: true
-
 
 # display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 # display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
