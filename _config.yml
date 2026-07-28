@@ -35,8 +35,6 @@ rss_icon: false
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: false
-socials_in_search: false
 bib_search: false
 
 # Dimensions
@@ -219,7 +217,6 @@ exclude:
   - README.md
   - vendor
   - _posts/
-  - assets/js/search/
 keep_files:
   - CNAME
   - .nojekyll
@@ -230,7 +227,6 @@ plugins:
   - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
-  - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
@@ -264,7 +260,7 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js"]
+  exclude: ["robots.txt"]
   uglifier_args:
     harmony: true
 
