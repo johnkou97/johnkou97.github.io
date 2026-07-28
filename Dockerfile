@@ -1,4 +1,7 @@
-FROM ruby:latest
+# Pinned to match ruby-version in .github/workflows/deploy.yml.
+# Do not use ruby:latest — Ruby 4.0 dropped `logger` from the default gems,
+# which Jekyll 4.3.3 requires without declaring, so the build fails on load.
+FROM ruby:3.2.2
 ENV DEBIAN_FRONTEND noninteractive
 
 Label MAINTAINER Amir Pourmand
